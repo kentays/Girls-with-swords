@@ -13,7 +13,7 @@ onready var sprite = $Sprite
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	$AnimationPlayer.play("Run")
 
 
 func _physics_process(delta):
@@ -21,6 +21,7 @@ func _physics_process(delta):
 	
 	if Input.is_action_pressed("move_left"):
 		vel.x -= speed
+		
 	if Input.is_action_pressed("move_right"):
 		vel.x += speed
 		
@@ -38,7 +39,7 @@ func _physics_process(delta):
 		
 	
 		
-	if vel.x < 0:
-		sprite.flip_h = true
-	if vel.x > 0:
-		sprite.flip_h = false
+	#if vel.x < 0:
+	#	sprite.flip_h = true
+	#if vel.x > 0:
+	#	sprite.flip_h = false
