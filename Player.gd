@@ -28,7 +28,8 @@ func _physics_process(delta):
 		vel.x += speed
 	
 	elif Input.is_action_pressed("punch"):
-		$AnimatedSprite.play("Jab")
+		if is_on_floor():
+			$AnimatedSprite.play("Jab")
 		
 	elif not is_on_floor():
 		$AnimatedSprite.play("Jump")
