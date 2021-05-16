@@ -12,3 +12,6 @@ func handle_input(event):
 		
 	elif event.is_action_pressed("crouch"):
 		emit_signal("finished", "crouch")
+		
+	elif event.is_action_pressed("move_left") or event.is_action_pressed("move_right"):
+		emit_signal("finished", "run")

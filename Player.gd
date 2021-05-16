@@ -6,14 +6,18 @@ var speed : int = 200
 export var jumpForce : int = 400
 var gravity : int = 800
 
+
 var vel : Vector2 = Vector2()
 
 onready var states_map = {
 	"idle": $States/Idle,
 	"jump": $States/Jump,
 	"jab": $States/Jab,
-	"crouch": $States/Crouch
+	"crouch": $States/Crouch,
+	"run": $States/Run
 }
+
+onready var sprite = $AnimatedSprite
 
 func _ready():
 	current_state = $States/Idle
@@ -30,7 +34,6 @@ func _input(event):
 	current_state.handle_input(event)
 
 func _physics_process(delta):
-	print(current_state)
 	current_state.update(delta)
 	
 
