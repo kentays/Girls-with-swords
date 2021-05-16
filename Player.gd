@@ -11,7 +11,8 @@ var vel : Vector2 = Vector2()
 onready var states_map = {
 	"idle": $States/Idle,
 	"jump": $States/Jump,
-	"jab": $States/Jab
+	"jab": $States/Jab,
+	"crouch": $States/Crouch
 }
 
 func _ready():
