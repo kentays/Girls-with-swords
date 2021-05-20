@@ -19,10 +19,14 @@ onready var states_map = {
 
 onready var sprite = $AnimatedSprite
 
+onready var input_dict = $Inputs.input_dict
+
 func _ready():
 	current_state = $States/Idle
 	for state_node in $States.get_children():
 		state_node.connect("finished", self, "_change_state")
+		print(state_node)
+		state_node.map_inputs(input_dict)
 	_change_state("idle")
 	
 func _change_state(state_name):

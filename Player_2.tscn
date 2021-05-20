@@ -16,7 +16,7 @@
 [ext_resource path="res://Sprites/Spritesheet/OL Block State.png" type="Texture" id=14]
 [ext_resource path="res://Sprites/Spritesheet/OL Backdash.png" type="Texture" id=15]
 [ext_resource path="res://Sprites/Spritesheet/OL Knockdown.png" type="Texture" id=16]
-[ext_resource path="res://P1Inputs.gd" type="Script" id=17]
+[ext_resource path="res://P2Inputs.gd" type="Script" id=17]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -318,7 +318,6 @@ shape = SubResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 60 )
 animation = "Run"
-frame = 1
 playing = true
 
 [node name="Area2D" type="Area2D" parent="."]

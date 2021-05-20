@@ -6,7 +6,7 @@ var facing_right : bool = true
 
 func enter():
 	owner.get_node("AnimatedSprite").play("Run")
-	if Input.is_action_pressed("move_right"):
+	if Input.is_action_pressed(input_dict["move_right"]):
 		facing_right = true
 		owner.sprite.flip_h = false
 	else:
@@ -14,13 +14,13 @@ func enter():
 		owner.sprite.flip_h = true
 	
 func handle_input(event):
-	if event.is_action_pressed("jump"):
+	if event.is_action_pressed(input_dict["jump"]):
 		emit_signal("finished", "jump")
 	
-	if event.is_action_released("move_right") and facing_right:
+	if event.is_action_released(input_dict["move_right"]) and facing_right:
 		emit_signal("finished", "idle")
 		
-	if event.is_action_released("move_left") and not facing_right:
+	if event.is_action_released(input_dict["move_left"]) and not facing_right:
 		emit_signal("finished", "idle")
 		
 func update(delta):
