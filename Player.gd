@@ -8,6 +8,8 @@ var gravity : int = 800
 
 var input_dict = null
 
+var inside_hurtbox : bool = false
+
 var vel : Vector2 = Vector2()
 
 onready var states_map = {

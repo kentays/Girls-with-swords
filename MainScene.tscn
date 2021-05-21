@@ -9,7 +9,7 @@
 [node name="Player_1" parent="." instance=ExtResource( 1 )]
 position = Vector2( 101.468, 226.917 )
 
-[node name="Player2" parent="." instance=ExtResource( 3 )]
+[node name="Player_2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 213.713, 226.735 )
 
 [node name="Floor" parent="." instance=ExtResource( 2 )]
