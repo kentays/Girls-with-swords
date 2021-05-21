@@ -6,6 +6,7 @@ var speed : int = 200
 export var jumpForce : int = 400
 var gravity : int = 800
 
+var input_dict = null
 
 var vel : Vector2 = Vector2()
 
@@ -19,13 +20,10 @@ onready var states_map = {
 
 onready var sprite = $AnimatedSprite
 
-onready var input_dict = $Inputs.input_dict
-
 func _ready():
 	current_state = $States/Idle
 	for state_node in $States.get_children():
 		state_node.connect("finished", self, "_change_state")
-		print(state_node)
 		state_node.map_inputs(input_dict)
 	_change_state("idle")
 	
