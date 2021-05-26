@@ -15,6 +15,7 @@ var vel : Vector2 = Vector2()
 onready var states_map = {
 	"idle": $States/Idle,
 	"jump": $States/Jump,
+	"moving_jump": $States/MovingJump,
 	"jab": $States/Jab,
 	"crouch": $States/Crouch,
 	"run": $States/Run
