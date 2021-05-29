@@ -6,3 +6,6 @@ func enter():
 func handle_input(event):
 	if event.is_action_released(input_dict["crouch"]):
 		emit_signal("finished", "idle")
+	
+	elif event.is_action_released(input_dict["punch"]):
+		emit_signal("finished", "crouch_jab")
