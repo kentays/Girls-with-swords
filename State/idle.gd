@@ -29,3 +29,4 @@ func handle_input(event):
 	
 	elif event.is_action_pressed(input_dict["move_left"]):
 		emit_signal("finished", "run")
+		

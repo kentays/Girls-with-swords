@@ -12,9 +12,12 @@ var inside_hurtbox : bool = false
 
 var vel : Vector2 = Vector2()
 
+var facing_right : bool = true
+
 
 onready var states_map = {
 	"idle": $States/Idle,
+	"block": $States/Block,
 	"jump": $States/Jump,
 	"moving_jump": $States/MovingJump,
 	"jab": $States/Jab,
@@ -25,6 +28,7 @@ onready var states_map = {
 }
 
 onready var sprite = $AnimatedSprite
+onready var hurtbox = $Area2D/HurtBox
 
 func _ready():
 	current_state = $States/Idle
@@ -50,4 +54,13 @@ func _on_AnimatedSprite_animation_finished():
 	
 func hit_connect():
 	pass
-		
+	
+func turn_right():
+	facing_right = true
+	sprite.flip_h = false
+	hurtbox.position.x = 23
+	
+func turn_left():
+	facing_right = false
+	sprite.flip_h = true
+	hurtbox.position.y = -23
