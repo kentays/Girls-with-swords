@@ -1,12 +1,11 @@
 extends "state.gd"
 
 func enter():
-	owner.get_node("AnimatedSprite").play("Hitstun")
+	owner.get_node("AnimatedSprite").play("Knockdown")
 	
 
 func receive_hit():
-	print("COMBO")
-	emit_signal("finished", "knockdown")
+	pass
 
 	
 func _on_animation_finished():

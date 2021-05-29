@@ -1,4 +1,4 @@
-[gd_scene load_steps=88 format=2]
+[gd_scene load_steps=89 format=2]
 
 [ext_resource path="res://Sprites/Spritesheet/OL Neutral.png" type="Texture" id=1]
 [ext_resource path="res://Player_1.gd" type="Script" id=2]
@@ -6,7 +6,7 @@
 [ext_resource path="res://Sprites/Spritesheet/OL Jab.png" type="Texture" id=4]
 [ext_resource path="res://State/jump.gd" type="Script" id=5]
 [ext_resource path="res://State/idle.gd" type="Script" id=6]
-[ext_resource path="res://State/hit_stun.gd" type="Script" id=7]
+[ext_resource path="res://State/knockdown.gd" type="Script" id=7]
 [ext_resource path="res://Sprites/Spritesheet/OL Crouch.png" type="Texture" id=8]
 [ext_resource path="res://Sprites/Spritesheet/OL Jump.png" type="Texture" id=9]
 [ext_resource path="res://Sprites/Spritesheet/OL Hitstun.png" type="Texture" id=10]
@@ -21,6 +21,7 @@
 [ext_resource path="res://Sprites/Spritesheet/OL Crouch Jab.png" type="Texture" id=19]
 [ext_resource path="res://State/CrouchJab.gd" type="Script" id=20]
 [ext_resource path="res://State/Block.gd" type="Script" id=21]
+[ext_resource path="res://State/hit_stun.gd" type="Script" id=22]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -326,7 +327,7 @@ animations = [ {
 "frames": [ SubResource( 55 ), SubResource( 56 ), SubResource( 57 ), SubResource( 58 ), SubResource( 59 ) ],
 "loop": true,
 "name": "Knockdown",
-"speed": 8.0
+"speed": 5.0
 }, {
 "frames": [ SubResource( 62 ), SubResource( 63 ), SubResource( 64 ), SubResource( 65 ), SubResource( 66 ) ],
 "loop": true,
@@ -350,8 +351,8 @@ shape = SubResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 3, 3 )
 frames = SubResource( 60 )
-animation = "CrouchJab"
-frame = 1
+animation = "Knockdown"
+frame = 2
 playing = true
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -388,6 +389,9 @@ script = ExtResource( 12 )
 script = ExtResource( 17 )
 
 [node name="HitStun" type="Node" parent="States"]
+script = ExtResource( 22 )
+
+[node name="Knockdown" type="Node" parent="States"]
 script = ExtResource( 7 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
