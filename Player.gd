@@ -45,3 +45,7 @@ func _physics_process(delta):
 
 func _on_AnimatedSprite_animation_finished():
 	current_state._on_animation_finished()
+	
+func hit_connect():
+	pass
+		

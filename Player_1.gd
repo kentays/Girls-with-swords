@@ -18,3 +18,4 @@ func _on_Area2D_body_entered(body):
 func _on_Area2D_body_exited(body):
 	if body.name == "Player_2":
 		inside_hurtbox = false
+		
