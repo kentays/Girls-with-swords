@@ -1,6 +1,7 @@
-extends "state.gd"
+extends "hit_state.gd"
 
 func enter():
+	.enter()
 	owner.get_node("AnimatedSprite").play("Block")
 
 func receive_hit():
