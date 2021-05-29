@@ -6,12 +6,16 @@ var speed : int = 200
 export var jumpForce : int = 400
 var gravity : int = 800
 
+var input_dict = null
+
+var inside_hurtbox : bool = false
 
 var vel : Vector2 = Vector2()
 
 onready var states_map = {
 	"idle": $States/Idle,
 	"jump": $States/Jump,
+	"moving_jump": $States/MovingJump,
 	"jab": $States/Jab,
 	"crouch": $States/Crouch,
 	"run": $States/Run
@@ -23,6 +27,7 @@ func _ready():
 	current_state = $States/Idle
 	for state_node in $States.get_children():
 		state_node.connect("finished", self, "_change_state")
+		state_node.map_inputs(input_dict)
 	_change_state("idle")
 	
 func _change_state(state_name):
