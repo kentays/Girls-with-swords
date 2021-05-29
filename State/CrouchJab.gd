@@ -10,7 +10,7 @@ func handle_input(event):
 		print("jump cancel")
 		emit_signal("finished", "jump")
 		
-func update(delta):
+func update(_delta):
 	var frame_count = owner.get_node("AnimatedSprite").frame
 	if 4 > frame_count and frame_count > 2:
 		if owner.inside_hurtbox and not hit_connect:

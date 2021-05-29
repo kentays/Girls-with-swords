@@ -6,7 +6,7 @@ var p2_x : int
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	var p1 = get_node("Player_1")
 	var p2 = get_node("Player_2")
 	if p1.position.x > p2.position.x:

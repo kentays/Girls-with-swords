@@ -27,7 +27,7 @@ func handle_input(event):
 	elif event.is_action_pressed(input_dict["punch"]):
 		emit_signal("finished", "jab")
 		
-func update(delta):
+func update(_delta):
 	var mod = -1
 	if facing_right:
 		mod = 1

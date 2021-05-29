@@ -13,10 +13,10 @@ func enter():
 func exit():
 	pass
 	
-func handle_input(event):
+func handle_input(_event):
 	pass
 	
-func update(delta):
+func update(_delta):
 	pass
 	
 func _on_animation_finished():
