@@ -11,10 +11,8 @@ func enter():
 	
 	if Input.is_action_pressed(input_dict["move_right"]):
 		facing_right = true
-		owner.sprite.flip_h = false
 	else:
 		facing_right = false
-		owner.sprite.flip_h = true
 		
 	vel.y = -1 * jumpForce
 	
