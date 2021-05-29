@@ -8,3 +8,14 @@ func _init():
 		"crouch" : "p2_crouch",
 		"punch" : "p2_punch"
 	}
+
+
+
+func _on_Area2D_body_entered(body):
+	if body.name == "Player_1":
+		inside_hurtbox = true
+	
+
+func _on_Area2D_body_exited(body):
+	if body.name == "Player_1":
+		inside_hurtbox = false

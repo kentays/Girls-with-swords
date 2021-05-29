@@ -21,3 +21,6 @@ func update(delta):
 	
 func _on_animation_finished():
 	return
+	
+func receive_hit():
+	emit_signal("finished", "hitstun")

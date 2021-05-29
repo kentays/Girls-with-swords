@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=2]
+[gd_scene load_steps=80 format=2]
 
 [ext_resource path="res://Sprites/Spritesheet/OL Neutral.png" type="Texture" id=1]
 [ext_resource path="res://Player_2.gd" type="Script" id=2]
@@ -6,7 +6,7 @@
 [ext_resource path="res://Sprites/Spritesheet/OL Jab.png" type="Texture" id=4]
 [ext_resource path="res://State/jump.gd" type="Script" id=5]
 [ext_resource path="res://State/idle.gd" type="Script" id=6]
-[ext_resource path="res://State/jab.gd" type="Script" id=7]
+[ext_resource path="res://State/hit_stun.gd" type="Script" id=7]
 [ext_resource path="res://Sprites/Spritesheet/OL Crouch.png" type="Texture" id=8]
 [ext_resource path="res://Sprites/Spritesheet/OL Jump.png" type="Texture" id=9]
 [ext_resource path="res://Sprites/Spritesheet/OL Hitstun.png" type="Texture" id=10]
@@ -17,6 +17,7 @@
 [ext_resource path="res://Sprites/Spritesheet/OL Backdash.png" type="Texture" id=15]
 [ext_resource path="res://Sprites/Spritesheet/OL Knockdown.png" type="Texture" id=16]
 [ext_resource path="res://State/moving_jump.gd" type="Script" id=17]
+[ext_resource path="res://State/jab.gd" type="Script" id=18]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -339,7 +340,7 @@ script = ExtResource( 6 )
 script = ExtResource( 5 )
 
 [node name="Jab" type="Node" parent="States"]
-script = ExtResource( 7 )
+script = ExtResource( 18 )
 
 [node name="Crouch" type="Node" parent="States"]
 script = ExtResource( 11 )
@@ -349,5 +350,8 @@ script = ExtResource( 12 )
 
 [node name="MovingJump" type="Node" parent="States"]
 script = ExtResource( 17 )
+
+[node name="HitStun" type="Node" parent="States"]
+script = ExtResource( 7 )
 
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
