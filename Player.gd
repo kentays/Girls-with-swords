@@ -1,57 +1,41 @@
 extends KinematicBody2D
 
+var current_state = null
+
 var speed : int = 200
 export var jumpForce : int = 400
 var gravity : int = 800
 
-var vel : Vector2 = Vector2()
-var grounded : bool = false
 
-var doubleJump : bool = false
+var vel : Vector2 = Vector2()
+
+onready var states_map = {
+	"idle": $States/Idle,
+	"jump": $States/Jump,
+	"jab": $States/Jab,
+	"crouch": $States/Crouch,
+	"run": $States/Run
+}
 
 onready var sprite = $AnimatedSprite
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
-
+	current_state = $States/Idle
+	for state_node in $States.get_children():
+		state_node.connect("finished", self, "_change_state")
+	_change_state("idle")
+	
+func _change_state(state_name):
+	current_state.exit()
+	current_state = states_map[state_name]
+	current_state.enter()
+	
+func _input(event):
+	current_state.handle_input(event)
 
 func _physics_process(delta):
-	vel.x = 0
+	current_state.update(delta)
 	
-	if Input.is_action_pressed("move_left"):
-		$AnimatedSprite.play("Run")
-		vel.x -= speed
-		
-	elif Input.is_action_pressed("move_right"):
-		$AnimatedSprite.play("Run")
-		vel.x += speed
-	
-	elif Input.is_action_pressed("punch"):
-		if is_on_floor():
-			$AnimatedSprite.play("Jab")
-		
-	elif not is_on_floor():
-		$AnimatedSprite.play("Jump")
-	
-	else:
-		$AnimatedSprite.play("Neutral")
-		
-	vel = move_and_slide(vel, Vector2.UP)
-	
-	vel.y += gravity * delta
-	
-	if Input.is_action_just_pressed("jump") and doubleJump and !is_on_floor():
-		vel.y = -1 * jumpForce
-		doubleJump = false
-	
-	if Input.is_action_just_pressed("jump") and is_on_floor():
-		vel.y = -1 * jumpForce
-		doubleJump = true
-		
-	
-		
-	if vel.x < 0:
-		sprite.flip_h = true
-	if vel.x > 0:
-		sprite.flip_h = false
+
+func _on_AnimatedSprite_animation_finished():
+	current_state._on_animation_finished()
