@@ -359,7 +359,7 @@ shape = SubResource( 1 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 60 )
 animation = "CrouchBlock"
-frame = 1
+frame = 7
 playing = true
 
 [node name="Area2D" type="Area2D" parent="."]

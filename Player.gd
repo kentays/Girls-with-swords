@@ -65,4 +65,4 @@ func turn_right():
 func turn_left():
 	facing_right = false
 	sprite.flip_h = true
-	hurtbox.position.y = -23
+	hurtbox.position.x = -23
