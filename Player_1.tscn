@@ -290,7 +290,7 @@ animations = [ {
 "frames": [ SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ) ],
 "loop": true,
 "name": "Jab",
-"speed": 20.0
+"speed": 30.0
 }, {
 "frames": [ ExtResource( 8 ) ],
 "loop": false,
