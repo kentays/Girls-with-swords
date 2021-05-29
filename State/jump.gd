@@ -9,7 +9,7 @@ func enter():
 	vel.y = -1 * jumpForce
 	
 func update(delta):
-	owner.move_and_slide(vel, Vector2.UP)
 	vel.y += gravity * delta
+	owner.move_and_slide(vel, Vector2.UP)
 	if owner.is_on_floor():
 		emit_signal("finished", "idle")

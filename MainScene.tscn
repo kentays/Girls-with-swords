@@ -66,6 +66,7 @@ position = Vector2( 240, 128 )
 texture = ExtResource( 12 )
 
 [node name="Cloud_2" type="CPUParticles2D" parent="."]
+visible = false
 position = Vector2( 0, 120 )
 amount = 27
 texture = ExtResource( 6 )
