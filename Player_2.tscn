@@ -1,4 +1,4 @@
-[gd_scene load_steps=83 format=2]
+[gd_scene load_steps=85 format=2]
 
 [ext_resource path="res://Sprites/Spritesheet/OL Neutral.png" type="Texture" id=1]
 [ext_resource path="res://Player_2.gd" type="Script" id=2]
@@ -21,6 +21,8 @@
 [ext_resource path="res://State/CrouchJab.gd" type="Script" id=19]
 [ext_resource path="res://State/Block.gd" type="Script" id=20]
 [ext_resource path="res://State/knockdown.gd" type="Script" id=21]
+[ext_resource path="res://Sprites/Spritesheet/OL Crouch Block State.png" type="Texture" id=22]
+[ext_resource path="res://State/CrouchBlock.gd" type="Script" id=23]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -273,7 +275,7 @@ animations = [ {
 "name": "Jab",
 "speed": 20.0
 }, {
-"frames": [ ExtResource( 8 ) ],
+"frames": [ ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ) ],
 "loop": false,
 "name": "Crouch",
 "speed": 5.0
@@ -293,7 +295,7 @@ animations = [ {
 "name": "Hitstun",
 "speed": 20.0
 }, {
-"frames": [ ExtResource( 14 ) ],
+"frames": [ ExtResource( 14 ), ExtResource( 14 ), ExtResource( 14 ), ExtResource( 14 ), ExtResource( 14 ), ExtResource( 14 ), ExtResource( 14 ), ExtResource( 14 ) ],
 "loop": true,
 "name": "Block",
 "speed": 5.0
@@ -307,6 +309,11 @@ animations = [ {
 "loop": true,
 "name": "Knockdown",
 "speed": 8.0
+}, {
+"frames": [ ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "CrouchBlock",
+"speed": 5.0
 } ]
 
 [sub_resource type="CircleShape2D" id=61]
@@ -323,7 +330,8 @@ shape = SubResource( 1 )
 position = Vector2( 0.111366, 0 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 60 )
-animation = "Run"
+animation = "CrouchBlock"
+frame = 6
 playing = true
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -364,5 +372,8 @@ script = ExtResource( 7 )
 
 [node name="Knockdown" type="Node" parent="States"]
 script = ExtResource( 21 )
+
+[node name="CrouchBlock" type="Node" parent="States"]
+script = ExtResource( 23 )
 
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]

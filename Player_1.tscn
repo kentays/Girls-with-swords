@@ -1,4 +1,4 @@
-[gd_scene load_steps=89 format=2]
+[gd_scene load_steps=91 format=2]
 
 [ext_resource path="res://Sprites/Spritesheet/OL Neutral.png" type="Texture" id=1]
 [ext_resource path="res://Player_1.gd" type="Script" id=2]
@@ -22,6 +22,8 @@
 [ext_resource path="res://State/CrouchJab.gd" type="Script" id=20]
 [ext_resource path="res://State/Block.gd" type="Script" id=21]
 [ext_resource path="res://State/hit_stun.gd" type="Script" id=22]
+[ext_resource path="res://Sprites/Spritesheet/OL Crouch Block State.png" type="Texture" id=23]
+[ext_resource path="res://State/CrouchBlock.gd" type="Script" id=24]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -314,7 +316,7 @@ animations = [ {
 "name": "Hitstun",
 "speed": 20.0
 }, {
-"frames": [ ExtResource( 14 ) ],
+"frames": [ ExtResource( 14 ), ExtResource( 14 ), ExtResource( 14 ), ExtResource( 14 ), ExtResource( 14 ), ExtResource( 14 ), ExtResource( 14 ), ExtResource( 14 ) ],
 "loop": true,
 "name": "Block",
 "speed": 5.0
@@ -333,6 +335,11 @@ animations = [ {
 "loop": true,
 "name": "CrouchJab",
 "speed": 20.0
+}, {
+"frames": [ ExtResource( 23 ), ExtResource( 23 ), ExtResource( 23 ), ExtResource( 23 ), ExtResource( 23 ), ExtResource( 23 ), ExtResource( 23 ), ExtResource( 23 ) ],
+"loop": true,
+"name": "CrouchBlock",
+"speed": 5.0
 } ]
 
 [sub_resource type="CircleShape2D" id=61]
@@ -351,8 +358,8 @@ shape = SubResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 3, 3 )
 frames = SubResource( 60 )
-animation = "Knockdown"
-frame = 2
+animation = "CrouchBlock"
+frame = 1
 playing = true
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -393,6 +400,9 @@ script = ExtResource( 22 )
 
 [node name="Knockdown" type="Node" parent="States"]
 script = ExtResource( 7 )
+
+[node name="CrouchBlock" type="Node" parent="States"]
+script = ExtResource( 24 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 0, -20 )
