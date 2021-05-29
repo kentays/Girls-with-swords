@@ -5,6 +5,8 @@ var gravity : int = 800
 var vel : Vector2 = Vector2()
 
 func enter():
+	if Input.is_action_pressed(input_dict["move_right"]) or Input.is_action_pressed(input_dict["move_left"]):
+		emit_signal("finished", "moving_jump")
 	owner.get_node("AnimatedSprite").play("Jump")
 	vel.y = -1 * jumpForce
 	
