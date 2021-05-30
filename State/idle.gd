@@ -6,10 +6,10 @@ func enter():
 		emit_signal("finished", "crouch")
 	
 	elif Input.is_action_pressed(input_dict["move_right"]):
-		emit_signal("finished", "run")
+		emit_signal("finished", "walk")
 	
 	elif Input.is_action_pressed(input_dict["move_left"]):
-		emit_signal("finished", "run")
+		emit_signal("finished", "walk")
 		
 	elif Input.is_action_pressed(input_dict["jump"]):
 		emit_signal("finished", "jump")
@@ -25,8 +25,8 @@ func handle_input(event):
 		emit_signal("finished", "crouch")
 		
 	elif event.is_action_pressed(input_dict["move_right"]):
-		emit_signal("finished", "run")
+		emit_signal("finished", "walk")
 	
 	elif event.is_action_pressed(input_dict["move_left"]):
-		emit_signal("finished", "run")
+		emit_signal("finished", "walk")
 		

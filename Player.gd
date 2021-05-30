@@ -26,7 +26,8 @@ onready var states_map = {
 	"hitstun": $States/HitStun,
 	"crouch_jab": $States/CrouchJab,
 	"knockdown": $States/Knockdown,
-	"crouch_block": $States/CrouchBlock
+	"crouch_block": $States/CrouchBlock,
+	"walk": $States/Walk
 }
 
 onready var sprite = $AnimatedSprite

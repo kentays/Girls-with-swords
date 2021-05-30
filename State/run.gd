@@ -32,7 +32,7 @@ func update(_delta):
 	if moving_right:
 		mod = 1
 	vel.x = mod * MOVE_SPEED
-	owner.move_and_slide(vel, Vector2.UP)
+	owner.move_and_collide(vel * _delta)
 	
 func receive_hit():
 	if moving_right and not owner.facing_right:
