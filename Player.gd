@@ -33,6 +33,7 @@ onready var states_map = {
 
 onready var sprite = $AnimatedSprite
 onready var hurtbox = $Area2D/HurtBox
+onready var hitbox = $HitBox
 
 func _ready():
 	current_state = $States/Idle
@@ -68,3 +69,12 @@ func turn_left():
 	facing_right = false
 	sprite.flip_h = true
 	hurtbox.position.x = -23
+	
+func stand():
+	hitbox.stand()
+	hurtbox.stand()
+	
+	
+func crouch():
+	hitbox.crouch()
+	hurtbox.crouch()

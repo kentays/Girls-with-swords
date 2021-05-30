@@ -19,6 +19,7 @@ func update(_delta):
 	
 func exit():
 	hit_connect = false
+	owner.hitbox.stand()
 	
 func _on_animation_finished():
 	if Input.is_action_pressed(input_dict["crouch"]):
