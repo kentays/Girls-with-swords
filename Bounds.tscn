@@ -5,8 +5,8 @@
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 1080, 16 )
 
-[node name="Floor" type="StaticBody2D"]
+[node name="Bounds" type="StaticBody2D"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Floor" type="CollisionShape2D" parent="."]
 material = SubResource( 1 )
 shape = SubResource( 2 )
