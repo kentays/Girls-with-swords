@@ -10,8 +10,11 @@ func enter():
 
 func handle_input(event):
 	if event.is_action_pressed(input_dict["dash"]):
-		print("Dash command")
-		emit_signal("finished", "run")
+		if moving_right == owner.facing_right:
+			print("Run forward")
+			emit_signal("finished", "run")
+		else:
+			emit_signal("finished", "backdash")
 	else: 
 		.handle_input(event)
 	

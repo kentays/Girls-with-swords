@@ -1,4 +1,4 @@
-[gd_scene load_steps=85 format=2]
+[gd_scene load_steps=86 format=2]
 
 [ext_resource path="res://Sprites/Spritesheet/OL Neutral.png" type="Texture" id=1]
 [ext_resource path="res://Player_2.gd" type="Script" id=2]
@@ -24,6 +24,7 @@
 [ext_resource path="res://Sprites/Spritesheet/OL Crouch Block State.png" type="Texture" id=22]
 [ext_resource path="res://State/CrouchBlock.gd" type="Script" id=23]
 [ext_resource path="res://State/walk.gd" type="Script" id=24]
+[ext_resource path="res://State/Backdash.gd" type="Script" id=25]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -328,7 +329,7 @@ position = Vector2( 0.111366, 0 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 59 )
 animation = "CrouchBlock"
-frame = 2
+frame = 7
 playing = true
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -375,5 +376,8 @@ script = ExtResource( 23 )
 
 [node name="Walk" type="Node" parent="States"]
 script = ExtResource( 24 )
+
+[node name="Backdash" type="Node" parent="States"]
+script = ExtResource( 25 )
 
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
