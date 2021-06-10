@@ -80,3 +80,8 @@ func crouch():
 
 func block():
 	get_parent().block()
+	
+
+func receive_hit_confirm():
+	# called when the state object confirms that it is in a hittable state
+	get_parent().hit_confirm()

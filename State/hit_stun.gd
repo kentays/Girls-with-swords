@@ -2,6 +2,7 @@ extends "hit_state.gd"
 
 func enter():
 	.enter()
+	owner.receive_hit_confirm()
 	owner.get_node("AnimatedSprite").play("Hitstun")
 	
 
