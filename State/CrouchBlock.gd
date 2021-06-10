@@ -3,6 +3,7 @@ extends "hit_state.gd"
 func enter():
 	.enter()
 	owner.get_node("AnimatedSprite").play("CrouchBlock")
+	owner.block()
 
 func receive_hit():
 	print("Blockstring")
