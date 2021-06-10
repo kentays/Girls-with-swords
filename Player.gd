@@ -74,7 +74,9 @@ func stand():
 	hitbox.stand()
 	hurtbox.stand()
 	
-	
 func crouch():
 	hitbox.crouch()
 	hurtbox.crouch()
+
+func block():
+	get_parent().block()

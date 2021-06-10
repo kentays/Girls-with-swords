@@ -22,3 +22,4 @@ func _on_Area2D_body_exited(body):
 
 func hit_connect():
 	get_parent().hit_p2()
+

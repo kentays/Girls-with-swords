@@ -21,3 +21,6 @@ func hit_p2():
 	print("Player 2 hit")
 	$AudioStreamPlayer.hit()
 	get_node("Player_2").current_state.receive_hit()
+	
+func block():
+	$AudioStreamPlayer.block()
