@@ -19,5 +19,5 @@ func _process(_delta):
 		
 func hit_p2():
 	print("Player 2 hit")
-	$AudioStreamPlayer.play()
+	$AudioStreamPlayer.hit()
 	get_node("Player_2").current_state.receive_hit()
