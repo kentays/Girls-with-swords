@@ -26,3 +26,6 @@ func block():
 	
 func hit_confirm():
 	$AudioStreamPlayer.hit()
+	
+func knockdown():
+	$AudioStreamPlayer.knockdown()

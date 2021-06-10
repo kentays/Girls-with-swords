@@ -85,3 +85,6 @@ func block():
 func receive_hit_confirm():
 	# called when the state object confirms that it is in a hittable state
 	get_parent().hit_confirm()
+	
+func knockdown():
+	get_parent().knockdown()

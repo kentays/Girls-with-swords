@@ -1,6 +1,7 @@
 extends "state.gd"
 
 func enter():
+	owner.knockdown()
 	owner.get_node("AnimatedSprite").play("Knockdown")
 	
 
