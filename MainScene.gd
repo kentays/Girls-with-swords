@@ -19,7 +19,7 @@ func _process(_delta):
 		
 func hit_p2():
 	print("Player 2 hit")
-	$AudioStreamPlayer.hit()
+	$AudioStreamPlayer.hit() # need to fix this so it only calls when hit connects
 	get_node("Player_2").current_state.receive_hit()
 	
 func block():
