@@ -98,11 +98,7 @@ func jump():
 	
 func dash():
 	$AudioStreamPlayer.dash()
-	
-func instance(scene):
-	var instance = scene.instance()
-	add_child(instance)
-	
+	$Dust.emitting = true
 	
 func try_buffer(event):
 	for key in input_dict.keys():
