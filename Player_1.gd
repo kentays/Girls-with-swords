@@ -1,5 +1,7 @@
 extends "Player.gd"
 
+export (PackedScene) var Dust
+
 func _init():
 	input_dict = {
 		"jump" : "p1_jump",
@@ -22,5 +24,9 @@ func _on_Area2D_body_exited(body):
 
 func hit_connect():
 	get_parent().hit_p2()
+	
+func dash():
+	.dash()
+	instance(Dust)
 
 

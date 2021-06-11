@@ -1,4 +1,4 @@
-[gd_scene load_steps=100 format=2]
+[gd_scene load_steps=101 format=2]
 
 [ext_resource path="res://Sprites/Spritesheet/OL Neutral.png" type="Texture" id=1]
 [ext_resource path="res://Player_2.gd" type="Script" id=2]
@@ -31,6 +31,7 @@
 [ext_resource path="res://Sprites/Spritesheet/OL Wakeup.png" type="Texture" id=29]
 [ext_resource path="res://Sounds/hit.ogg" type="AudioStream" id=30]
 [ext_resource path="res://AudioStreamPlayer.gd" type="Script" id=31]
+[ext_resource path="res://Dust.tscn" type="PackedScene" id=32]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -362,6 +363,7 @@ radius = 6.22676
 
 [node name="Player_2" type="KinematicBody2D"]
 script = ExtResource( 2 )
+Dust = ExtResource( 32 )
 
 [node name="BufTimer" type="Timer" parent="."]
 wait_time = 0.168
