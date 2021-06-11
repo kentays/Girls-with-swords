@@ -96,6 +96,9 @@ func whiff():
 func jump():
 	$AudioStreamPlayer.jump()
 	
+func dash():
+	$AudioStreamPlayer.dash()
+	
 func try_buffer(event):
 	for key in input_dict.keys():
 		if event.is_action_pressed(input_dict[key]):

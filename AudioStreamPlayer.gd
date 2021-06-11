@@ -6,6 +6,7 @@ var block_sfx: AudioStream
 var knockdown_sfx: AudioStream
 var whiff_sfx: AudioStream
 var jump_sfx: AudioStream
+var dash_sfx: AudioStream
 
 
 # Called when the node enters the scene tree for the first time.
@@ -15,6 +16,7 @@ func _ready():
 	knockdown_sfx = preload("res://Sounds/knockdown.ogg")
 	whiff_sfx = preload("res://Sounds/whiff.ogg")
 	jump_sfx = preload("res://Sounds/jump.ogg")
+	dash_sfx = preload("res://Sounds/dash.ogg")
 
 func hit():
 	self.set_stream(hit_sfx)
@@ -34,4 +36,8 @@ func whiff():
 	
 func jump():
 	self.set_stream(jump_sfx)
+	self.play()
+	
+func dash():
+	self.set_stream(dash_sfx)
 	self.play()

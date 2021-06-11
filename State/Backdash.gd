@@ -2,6 +2,7 @@ extends "run.gd"
 
 func enter():
 	owner.get_node("AnimatedSprite").play("Backdash")
+	owner.dash()
 	if Input.is_action_pressed(input_dict["move_right"]):
 		moving_right = true
 	else:
