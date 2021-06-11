@@ -6,13 +6,15 @@ var speed : int = 200
 export var jumpForce : int = 400
 var gravity : int = 800
 
-var input_dict = null
+var input_dict : Dictionary
 
 var inside_hurtbox : bool = false
 
 var vel : Vector2 = Vector2()
 
 var facing_right : bool = true
+
+var input_buf : String
 
 
 onready var states_map = {

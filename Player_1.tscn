@@ -531,6 +531,7 @@ script = ExtResource( 27 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 96 )
 animation = "Hadouken"
+frame = 2
 playing = true
 
 [node name="Area2D" type="Area2D" parent="."]
