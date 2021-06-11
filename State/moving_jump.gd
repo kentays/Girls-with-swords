@@ -8,7 +8,7 @@ var facing_right : bool = true
 
 func enter():
 	owner.get_node("AnimatedSprite").play("Jump")
-	
+	owner.jump()
 	if Input.is_action_pressed(input_dict["move_right"]):
 		facing_right = true
 	else:

@@ -93,6 +93,9 @@ func knockdown():
 func whiff():
 	get_parent().whiff()
 	
+func jump():
+	get_parent().jump()
+	
 func try_buffer(event):
 	for key in input_dict.keys():
 		if event.is_action_pressed(input_dict[key]):

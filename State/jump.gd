@@ -8,6 +8,7 @@ func enter():
 	if Input.is_action_pressed(input_dict["move_right"]) or Input.is_action_pressed(input_dict["move_left"]):
 		emit_signal("finished", "moving_jump")
 	owner.get_node("AnimatedSprite").play("Jump")
+	owner.jump()
 	vel.y = -1 * jumpForce
 	
 func update(delta):

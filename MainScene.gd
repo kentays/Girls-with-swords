@@ -20,15 +20,3 @@ func _process(_delta):
 func hit_p2():
 	print("Player 2 hit")
 	get_node("Player_2").current_state.receive_hit()
-	
-func block():
-	$AudioStreamPlayer.block()
-	
-func hit_confirm():
-	$AudioStreamPlayer.hit()
-	
-func knockdown():
-	$AudioStreamPlayer.knockdown()
-	
-func whiff():
-	$AudioStreamPlayer.whiff()
