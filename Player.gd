@@ -82,7 +82,6 @@ func crouch():
 
 func block():
 	get_parent().block()
-	
 
 func receive_hit_confirm():
 	# called when the state object confirms that it is in a hittable state
@@ -91,11 +90,13 @@ func receive_hit_confirm():
 func knockdown():
 	get_parent().knockdown()
 	
+func whiff():
+	get_parent().whiff()
+	
 func try_buffer(event):
 	for key in input_dict.keys():
 		if event.is_action_pressed(input_dict[key]):
 			buffer(key)
-			
 			
 func buffer(key):
 	input_buf.push_front(key)

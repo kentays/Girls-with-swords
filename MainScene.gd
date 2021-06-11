@@ -29,3 +29,6 @@ func hit_confirm():
 	
 func knockdown():
 	$AudioStreamPlayer.knockdown()
+	
+func whiff():
+	$AudioStreamPlayer.whiff()

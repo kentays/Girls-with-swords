@@ -3,6 +3,7 @@ extends "state.gd"
 var hit_connect : bool = false
 
 func enter():
+	owner.whiff()
 	owner.get_node("AnimatedSprite").play("Jab")
 			
 func handle_input(event):
