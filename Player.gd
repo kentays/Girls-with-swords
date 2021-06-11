@@ -14,7 +14,7 @@ var vel : Vector2 = Vector2()
 
 var facing_right : bool = true
 
-var input_buf : String
+var input_buf = []
 
 
 onready var states_map = {
@@ -50,11 +50,11 @@ func _change_state(state_name):
 	current_state.enter()
 	
 func _input(event):
+	try_buffer(event)
 	current_state.handle_input(event)
 
 func _physics_process(delta):
 	current_state.update(delta)
-	
 
 func _on_AnimatedSprite_animation_finished():
 	current_state._on_animation_finished()
@@ -90,3 +90,20 @@ func receive_hit_confirm():
 	
 func knockdown():
 	get_parent().knockdown()
+	
+func try_buffer(event):
+	for key in input_dict.keys():
+		if event.is_action_pressed(input_dict[key]):
+			buffer(key)
+			
+			
+func buffer(key):
+	input_buf.push_front(key)
+	while len(input_buf) > 4:
+		input_buf.pop_back()
+	print(input_buf)
+	$BufTimer.start()
+
+func _on_BufTimer_timeout():
+	print("BufTimer timeout")
+	input_buf = []
