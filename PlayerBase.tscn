@@ -1,4 +1,4 @@
-[gd_scene load_steps=139 format=2]
+[gd_scene load_steps=140 format=2]
 
 [ext_resource path="res://Sprites/Spritesheet/OL Neutral.png" type="Texture" id=1]
 [ext_resource path="res://Player.gd" type="Script" id=2]
@@ -11,21 +11,21 @@
 [ext_resource path="res://Sprites/Spritesheet/OL Jump.png" type="Texture" id=9]
 [ext_resource path="res://Sprites/Spritesheet/OL Hitstun.png" type="Texture" id=10]
 [ext_resource path="res://State/crouch.gd" type="Script" id=11]
-[ext_resource path="res://State/run.gd" type="Script" id=12]
+[ext_resource path="res://State/move/Backdash.gd" type="Script" id=12]
 [ext_resource path="res://Sprites/Spritesheet/OL Walk.png" type="Texture" id=13]
 [ext_resource path="res://Sprites/Spritesheet/OL Block State.png" type="Texture" id=14]
 [ext_resource path="res://Sprites/Spritesheet/OL Backdash.png" type="Texture" id=15]
 [ext_resource path="res://Sprites/Spritesheet/OL Knockdown.png" type="Texture" id=16]
 [ext_resource path="res://State/moving_jump.gd" type="Script" id=17]
-[ext_resource path="res://State/jab.gd" type="Script" id=18]
+[ext_resource path="res://State/attack/CrouchJab.gd" type="Script" id=18]
 [ext_resource path="res://Sprites/Spritesheet/OL Crouch Jab.png" type="Texture" id=19]
-[ext_resource path="res://State/CrouchJab.gd" type="Script" id=20]
-[ext_resource path="res://State/Block.gd" type="Script" id=21]
-[ext_resource path="res://State/hit_stun.gd" type="Script" id=22]
+[ext_resource path="res://State/attack/jab.gd" type="Script" id=20]
+[ext_resource path="res://State/hit_state/Block.gd" type="Script" id=21]
+[ext_resource path="res://State/hit_state/hit_stun.gd" type="Script" id=22]
 [ext_resource path="res://Sprites/Spritesheet/OL Crouch Block State.png" type="Texture" id=23]
-[ext_resource path="res://State/CrouchBlock.gd" type="Script" id=24]
-[ext_resource path="res://State/walk.gd" type="Script" id=25]
-[ext_resource path="res://State/Backdash.gd" type="Script" id=26]
+[ext_resource path="res://State/hit_state/CrouchBlock.gd" type="Script" id=24]
+[ext_resource path="res://State/move/walk.gd" type="Script" id=25]
+[ext_resource path="res://State/move/run.gd" type="Script" id=26]
 [ext_resource path="res://HitBox.gd" type="Script" id=27]
 [ext_resource path="res://HurtBox.gd" type="Script" id=28]
 [ext_resource path="res://Sprites/Spritesheet/OL Wakeup.png" type="Texture" id=29]
@@ -39,6 +39,7 @@
 [ext_resource path="res://Sounds/hit.ogg" type="AudioStream" id=37]
 [ext_resource path="res://AudioStreamPlayer.gd" type="Script" id=38]
 [ext_resource path="res://Sprites/Spritesheet/Dust FX.png" type="Texture" id=39]
+[ext_resource path="res://State/attack/Slash.gd" type="Script" id=40]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -527,6 +528,7 @@ particles_anim_loop = false
 
 [sub_resource type="ParticlesMaterial" id=99]
 flag_disable_z = true
+direction = Vector3( -1, 2, 1 )
 gravity = Vector3( 0, 0, 0 )
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
@@ -577,16 +579,16 @@ script = ExtResource( 21 )
 script = ExtResource( 5 )
 
 [node name="Jab" type="Node" parent="States"]
-script = ExtResource( 18 )
+script = ExtResource( 20 )
 
 [node name="Crouch" type="Node" parent="States"]
 script = ExtResource( 11 )
 
 [node name="CrouchJab" type="Node" parent="States"]
-script = ExtResource( 20 )
+script = ExtResource( 18 )
 
 [node name="Run" type="Node" parent="States"]
-script = ExtResource( 12 )
+script = ExtResource( 26 )
 
 [node name="MovingJump" type="Node" parent="States"]
 script = ExtResource( 17 )
@@ -604,13 +606,19 @@ script = ExtResource( 24 )
 script = ExtResource( 25 )
 
 [node name="Backdash" type="Node" parent="States"]
-script = ExtResource( 26 )
+script = ExtResource( 12 )
+
+[node name="Slash" type="Node" parent="States"]
+script = ExtResource( 40 )
 
 [node name="Dust" type="Particles2D" parent="."]
 show_behind_parent = true
 material = SubResource( 98 )
 emitting = false
 amount = 1
+lifetime = 0.75
+one_shot = true
+local_coords = false
 process_material = SubResource( 99 )
 texture = ExtResource( 39 )
 

@@ -96,9 +96,15 @@ func whiff():
 func jump():
 	$AudioStreamPlayer.jump()
 	
-func dash():
+func dash(moving_right):
+	if moving_right:
+		$Dust.set_scale(Vector2(-1, 1))
+	else:
+		$Dust.set_scale(Vector2(1, 1))
 	$AudioStreamPlayer.dash()
 	$Dust.emitting = true
+	$Dust.restart()
+	
 	
 func try_buffer(event):
 	for key in input_dict.keys():

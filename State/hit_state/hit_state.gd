@@ -1,4 +1,4 @@
-extends "state.gd"
+extends "../state.gd"
 
 export var PUSH_SPEED : int = 300
 var vel : Vector2 = Vector2()
