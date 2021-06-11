@@ -81,20 +81,20 @@ func crouch():
 	hurtbox.crouch()
 
 func block():
-	get_parent().block()
+	$AudioStreamPlayer.block()
 
 func receive_hit_confirm():
 	# called when the state object confirms that it is in a hittable state
-	get_parent().hit_confirm()
+	$AudioStreamPlayer.hit()
 	
 func knockdown():
-	get_parent().knockdown()
+	$AudioStreamPlayer.knockdown()
 	
 func whiff():
-	get_parent().whiff()
+	$AudioStreamPlayer.whiff()
 	
 func jump():
-	get_parent().jump()
+	$AudioStreamPlayer.jump()
 	
 func try_buffer(event):
 	for key in input_dict.keys():
