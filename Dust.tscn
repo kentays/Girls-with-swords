@@ -44,11 +44,13 @@ animations = [ {
 } ]
 
 [node name="Dust" type="Node2D"]
+z_index = 1
+z_as_relative = false
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 9 )
-frame = 2
+frame = 1
 playing = true
 
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]

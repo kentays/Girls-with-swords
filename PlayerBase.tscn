@@ -1,4 +1,4 @@
-[gd_scene load_steps=140 format=2]
+[gd_scene load_steps=138 format=2]
 
 [ext_resource path="res://Sprites/Spritesheet/OL Neutral.png" type="Texture" id=1]
 [ext_resource path="res://Player.gd" type="Script" id=2]
@@ -38,7 +38,7 @@
 [ext_resource path="res://Sprites/Spritesheet/OL Sweep.png" type="Texture" id=36]
 [ext_resource path="res://Sounds/hit.ogg" type="AudioStream" id=37]
 [ext_resource path="res://AudioStreamPlayer.gd" type="Script" id=38]
-[ext_resource path="res://Sprites/Spritesheet/Dust FX.png" type="Texture" id=39]
+[ext_resource path="res://Dust.tscn" type="PackedScene" id=39]
 [ext_resource path="res://State/attack/Slash.gd" type="Script" id=40]
 
 [sub_resource type="CapsuleShape2D" id=1]
@@ -520,25 +520,12 @@ animations = [ {
 [sub_resource type="CircleShape2D" id=97]
 radius = 6.22676
 
-[sub_resource type="CanvasItemMaterial" id=98]
-particles_animation = true
-particles_anim_h_frames = 3
-particles_anim_v_frames = 3
-particles_anim_loop = false
-
-[sub_resource type="ParticlesMaterial" id=99]
-flag_disable_z = true
-direction = Vector3( -1, 2, 1 )
-gravity = Vector3( 0, 0, 0 )
-orbit_velocity = 0.0
-orbit_velocity_random = 0.0
-anim_speed = 1.43
-
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_horizontal_guides_": [  ]
 }
+Dust = ExtResource( 39 )
 
 [node name="BufTimer" type="Timer" parent="."]
 wait_time = 0.168
@@ -609,17 +596,6 @@ script = ExtResource( 12 )
 
 [node name="Slash" type="Node" parent="States"]
 script = ExtResource( 40 )
-
-[node name="Dust" type="Particles2D" parent="."]
-show_behind_parent = true
-material = SubResource( 98 )
-emitting = false
-amount = 1
-lifetime = 0.75
-one_shot = true
-local_coords = false
-process_material = SubResource( 99 )
-texture = ExtResource( 39 )
 
 [connection signal="timeout" from="BufTimer" to="." method="_on_BufTimer_timeout"]
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]

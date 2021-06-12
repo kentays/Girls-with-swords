@@ -6,6 +6,8 @@ var speed : int = 200
 export var jumpForce : int = 400
 var gravity : int = 800
 
+export (PackedScene) var Dust
+
 var input_dict : Dictionary
 
 var inside_hurtbox : bool = false
@@ -98,13 +100,12 @@ func jump():
 	$AudioStreamPlayer.jump()
 	
 func dash(moving_right):
-	if moving_right:
-		$Dust.set_scale(Vector2(-1, 1))
-	else:
-		$Dust.set_scale(Vector2(1, 1))
 	$AudioStreamPlayer.dash()
-	$Dust.emitting = true
-	$Dust.restart()
+	var dust = Dust.instance()
+	dust.set_global_position(position)
+	if moving_right:
+		dust.flip_right()
+	get_parent().add_child(dust)
 	
 	
 func try_buffer(event):
