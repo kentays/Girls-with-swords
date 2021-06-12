@@ -10,6 +10,9 @@ func handle_input(event):
 	
 	elif event.is_action_pressed(input_dict["punch"]):
 		emit_signal("finished", "crouch_jab")
+		
+	elif event.is_action_pressed(input_dict["slash"]):
+		emit_signal("finished", "sweep")
 
 func receive_hit():
 	if Input.is_action_pressed(input_dict["move_left"]) and owner.facing_right:

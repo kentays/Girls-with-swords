@@ -1,4 +1,4 @@
-[gd_scene load_steps=138 format=2]
+[gd_scene load_steps=139 format=2]
 
 [ext_resource path="res://Sprites/Spritesheet/OL Neutral.png" type="Texture" id=1]
 [ext_resource path="res://Player.gd" type="Script" id=2]
@@ -40,6 +40,7 @@
 [ext_resource path="res://AudioStreamPlayer.gd" type="Script" id=38]
 [ext_resource path="res://Dust.tscn" type="PackedScene" id=39]
 [ext_resource path="res://State/attack/Slash.gd" type="Script" id=40]
+[ext_resource path="res://State/attack/Sweep.gd" type="Script" id=41]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -538,7 +539,8 @@ script = ExtResource( 27 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 3, 3 )
 frames = SubResource( 96 )
-animation = "Hadouken"
+animation = "Sweep"
+frame = 3
 playing = true
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -596,6 +598,9 @@ script = ExtResource( 12 )
 
 [node name="Slash" type="Node" parent="States"]
 script = ExtResource( 40 )
+
+[node name="Sweep" type="Node" parent="States"]
+script = ExtResource( 41 )
 
 [connection signal="timeout" from="BufTimer" to="." method="_on_BufTimer_timeout"]
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
