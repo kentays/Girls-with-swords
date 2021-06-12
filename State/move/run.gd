@@ -28,6 +28,9 @@ func handle_input(event):
 	elif event.is_action_pressed(input_dict["punch"]):
 		emit_signal("finished", "jab")
 		
+	elif event.is_action_pressed(input_dict["slash"]):
+		emit_signal("finished", "slash")
+		
 func update(_delta):
 	var mod = -1
 	if moving_right:

@@ -23,6 +23,9 @@ func handle_input(event):
 	elif event.is_action_pressed(input_dict["punch"]):
 		emit_signal("finished", "jab")
 		
+	elif event.is_action_pressed(input_dict["slash"]):
+		emit_signal("finished", "slash")	
+		
 	elif event.is_action_pressed(input_dict["crouch"]):
 		emit_signal("finished", "crouch")
 		

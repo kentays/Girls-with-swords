@@ -7,7 +7,7 @@ func _init():
 		"move_left" : "p2_move_left",
 		"crouch" : "p2_crouch",
 		"punch" : "p2_punch",
-		"dash" : "p2_dash"
+		"slash" : "p2_slash"
 	}
 
 

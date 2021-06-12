@@ -30,7 +30,8 @@ onready var states_map = {
 	"knockdown": $States/Knockdown,
 	"crouch_block": $States/CrouchBlock,
 	"walk": $States/Walk,
-	"backdash": $States/Backdash
+	"backdash": $States/Backdash,
+	"slash": $States/Slash
 }
 
 onready var sprite = $AnimatedSprite

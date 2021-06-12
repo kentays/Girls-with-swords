@@ -474,7 +474,7 @@ animations = [ {
 "frames": [ SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 51 ) ],
 "loop": true,
 "name": "Slash",
-"speed": 12.0
+"speed": 18.0
 }, {
 "frames": [ SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ), SubResource( 56 ), SubResource( 56 ) ],
 "loop": true,
@@ -552,7 +552,6 @@ script = ExtResource( 27 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 96 )
 animation = "Hadouken"
-frame = 2
 playing = true
 
 [node name="Area2D" type="Area2D" parent="."]
