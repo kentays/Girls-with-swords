@@ -35,7 +35,8 @@ onready var states_map = {
 	"walk": $States/Walk,
 	"backdash": $States/Backdash,
 	"slash": $States/Slash,
-	"sweep": $States/Sweep
+	"sweep": $States/Sweep,
+	"hadouken": $States/Hadouken
 }
 
 onready var sprite = $AnimatedSprite
@@ -125,9 +126,7 @@ func buffer(key):
 	input_buf.push_front(key)
 	while len(input_buf) > 4:
 		input_buf.pop_back()
-	print(input_buf)
 	$BufTimer.start()
 
 func _on_BufTimer_timeout():
-	print("BufTimer timeout")
 	input_buf = []
