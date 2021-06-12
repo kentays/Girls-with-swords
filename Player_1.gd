@@ -22,5 +22,9 @@ func _on_Area2D_body_exited(body):
 
 func hit_connect():
 	get_parent().hit_p2()
+	
+func sub_hadouken():
+	var mask = 24
+	hadouken(24)
 
 

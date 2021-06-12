@@ -7,6 +7,7 @@ export var jumpForce : int = 400
 var gravity : int = 800
 
 export (PackedScene) var Dust
+export (PackedScene) var Hadouken
 
 var input_dict : Dictionary
 
@@ -107,6 +108,12 @@ func dash(moving_right):
 	if moving_right:
 		dust.flip_right()
 	get_parent().add_child(dust)
+	
+func hadouken(mask: int):
+	var h = Hadouken.instance()
+	get_parent().add_child(h)
+	h.init(facing_right)
+	h.set_global_position(position)
 	
 	
 func try_buffer(event):
