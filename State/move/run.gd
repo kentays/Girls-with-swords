@@ -31,7 +31,7 @@ func handle_input(event):
 	elif event.is_action_pressed(input_dict["slash"]):
 		if len(owner.input_buf) > 2:
 			var dir: String = "move_right"
-			if not moving_right: dir = "move_left"
+			if not owner.facing_right: dir = "move_left"
 			if (owner.input_buf[1] == dir) and (owner.input_buf[2] == "crouch"):
 				emit_signal("finished", "hadouken")
 				return

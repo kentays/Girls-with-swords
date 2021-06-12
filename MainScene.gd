@@ -17,6 +17,6 @@ func _process(_delta):
 		p1.turn_right()
 		p2.turn_left()
 		
-func hit_p2():
-	print("Player 2 hit")
-	get_node("P2").current_state.receive_hit()
+func hit_player(name):
+	print(name + " hit")
+	get_node(name).current_state.receive_hit()

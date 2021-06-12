@@ -21,7 +21,7 @@ func _on_Area2D_body_exited(body):
 		inside_hurtbox = false
 
 func hit_connect():
-	get_parent().hit_p2()
+	get_parent().hit_player("P2")
 	
 func sub_hadouken():
 	var mask = 24

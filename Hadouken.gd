@@ -15,8 +15,11 @@ func init(right: bool):
 func _physics_process(delta):
 	var collision = move_and_collide(delta * velocity)
 	if collision != null:
-		print(collision.collider.name)
-		queue_free()
+		if collision.collider.get_class() == "KinematicBody2D":
+			get_parent().hit_player(collision.collider.name)
+			queue_free()
+		else:
+			queue_free()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
