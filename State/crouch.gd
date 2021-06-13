@@ -13,8 +13,15 @@ func handle_input(event):
 		
 	elif event.is_action_pressed(input_dict["kick"]):
 		emit_signal("finished", "sweep")
-		
+	
 	elif event.is_action_pressed(input_dict["slash"]):
+		if len(owner.input_buf) > 3:
+			var dir: String = "move_right"
+			if not owner.facing_right: dir = "move_left"
+			if (owner.input_buf[1] == dir) and (owner.input_buf[2] == "crouch") and (owner.input_buf[3] == dir):
+				emit_signal("finished", "DP")
+				return
+		
 		emit_signal("finished", "crouch_slash")
 
 func receive_hit():

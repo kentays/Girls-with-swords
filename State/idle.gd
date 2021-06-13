@@ -30,9 +30,6 @@ func handle_input(event):
 	elif event.is_action_pressed(input_dict["crouch"]):
 		emit_signal("finished", "crouch")
 		
-	elif event.is_action_pressed(input_dict["kick"]):
-		emit_signal("finished", "DP")
-		
 	elif event.is_action_pressed(input_dict["move_right"]):
 		emit_signal("finished", "walk")
 	
