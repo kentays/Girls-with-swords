@@ -1,10 +1,7 @@
 extends "../state.gd"
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
+# needs better timing
 
 # Called when the node enters the scene tree for the first time.
 func enter():
