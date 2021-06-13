@@ -60,6 +60,8 @@ func _input(event):
 	current_state.handle_input(event)
 
 func _physics_process(delta):
+	vel.y += gravity * delta
+	move_and_slide(vel, Vector2.UP)
 	current_state.update(delta)
 
 func _on_AnimatedSprite_animation_finished():

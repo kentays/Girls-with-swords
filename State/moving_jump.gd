@@ -2,8 +2,6 @@ extends "state.gd"
 
 export var jumpForce : int = 400
 export var MOVE_SPEED : int = 200
-var gravity : int = 800
-var vel : Vector2 = Vector2()
 var facing_right : bool = true
 
 func enter():
@@ -14,14 +12,15 @@ func enter():
 	else:
 		facing_right = false
 		
-	vel.y = -1 * jumpForce
+	owner.vel.y = -1 * jumpForce
+	
+func exit():
+	owner.vel.x = 0
 	
 func update(delta):
-	vel.y += gravity * delta
 	var mod = -1
 	if facing_right:
 		mod = 1
-	vel.x = mod * MOVE_SPEED
-	owner.move_and_slide(vel, Vector2.UP)
+	owner.vel.x = mod * MOVE_SPEED
 	if owner.is_on_floor():
 		emit_signal("finished", "idle")

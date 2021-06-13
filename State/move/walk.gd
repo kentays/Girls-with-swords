@@ -17,5 +17,3 @@ func enter():
 			emit_signal("finished", "run")
 		else:
 			emit_signal("finished", "backdash")
-
-	

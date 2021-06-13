@@ -1,7 +1,6 @@
 extends "../state.gd"
 
 export var MOVE_SPEED : int = 200
-var vel : Vector2 = Vector2()
 var moving_right : bool = true
 
 func enter():
@@ -11,6 +10,9 @@ func enter():
 	else:
 		moving_right = false
 	owner.dash(moving_right)
+
+func exit():
+	owner.vel.x = 0
 	
 func handle_input(event):
 	if event.is_action_pressed(input_dict["jump"]):
@@ -42,8 +44,7 @@ func update(_delta):
 	var mod = -1
 	if moving_right:
 		mod = 1
-	vel.x = mod * MOVE_SPEED
-	owner.move_and_collide(vel * _delta)
+	owner.vel.x = mod * MOVE_SPEED
 	
 func receive_hit():
 	if moving_right and not owner.facing_right:

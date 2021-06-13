@@ -41,3 +41,6 @@ func jump():
 func dash():
 	self.set_stream(dash_sfx)
 	self.play()
+	
+func hadouken():
+	pass
