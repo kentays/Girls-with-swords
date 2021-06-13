@@ -9,6 +9,10 @@ func enter():
 	owner.jump()
 	owner.vel.y = -1 * jumpForce
 	
+func handle_input(event):
+	if event.is_action_pressed(input_dict["punch"]):
+		emit_signal("finished", "jumping_punch")
+	
 func update(delta):
 	if owner.is_on_floor():
 		emit_signal("finished", "idle")

@@ -1,0 +1,543 @@
+[33mcommit bde0d733f8b3a4f2cd954a3eff5969cd014e9829[m[33m ([m[1;36mHEAD -> [m[1;32mroot-movement[m[33m)[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Sun Jun 13 10:29:07 2021 -0400
+
+    Redid movement system
+
+[33mcommit becae96a8633bea2ac3e1830b5a35fb2bb6c78e5[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Sat Jun 12 19:43:31 2021 -0400
+
+    Hadouken collides with player
+
+[33mcommit 69b68a647809bb4d967f4a5d36e1616c728c00b6[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Sat Jun 12 19:31:20 2021 -0400
+
+    Hadouken State
+
+[33mcommit 4be7f77109d9c3b9c0dba5db138605bd453aed06[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Sat Jun 12 11:09:54 2021 -0400
+
+    Basic hadouken
+
+[33mcommit de981547fa71bb738710ccaec0570548b2686816[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Fri Jun 11 22:18:21 2021 -0400
+
+    Basic sweep
+
+[33mcommit 764b3699da126fd5e5475c3d700535d4971ed4bc[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Fri Jun 11 22:05:51 2021 -0400
+
+    Dust properly flips
+
+[33mcommit aebb992b300541abaa2b2b37e55b3e465156e9b6[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Fri Jun 11 21:41:15 2021 -0400
+
+    Basic slash
+
+[33mcommit 9caa9fb8d26ba41a581073212b8495fbe067daf4[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Fri Jun 11 19:52:59 2021 -0400
+
+    Reorganized state scripts
+
+[33mcommit e32c8803292dc5f0300dac107bd2b7f137e493b7[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Fri Jun 11 13:09:53 2021 -0400
+
+    More Bad Dust
+
+[33mcommit 3c5d5511d165fc5e41ed08c11d3be7a1d3899009[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Fri Jun 11 12:26:11 2021 -0400
+
+    Bad Dust GFX
+
+[33mcommit 1fd006d484cbf461b12fff09c43822dc9a971891[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Fri Jun 11 12:02:25 2021 -0400
+
+    Player scene inheritance
+
+[33mcommit 854492bc0db91b26c39f289413fb7e919ea98453[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Fri Jun 11 11:13:02 2021 -0400
+
+    dash sfx
+
+[33mcommit 7428c0f5c597513f1d2a945c22e656b5cb4e730b[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Fri Jun 11 10:59:51 2021 -0400
+
+    Players get personal audiostreams
+
+[33mcommit f07ab55930bfc2eefe01aee6e95eef9a614eb3eb[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Fri Jun 11 10:56:16 2021 -0400
+
+    Jump SFX
+
+[33mcommit 6733b62fdc23a4a0b59706499ecbedab8242c756[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Fri Jun 11 10:29:10 2021 -0400
+
+    Whiff SFX
+
+[33mcommit 1e322dbb938425cc3437bfcb0e9f9ce1bcb66886[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Thu Jun 10 23:22:31 2021 -0400
+
+    Fixed P2
+
+[33mcommit 884f3707534c85647c1cad98096c898ccec45fb6[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Thu Jun 10 23:21:08 2021 -0400
+
+    Basic input buffer and double press dash
+
+[33mcommit ddd4de6c3cec33dc85967ac61e434562aa87a4ad[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Thu Jun 10 21:59:43 2021 -0400
+
+    Better Sounds
+
+[33mcommit 7ec040b351301b00d29b1f820290f3662ea5d26e[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Thu Jun 10 19:10:11 2021 -0400
+
+    Crouchblock noise
+
+[33mcommit ccab471786149fbd1ed8853347e79801143799ff[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Thu Jun 10 19:10:01 2021 -0400
+
+    Improved knockdown sfx
+
+[33mcommit b44b45af50be88cbe4395a82c93b74418dba6107[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Thu Jun 10 12:36:25 2021 -0400
+
+    New Animations
+
+[33mcommit 15e0d1cad566836d26921dff7406d421cb7b7e2e[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Thu Jun 10 12:21:50 2021 -0400
+
+    Knockdown sfx
+
+[33mcommit 5a182ef7980da44fde156eb39a027128333731e5[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Thu Jun 10 12:09:52 2021 -0400
+
+    hit sfx only on hitstun
+
+[33mcommit aa393580f51a563c517c192a04549bab872dd6ad[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Thu Jun 10 11:57:17 2021 -0400
+
+    Wakeup from knockdown
+
+[33mcommit d63e6fab34568b9a32604d0cb98961e977bc978d[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Thu Jun 10 11:44:52 2021 -0400
+
+    Block sfx configured
+
+[33mcommit 298367825aabeb7447b1598a2a2b7202d8755a5e[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Thu Jun 10 11:34:40 2021 -0400
+
+    AudioStream holds own script
+
+[33mcommit fd0c6da71f16a9c0905add45846555605b707c33[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Thu Jun 10 11:34:22 2021 -0400
+
+    Block SFX
+
+[33mcommit d99bbd989e2aae426aa65ff55ffd61c85096d0d2[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Tue Jun 8 22:18:14 2021 -0400
+
+    Hit SFX
+
+[33mcommit 09c2289d08b618ef3a688630c25c7f21afeb00a2[m
+Merge: 4d93821 2d75cbf
+Author: Kieran McAuliffe <69212477+trian-gles@users.noreply.github.com>
+Date:   Sun Jun 6 13:09:12 2021 -0400
+
+    Merge pull request #9 from kentays/master
+    
+    New Sprites
+
+[33mcommit 2d75cbf84890c521f91a9237c452b24fac77ac74[m
+Author: kentays <kentay.s@gmail.com>
+Date:   Sun Jun 6 05:04:27 2021 -0700
+
+    New Sprites
+    
+    Moves: Crouch Slash, Anti-air (2H), Hadouken (Projectile)
+    FX: Dust, Impact (two Variations), blue Projectile
+
+[33mcommit 4d938212648c827c498775f4e447b979b006fc95[m
+Merge: 7299cc2 d246b29
+Author: Kieran McAuliffe <69212477+trian-gles@users.noreply.github.com>
+Date:   Fri Jun 4 21:18:30 2021 -0400
+
+    Merge pull request #8 from kentays/master
+    
+    New Sprites
+
+[33mcommit d246b290bb62e5fff449e77d7108f4fcabd62c89[m
+Author: kentays <kentay.s@gmail.com>
+Date:   Fri Jun 4 03:42:00 2021 -0700
+
+    New Sprites
+    
+    DP, Falling State, Jumping Punch, Slash, Sweep, Wakeup
+
+[33mcommit 7299cc26759431c5e6dfe7fd64d7973930816806[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Sun May 30 17:52:42 2021 -0400
+
+    Walls
+
+[33mcommit 7e9fe5607a55c63813e99bf0e86e1fcc02e8a89a[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Sun May 30 17:33:54 2021 -0400
+
+    Moved Bkg to its own scene
+
+[33mcommit 701193af0d78d11ea0d8b0c600d476ed7c1597d2[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Sun May 30 15:40:49 2021 -0400
+
+    Hitbox and hurtbox change size
+
+[33mcommit be59ea09d199f60aee70a6a11605e976901b36f1[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Sun May 30 14:49:10 2021 -0400
+
+    Backdash
+
+[33mcommit 9e84fb4ec8433be7bb76f9ab3486afbf64e5d948[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Sun May 30 11:11:30 2021 -0400
+
+    Walk/Command Dash
+
+[33mcommit a6da0ca2654ed7a650fcfa61527e0a7873d9bcce[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Sat May 29 17:27:16 2021 -0400
+
+    Pushback on hit/block
+
+[33mcommit e99c3dcf09c770143d5ac2e86fd037081de23f12[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Sat May 29 16:48:58 2021 -0400
+
+    knockdown animation
+
+[33mcommit 96ccc0de9885b2f82c5b37bd42415c2f80b17725[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Sat May 29 16:26:22 2021 -0400
+
+    Hitbox direction change
+
+[33mcommit d174f203dbaa19ceb1b2bb168d29f39348fdd7a5[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Sat May 29 16:20:57 2021 -0400
+
+    CrouchBlock
+
+[33mcommit eede3906500c795c40d831ea4e3c37122e3ee88b[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Sat May 29 16:06:57 2021 -0400
+
+    Knockdown
+
+[33mcommit 806b69391c7c3f77bbeb0b96ab4cd4ea645f6b04[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Sat May 29 15:53:05 2021 -0400
+
+    Blockstring
+
+[33mcommit 1349115bff900926909fa30910b04bc95bb9728f[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Sat May 29 15:51:11 2021 -0400
+
+    Blocking and combo
+
+[33mcommit b78685c27e8ae4e97b1a93d1c7f4f0ebba4713c4[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Sat May 29 15:18:24 2021 -0400
+
+    Fixed warnings
+
+[33mcommit 66af7d6c36d061207c829ff73ef495f929cfe49f[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Sat May 29 14:22:38 2021 -0400
+
+    Faster Jab
+
+[33mcommit 9c22ac5c506a8459320a15dfc529b4e8f3446099[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Sat May 29 14:21:23 2021 -0400
+
+    Better CrouchJab
+
+[33mcommit 8d50d09b738b42716ac23bc270b93ad4a4c82311[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Sat May 29 14:18:28 2021 -0400
+
+    CrouchJab
+
+[33mcommit d88e213fc7956e5009b98286b926e7387bac80fc[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Sat May 29 13:57:12 2021 -0400
+
+    direction jump responds better
+
+[33mcommit de99cdf7d01b094aeb026219bae49ad3c2b4b0c1[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Sat May 29 13:53:12 2021 -0400
+
+    Hitstun, startup frames, jump cancelling
+
+[33mcommit fad5200804314145509e9570d2efb80635f669cf[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Sat May 29 13:11:35 2021 -0400
+
+    Jump cancel
+
+[33mcommit eef28070773ba03e8255f1945785f94d3e24253c[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Sat May 29 11:32:33 2021 -0400
+
+    Fixed input holding
+
+[33mcommit 9da51659a933420bbae73f6bf32f9cddc9c07647[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Sat May 29 01:32:12 2021 -0400
+
+    Kermits
+
+[33mcommit 7451fdb6e2ccab2859fdf325f87d1789a8fbf900[m
+Merge: 415744d 4183294
+Author: Kieran McAuliffe <69212477+trian-gles@users.noreply.github.com>
+Date:   Fri May 28 23:08:44 2021 -0400
+
+    Merge pull request #7 from kentays/master
+    
+    sky and buildings
+
+[33mcommit 415744d048f41b78e2cc6f642be742825ba4961c[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Fri May 28 23:07:24 2021 -0400
+
+    CLERDS
+
+[33mcommit 4183294e1e615f83637be740ec208355a494a110[m
+Merge: de1e891 2d8833f
+Author: kentays <kentay.s@gmail.com>
+Date:   Fri May 28 19:50:23 2021 -0700
+
+    Merge branch 'master' of https://github.com/kentays/Girls-with-swords
+
+[33mcommit de1e8912b7fc7944b205216d6b87e6ab55a3382e[m
+Author: kentays <kentay.s@gmail.com>
+Date:   Fri May 28 19:50:11 2021 -0700
+
+    Create Office Interior.png
+
+[33mcommit 2d8833f308744200cb3e544523b6343d73ae6fde[m
+Merge: f140dba 7d4ee35
+Author: kentays <kentay.s@gmail.com>
+Date:   Fri May 28 19:49:10 2021 -0700
+
+    Merge branch 'trian-gles:master' into master
+
+[33mcommit f140dba387e8f5f4e583cf5dbeef3b0c2f1bd09f[m
+Author: kentays <kentay.s@gmail.com>
+Date:   Fri May 28 19:48:45 2021 -0700
+
+    Buildings and Sky
+
+[33mcommit 7d4ee35210c9c4bbd13e9ebcab1d468a08794150[m
+Merge: 354a60e 1207bc7
+Author: Kieran McAuliffe <69212477+trian-gles@users.noreply.github.com>
+Date:   Fri May 28 22:44:15 2021 -0400
+
+    Merge pull request #6 from kentays/master
+    
+    clouds
+
+[33mcommit 1207bc7010c158daa4e014abfb2b7d21a2b3a6cd[m
+Merge: cc121a3 354a60e
+Author: kentays <kentay.s@gmail.com>
+Date:   Fri May 28 19:43:38 2021 -0700
+
+    Merge branch 'trian-gles:master' into master
+
+[33mcommit cc121a37613654e9e20ad8c8f19937906655e4a1[m
+Merge: 1085ef0 54dc20b
+Author: kentays <kentay.s@gmail.com>
+Date:   Fri May 28 19:42:00 2021 -0700
+
+    Merge branch 'master' of https://github.com/kentays/Girls-with-swords
+
+[33mcommit 1085ef0a15b6172fe3e07a520ffac3a374c49100[m
+Author: kentays <kentay.s@gmail.com>
+Date:   Fri May 28 19:41:58 2021 -0700
+
+    Clouds
+
+[33mcommit 354a60e86b0f448fee5155fcbf416dfa239d32da[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Tue May 25 23:50:16 2021 -0400
+
+    Bkg and camera
+
+[33mcommit 58f71eee92215ce52818b9d3df6733a6089cfd0c[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Tue May 25 22:48:56 2021 -0400
+
+    Moving jump
+
+[33mcommit e2375184426561535f06a16ac53a1f013be4584a[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Thu May 20 20:56:26 2021 -0400
+
+    Hurtbox-Hitbox connection
+
+[33mcommit 48c29507b086c488820bc43dc6969abb8e281770[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Thu May 20 20:11:53 2021 -0400
+
+    parent class Player
+
+[33mcommit 7249b52679129f27865c47c665e862ced08745e6[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Thu May 20 19:44:44 2021 -0400
+
+    2 Player
+
+[33mcommit 5ceb8587c73548955bbb52521c9fecc3339f7f15[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Wed May 19 00:40:07 2021 -0400
+
+    spritestuffs
+
+[33mcommit f351c71456253775334c62efd1a682a23cda1de0[m
+Merge: b034efc 54dc20b
+Author: Kieran McAuliffe <69212477+trian-gles@users.noreply.github.com>
+Date:   Tue May 18 11:04:43 2021 -0400
+
+    Merge pull request #5 from kentays/master
+    
+    New Sprites
+
+[33mcommit 54dc20b83d2db8d48fcc0f09905044c12f46bcd9[m
+Merge: ba0e7ca b034efc
+Author: kentays <kentay.s@gmail.com>
+Date:   Mon May 17 23:15:15 2021 -0700
+
+    Merge branch 'trian-gles:master' into master
+
+[33mcommit ba0e7caf1e5802b99fe0ed3b15a3e297e4d6ba65[m
+Author: kentays <kentay.s@gmail.com>
+Date:   Mon May 17 23:13:55 2021 -0700
+
+    New Sprites
+    
+    Crouch, Crouch Jab, Backdash, Crouch Block, Walk, Block, Knockdown
+
+[33mcommit b034efcfdf32eae3c28882432ac998274eb06284[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Sun May 16 17:12:45 2021 -0400
+
+    finished running
+
+[33mcommit 42611fc9f72c3105a79ad9e9d7fd992289a0ef75[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Sun May 16 15:23:20 2021 -0400
+
+    cleaned up sprites
+
+[33mcommit 22932c5b6c16541b401790a3891a2c5a227ade89[m
+Merge: a8f991f 17a511f
+Author: Kieran McAuliffe <69212477+trian-gles@users.noreply.github.com>
+Date:   Sun May 16 14:42:47 2021 -0400
+
+    Merge pull request #4 from trian-gles/action-states
+    
+    Action states
+
+[33mcommit 17a511fda71dce119cda924562b8038598d353db[m[33m ([m[1;31morigin/action-states[m[33m)[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Sun May 16 14:30:39 2021 -0400
+
+    configured jump physics
+
+[33mcommit a8f991f475f412a7d48cd8906d597002e0433ea8[m
+Merge: 2293aac 3b4d617
+Author: Kieran McAuliffe <69212477+trian-gles@users.noreply.github.com>
+Date:   Sun May 16 13:13:12 2021 -0400
+
+    Merge pull request #3 from kentays/master
+    
+    Folder fix and Hitstun
+
+[33mcommit 3b4d6170fcff6c7e6ab8ce3c9d606a6310116d38[m
+Merge: 66c96ec 2293aac
+Author: kentays <kentay.s@gmail.com>
+Date:   Sun May 16 00:40:07 2021 -0700
+
+    Merge branch 'trian-gles:master' into master
+
+[33mcommit 66c96ec036b452b3dc8bc190b270131a594c9d03[m
+Author: kentays <kentay.s@gmail.com>
+Date:   Sun May 16 00:38:03 2021 -0700
+
+    Folder Fix and Hitstun
+
+[33mcommit 00ef0b548c5dae2e9710d4ba5380b7701601d6ce[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Sat May 15 15:29:49 2021 -0400
+
+    basic states
+
+[33mcommit 2293aacea60bdd5c06821aeec46676f2872ee820[m
+Merge: ae1dcfe 674fef4
+Author: Kieran McAuliffe <69212477+trian-gles@users.noreply.github.com>
+Date:   Sat May 15 12:06:13 2021 -0400
+
+    Merge pull request #2 from kentays/master
+    
+    New Aligned Sprites
+
+[33mcommit ae1dcfe843b69620fdefb9ab4d21f12d5b78a0ca[m
+Author: trian-gles <69212477+trian-gles@users.noreply.github.com>
+Date:   Sat May 15 11:56:05 2021 -0400
+
+    Hitbox
+
+[33mcommit 674fef4ab56ea59626667e74e3dd6860ac3be0ea[m
+Author: kentays <kentay.s@gmail.com>
+Date:   Sat May 15 04:53:49 2021 -0700
+
+    Aligned New Sprites
+    
+    +Jump and Crouch
+
+[33mcommit 437c73bc6a54cc7ae0a69c61015f8dbc75f96e93[m
+Merge: e05256e a502992
+Author: kentays <kentay.s@gmail.com>
+Date:   Sat May 15 04:46:43 2021 -0700
+
+    Merge branch 'trian-gles:master' into master

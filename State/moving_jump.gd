@@ -1,6 +1,5 @@
-extends "state.gd"
+extends "jump.gd"
 
-export var jumpForce : int = 400
 export var MOVE_SPEED : int = 200
 var facing_right : bool = true
 
@@ -13,9 +12,6 @@ func enter():
 		facing_right = false
 		
 	owner.vel.y = -1 * jumpForce
-	
-func exit():
-	owner.vel.x = 0
 	
 func update(delta):
 	var mod = -1

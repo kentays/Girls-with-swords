@@ -36,7 +36,8 @@ onready var states_map = {
 	"backdash": $States/Backdash,
 	"slash": $States/Slash,
 	"sweep": $States/Sweep,
-	"hadouken": $States/Hadouken
+	"hadouken": $States/Hadouken,
+	"jumping_punch": $States/JumpPunch
 }
 
 onready var sprite = $AnimatedSprite
