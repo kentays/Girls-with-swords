@@ -1,4 +1,4 @@
-[gd_scene load_steps=143 format=2]
+[gd_scene load_steps=144 format=2]
 
 [ext_resource path="res://Sprites/Spritesheet/OL Neutral.png" type="Texture" id=1]
 [ext_resource path="res://Player.gd" type="Script" id=2]
@@ -45,6 +45,7 @@
 [ext_resource path="res://State/attack/Hadouken.gd" type="Script" id=43]
 [ext_resource path="res://State/attack/JumpPunch.gd" type="Script" id=44]
 [ext_resource path="res://State/air/Fall.gd" type="Script" id=45]
+[ext_resource path="res://State/attack/CrouchSlash.gd" type="Script" id=46]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -613,6 +614,9 @@ script = ExtResource( 44 )
 
 [node name="Fall" type="Node" parent="States"]
 script = ExtResource( 45 )
+
+[node name="CrouchSlash" type="Node" parent="States"]
+script = ExtResource( 46 )
 
 [connection signal="timeout" from="BufTimer" to="." method="_on_BufTimer_timeout"]
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]

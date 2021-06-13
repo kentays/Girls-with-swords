@@ -7,7 +7,8 @@ func _init():
 		"move_left" : "p1_move_left",
 		"crouch" : "p1_crouch",
 		"punch" : "p1_punch",
-		"slash" : "p1_slash"
+		"slash" : "p1_slash",
+		"kick" : "p1_kick"
 	}
 
 
