@@ -9,6 +9,10 @@ func handle_input(event):
 		emit_signal("finished", "idle")
 	
 	elif event.is_action_pressed(input_dict["punch"]):
+		if len(owner.input_buf) > 2:
+			if (owner.input_buf[1] == "crouch") and (owner.input_buf[2] == "crouch"):
+				emit_signal("finished", "anti_air")
+				return
 		emit_signal("finished", "crouch_jab")
 		
 	elif event.is_action_pressed(input_dict["kick"]):

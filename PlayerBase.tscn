@@ -1,4 +1,4 @@
-[gd_scene load_steps=152 format=2]
+[gd_scene load_steps=153 format=2]
 
 [ext_resource path="res://Sprites/Spritesheet/OL Neutral.png" type="Texture" id=1]
 [ext_resource path="res://Player.gd" type="Script" id=2]
@@ -48,6 +48,7 @@
 [ext_resource path="res://State/attack/CrouchSlash.gd" type="Script" id=46]
 [ext_resource path="res://Sprites/Spritesheet/OL DP.png" type="Texture" id=47]
 [ext_resource path="res://State/attack/DP.gd" type="Script" id=48]
+[ext_resource path="res://State/attack/AntiAir.gd" type="Script" id=49]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -536,7 +537,7 @@ animations = [ {
 "frames": [ SubResource( 64 ), SubResource( 65 ), SubResource( 66 ), SubResource( 67 ), SubResource( 68 ) ],
 "loop": true,
 "name": "2H",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [ SubResource( 69 ), SubResource( 70 ), SubResource( 71 ), SubResource( 72 ), SubResource( 73 ), SubResource( 74 ), SubResource( 75 ), SubResource( 76 ) ],
 "loop": true,
@@ -651,6 +652,9 @@ script = ExtResource( 46 )
 
 [node name="DP" type="Node" parent="States"]
 script = ExtResource( 48 )
+
+[node name="AntiAir" type="Node" parent="States"]
+script = ExtResource( 49 )
 
 [connection signal="timeout" from="BufTimer" to="." method="_on_BufTimer_timeout"]
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
