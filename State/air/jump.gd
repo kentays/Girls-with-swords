@@ -1,4 +1,4 @@
-extends "state.gd"
+extends "../state.gd"
 
 export var jumpForce : int = 400
 
@@ -16,3 +16,6 @@ func handle_input(event):
 func update(delta):
 	if owner.is_on_floor():
 		emit_signal("finished", "idle")
+		
+func _on_animation_finished():
+	emit_signal("finished", "fall")

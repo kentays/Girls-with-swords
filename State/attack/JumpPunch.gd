@@ -9,3 +9,6 @@ func update(delta):
 	if owner.is_on_floor():
 		emit_signal("finished", "idle")
 	.update(delta)
+	
+func _on_animation_finished():
+	emit_signal("finished", "fall")
