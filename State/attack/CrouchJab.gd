@@ -1,10 +1,5 @@
-extends "../state.gd"
-
-var hit_connect : bool = false
-
-func enter():
-	owner.whiff()
-	owner.get_node("AnimatedSprite").play("CrouchJab")
+extends "BaseAttack.gd"
+			
 			
 func handle_input(event):
 	if hit_connect and event.is_action_pressed(input_dict["jump"]):

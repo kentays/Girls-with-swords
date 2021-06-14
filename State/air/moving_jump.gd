@@ -3,8 +3,6 @@ extends "jump.gd"
 export var launchForce : Vector2 = Vector2(200, 400)
 var facing_right : bool = true
 
-# this glitches when it collides with P2
-
 func enter():
 	owner.get_node("AnimatedSprite").play("Jump")
 	owner.jump()
