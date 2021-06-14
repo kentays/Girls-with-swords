@@ -1,6 +1,6 @@
 extends "jump.gd"
 
-export var MOVE_SPEED : int = 200
+export var launchForce : Vector2 = Vector2(200, 400)
 var facing_right : bool = true
 
 # this glitches when it collides with P2
@@ -13,12 +13,11 @@ func enter():
 	else:
 		facing_right = false
 		
-	owner.vel.y = -1 * jumpForce
+	owner.vel.y = -1 * launchForce.y
 	
 func update(delta):
 	var mod = -1
 	if facing_right:
 		mod = 1
-	owner.vel.x = mod * MOVE_SPEED
-	if owner.is_on_floor():
-		emit_signal("finished", "idle")
+	owner.vel.x = mod * launchForce.x
+	.update(delta)
