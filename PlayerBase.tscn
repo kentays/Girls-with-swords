@@ -789,13 +789,15 @@ anims/Walk = SubResource( 108 )
 [node name="Idle" type="Node" parent="States"]
 script = ExtResource( 6 )
 
-[node name="Block" type="Node" parent="States"]
-script = ExtResource( 21 )
+[node name="Crouch" type="Node" parent="States"]
+script = ExtResource( 11 )
 
-[node name="Jump" type="Node" parent="States"]
-script = ExtResource( 17 )
+[node name="Knockdown" type="Node" parent="States"]
+script = ExtResource( 7 )
 
-[node name="Jab" type="Node" parent="States"]
+[node name="Attack" type="Node" parent="States"]
+
+[node name="Jab" type="Node" parent="States/Attack"]
 script = ExtResource( 20 )
 begin_frame = 4
 end_frame = 8
@@ -803,56 +805,62 @@ dmg = 8
 stun = 30
 push = Vector2( 600, 0 )
 
-[node name="Crouch" type="Node" parent="States"]
-script = ExtResource( 11 )
-
-[node name="CrouchJab" type="Node" parent="States"]
+[node name="CrouchJab" type="Node" parent="States/Attack"]
 script = ExtResource( 18 )
 
-[node name="Run" type="Node" parent="States"]
-script = ExtResource( 26 )
-
-[node name="MovingJump" type="Node" parent="States"]
-script = ExtResource( 5 )
-
-[node name="HitStun" type="Node" parent="States"]
-script = ExtResource( 22 )
-
-[node name="Knockdown" type="Node" parent="States"]
-script = ExtResource( 7 )
-
-[node name="CrouchBlock" type="Node" parent="States"]
-script = ExtResource( 24 )
-
-[node name="Walk" type="Node" parent="States"]
-script = ExtResource( 25 )
-
-[node name="Backdash" type="Node" parent="States"]
-script = ExtResource( 12 )
-
-[node name="Slash" type="Node" parent="States"]
+[node name="Slash" type="Node" parent="States/Attack"]
 script = ExtResource( 40 )
 
-[node name="Sweep" type="Node" parent="States"]
+[node name="Sweep" type="Node" parent="States/Attack"]
 script = ExtResource( 41 )
 
-[node name="Hadouken" type="Node" parent="States"]
+[node name="Hadouken" type="Node" parent="States/Attack"]
 script = ExtResource( 43 )
 
-[node name="JumpPunch" type="Node" parent="States"]
+[node name="JumpPunch" type="Node" parent="States/Attack"]
 script = ExtResource( 44 )
 
-[node name="Fall" type="Node" parent="States"]
-script = ExtResource( 45 )
-
-[node name="CrouchSlash" type="Node" parent="States"]
+[node name="CrouchSlash" type="Node" parent="States/Attack"]
 script = ExtResource( 46 )
 
-[node name="DP" type="Node" parent="States"]
+[node name="DP" type="Node" parent="States/Attack"]
 script = ExtResource( 48 )
 
-[node name="AntiAir" type="Node" parent="States"]
+[node name="AntiAir" type="Node" parent="States/Attack"]
 script = ExtResource( 49 )
+
+[node name="Air" type="Node" parent="States"]
+
+[node name="Jump" type="Node" parent="States/Air"]
+script = ExtResource( 17 )
+
+[node name="MovingJump" type="Node" parent="States/Air"]
+script = ExtResource( 5 )
+
+[node name="Fall" type="Node" parent="States/Air"]
+script = ExtResource( 45 )
+
+[node name="HitState" type="Node" parent="States"]
+
+[node name="Block" type="Node" parent="States/HitState"]
+script = ExtResource( 21 )
+
+[node name="HitStun" type="Node" parent="States/HitState"]
+script = ExtResource( 22 )
+
+[node name="CrouchBlock" type="Node" parent="States/HitState"]
+script = ExtResource( 24 )
+
+[node name="Move" type="Node" parent="States"]
+
+[node name="Run" type="Node" parent="States/Move"]
+script = ExtResource( 26 )
+
+[node name="Walk" type="Node" parent="States/Move"]
+script = ExtResource( 25 )
+
+[node name="Backdash" type="Node" parent="States/Move"]
+script = ExtResource( 12 )
 
 [connection signal="timeout" from="BufTimer" to="." method="_on_BufTimer_timeout"]
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]

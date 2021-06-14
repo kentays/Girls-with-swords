@@ -1,8 +1,4 @@
 extends "BaseAttack.gd"
-
-func enter():
-	owner.whiff()
-	change_animation()
 			
 func handle_input(event):
 	if hit_connect and event.is_action_pressed(input_dict["jump"]):

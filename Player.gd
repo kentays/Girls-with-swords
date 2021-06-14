@@ -22,26 +22,26 @@ var input_buf = []
 
 onready var states_map = {
 	"idle": $States/Idle,
-	"block": $States/Block,
-	"jump": $States/Jump,
-	"moving_jump": $States/MovingJump,
-	"jab": $States/Jab,
+	"block": $States/HitState/Block,
+	"jump": $States/Air/Jump,
+	"moving_jump": $States/Air/MovingJump,
+	"jab": $States/Attack/Jab,
 	"crouch": $States/Crouch,
-	"run": $States/Run,
-	"hitstun": $States/HitStun,
-	"crouch_jab": $States/CrouchJab,
+	"run": $States/Move/Run,
+	"hitstun": $States/HitState/HitStun,
+	"crouch_jab": $States/Attack/CrouchJab,
 	"knockdown": $States/Knockdown,
-	"crouch_block": $States/CrouchBlock,
-	"walk": $States/Walk,
-	"backdash": $States/Backdash,
-	"slash": $States/Slash,
-	"sweep": $States/Sweep,
-	"hadouken": $States/Hadouken,
-	"jumping_punch": $States/JumpPunch,
-	"fall": $States/Fall,
-	"crouch_slash": $States/CrouchSlash,
-	"DP": $States/DP,
-	"anti_air": $States/AntiAir
+	"crouch_block": $States/HitState/CrouchBlock,
+	"walk": $States/Move/Walk,
+	"backdash": $States/Move/Backdash,
+	"slash": $States/Attack/Slash,
+	"sweep": $States/Attack/Sweep,
+	"hadouken": $States/Attack/Hadouken,
+	"jumping_punch": $States/Attack/JumpPunch,
+	"fall": $States/Air/Fall,
+	"crouch_slash": $States/Attack/CrouchSlash,
+	"DP": $States/Attack/DP,
+	"anti_air": $States/Attack/AntiAir
 }
 
 onready var sprite = $AnimatedSprite
@@ -51,8 +51,13 @@ onready var hitbox = $HitBox
 func _ready():
 	current_state = $States/Idle
 	for state_node in $States.get_children():
-		state_node.connect("finished", self, "_change_state")
-		state_node.map_inputs(input_dict)
+		if state_node.get_children():
+			for sub_node in state_node.get_children():
+				sub_node.connect("finished", self, "_change_state")
+				sub_node.map_inputs(input_dict)
+		else:
+			state_node.connect("finished", self, "_change_state")
+			state_node.map_inputs(input_dict)
 	_change_state("idle")
 	
 func _change_state(state_name):

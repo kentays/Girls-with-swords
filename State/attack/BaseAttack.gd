@@ -10,7 +10,9 @@ export var stun : int = 0
 export var push : Vector2 = Vector2.ZERO
 			
 	
-	
+func enter():
+	owner.whiff()
+	change_animation()	
 		
 func update(delta):
 	var frame_count = owner.get_node("AnimatedSprite").frame
