@@ -78,20 +78,14 @@ func hit_connect():
 func turn_right():
 	facing_right = true
 	sprite.flip_h = false
-	hurtbox.position.x = 23
+	hurtbox.position.x = abs(hurtbox.position.x)
+	hitbox.position.x = abs(hitbox.position.x) * -1
 	
 func turn_left():
 	facing_right = false
 	sprite.flip_h = true
-	hurtbox.position.x = -23
-	
-func stand():
-	hitbox.stand()
-	hurtbox.stand()
-	
-func crouch():
-	hitbox.crouch()
-	hurtbox.crouch()
+	hurtbox.position.x = abs(hurtbox.position.x) * -1
+	hitbox.position.x = abs(hitbox.position.x)
 
 func block():
 	$AudioStreamPlayer.block()
@@ -137,3 +131,7 @@ func buffer(key):
 
 func _on_BufTimer_timeout():
 	input_buf = []
+	
+func change_animation(name: String):
+	$AnimatedSprite.play(name)
+	$AnimationPlayer.play(name)

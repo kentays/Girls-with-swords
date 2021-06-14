@@ -4,12 +4,12 @@ export var MOVE_SPEED : int = 200
 var moving_right : bool = true
 
 func enter():
-	owner.get_node("AnimatedSprite").play("Run")
 	if Input.is_action_pressed(input_dict["move_right"]):
 		moving_right = true
 	else:
 		moving_right = false
 	owner.dash(moving_right)
+	change_animation()
 
 func exit():
 	owner.vel.x = 0

@@ -1,9 +1,8 @@
 extends "state.gd"
 
 func enter():
-	owner.sprite.play("Neutral")
 	owner.vel.x = 0
-	owner.stand()
+	change_animation()
 	
 	if Input.is_action_pressed(input_dict["crouch"]):
 		emit_signal("finished", "crouch")

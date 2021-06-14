@@ -2,7 +2,7 @@ extends "run.gd"
 
 func enter():
 	MOVE_SPEED = 100
-	owner.get_node("AnimatedSprite").play("Walk")
+	change_animation()
 	if Input.is_action_pressed(input_dict["move_right"]):
 		moving_right = true
 	else:

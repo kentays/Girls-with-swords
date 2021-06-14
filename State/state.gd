@@ -6,6 +6,9 @@ var input_dict = null
 
 func map_inputs(mapping):
 	input_dict = mapping
+	
+func change_animation():
+	owner.change_animation(name)
 
 func enter():
 	pass

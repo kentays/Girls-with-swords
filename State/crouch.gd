@@ -1,8 +1,7 @@
 extends "state.gd"
 
 func enter():
-	owner.get_node("AnimatedSprite").play("Crouch")
-	owner.crouch()
+	change_animation()
 
 func handle_input(event):
 	if not Input.is_action_pressed(input_dict["crouch"]):
