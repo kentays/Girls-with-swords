@@ -1,27 +1,14 @@
-extends "../state.gd"
-
-var hit_connect : bool = false
+extends "BaseAttack.gd"
 
 func enter():
 	owner.whiff()
-	owner.get_node("AnimatedSprite").play("Jab")
+	change_animation()
 			
 func handle_input(event):
 	if hit_connect and event.is_action_pressed(input_dict["jump"]):
 		emit_signal("finished", "jump")
 	elif hit_connect and event.is_action_pressed(input_dict["slash"]):
 		emit_signal("finished", "slash")	
-	
 		
-func update(delta):
-	var frame_count = owner.get_node("AnimatedSprite").frame
-	if 8 > frame_count and frame_count > 4:
-		if owner.inside_hurtbox and not hit_connect:
-			owner.hit_connect()
-			hit_connect = true
-	
-func exit():
-	hit_connect = false
-	
 func _on_animation_finished():
 	emit_signal("finished", "idle")

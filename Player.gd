@@ -72,7 +72,7 @@ func _physics_process(delta):
 func _on_AnimatedSprite_animation_finished():
 	current_state._on_animation_finished()
 	
-func hit_connect():
+func hit_connect(dmg: int, stun: int, push: Vector2):
 	pass
 	
 func turn_right():
@@ -86,6 +86,13 @@ func turn_left():
 	sprite.flip_h = true
 	hurtbox.position.x = abs(hurtbox.position.x) * -1
 	hitbox.position.x = abs(hitbox.position.x)
+
+func receive_hit(dmg: int, stun: int, push: Vector2):
+	current_state.receive_hit()
+	if facing_right:
+		push.x *= -1
+	current_state.push(push)
+	current_state.stun(stun)
 
 func block():
 	$AudioStreamPlayer.block()

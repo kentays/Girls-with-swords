@@ -1,8 +1,10 @@
 extends Node2D
 
 
-var p1_x : int
-var p2_x : int
+var health_dict = {
+	"P1" : 100,
+	"P2" : 100
+}
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -16,7 +18,10 @@ func _process(_delta):
 	else:
 		p1.turn_right()
 		p2.turn_left()
-		
-func hit_player(name):
+
+	
+func hit_player(name: String, dmg: int, stun: int, push: Vector2):
 	print(name + " hit")
-	get_node(name).current_state.receive_hit()
+	health_dict[name] -= dmg
+	print(health_dict)
+	get_node(name).receive_hit(dmg, stun, push)

@@ -2,21 +2,22 @@ extends "../state.gd"
 
 var hit_connect : bool = false
 
-export var startup_frames : int = 0
-export var cooldown_frames : int = 0
+export var begin_frame : int = 0
+export var end_frame : int = 0
+
+export var dmg : int = 0
+export var stun : int = 0
+export var push : Vector2 = Vector2.ZERO
 			
 	
 	
 		
 func update(delta):
 	var frame_count = owner.get_node("AnimatedSprite").frame
-	if 8 > cooldown_frames and cooldown_frames > 4:
+	if frame_count >= begin_frame and frame_count <= end_frame:
 		if owner.inside_hurtbox and not hit_connect:
-			owner.hit_connect()
+			owner.hit_connect(dmg, stun, push)
 			hit_connect = true
 	
 func exit():
 	hit_connect = false
-	
-func _on_animation_finished():
-	emit_signal("finished", "idle")
