@@ -27,7 +27,10 @@ func handle_input(event):
 		
 		emit_signal("finished", "crouch_slash")
 
-func receive_hit():
+func receive_hit(height: String):
+	if height == "high":
+		emit_signal("finished", "hitstun")
+		return
 	if Input.is_action_pressed(input_dict["move_left"]) and owner.facing_right:
 		emit_signal("finished", "crouch_block")
 	elif Input.is_action_pressed(input_dict["move_right"]) and not owner.facing_right:

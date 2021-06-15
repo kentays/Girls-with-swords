@@ -20,8 +20,8 @@ func _process(_delta):
 		p2.turn_left()
 
 	
-func hit_player(name: String, dmg: int, stun: int, push: Vector2):
+func hit_player(name: String, dmg: int, stun: int, push: Vector2, height: String):
 	print(name + " hit")
 	health_dict[name] -= dmg
 	print(health_dict)
-	get_node(name).receive_hit(dmg, stun, push)
+	get_node(name).receive_hit(dmg, stun, push, height)

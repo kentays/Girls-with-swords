@@ -804,7 +804,7 @@ scale = Vector2( 3, 3 )
 texture = ExtResource( 27 )
 hframes = 55
 vframes = 2
-frame = 92
+frame = 87
 
 [node name="HitBox" type="CollisionShape2D" parent="."]
 position = Vector2( -2, -1 )
@@ -851,12 +851,14 @@ end_frame = 8
 dmg = 8
 stun = 30
 push = Vector2( 600, 0 )
+height = "mid"
 
 [node name="CrouchJab" type="Node" parent="States/Attack"]
 script = ExtResource( 18 )
 
 [node name="Slash" type="Node" parent="States/Attack"]
 script = ExtResource( 40 )
+height = "mid"
 
 [node name="Sweep" type="Node" parent="States/Attack"]
 script = ExtResource( 41 )
@@ -871,6 +873,7 @@ end_frame = 10
 dmg = 5
 stun = 60
 push = Vector2( 200, 0 )
+height = "high"
 
 [node name="CrouchSlash" type="Node" parent="States/Attack"]
 script = ExtResource( 46 )
@@ -880,9 +883,11 @@ script = ExtResource( 48 )
 end_frame = 6
 stun = 60
 push = Vector2( 600, 500 )
+height = "high"
 
 [node name="AntiAir" type="Node" parent="States/Attack"]
 script = ExtResource( 49 )
+height = "high"
 
 [node name="Air" type="Node" parent="States"]
 

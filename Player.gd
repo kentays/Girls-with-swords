@@ -78,7 +78,7 @@ func _physics_process(delta):
 func _on_AnimatedSprite_animation_finished():
 	current_state._on_animation_finished()
 	
-func hit_connect(dmg: int, stun: int, push: Vector2):
+func hit_connect(dmg: int, stun: int, push: Vector2, height: String):
 	pass
 	
 func turn_right():
@@ -95,8 +95,8 @@ func turn_left():
 	hurtbox.position.x = abs(hurtbox.position.x) * -1
 	hitbox.position.x = abs(hitbox.position.x)
 
-func receive_hit(dmg: int, stun: int, push: Vector2):
-	current_state.receive_hit()
+func receive_hit(dmg: int, stun: int, push: Vector2, height: String):
+	current_state.receive_hit(height)
 	if facing_right:
 		push.x *= -1
 	current_state.push(push)

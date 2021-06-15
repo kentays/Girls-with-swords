@@ -21,8 +21,8 @@ func _on_Area2D_body_exited(body):
 	if body.name == "P2":
 		inside_hurtbox = false
 
-func hit_connect(dmg: int, stun: int, push: Vector2):
-	get_parent().hit_player("P2", dmg, stun, push)
+func hit_connect(dmg: int, stun: int, push: Vector2, height: String):
+	get_parent().hit_player("P2", dmg, stun, push, height)
 	
 func sub_hadouken():
 	var mask = 24

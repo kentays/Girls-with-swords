@@ -25,5 +25,5 @@ func update(_delta):
 func _on_animation_finished():
 	return
 	
-func receive_hit():
+func receive_hit(height: String):
 	emit_signal("finished", "hitstun")

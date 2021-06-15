@@ -46,10 +46,13 @@ func update(_delta):
 		mod = 1
 	owner.vel.x = mod * MOVE_SPEED
 	
-func receive_hit():
+func receive_hit(height):
+	if height == "high":
+		emit_signal("finished", "hitstun")
+		return
 	if moving_right and not owner.facing_right:
 		emit_signal("finished", "block")
 	elif owner.facing_right and not moving_right:
 		emit_signal("finished", "block")
 	else:
-		.receive_hit()
+		emit_signal("finished", "hitstun")

@@ -6,7 +6,7 @@ func enter():
 	change_animation()
 	
 
-func receive_hit():
+func receive_hit(height):
 	print("COMBO")
 	emit_signal("finished", "knockdown")
 

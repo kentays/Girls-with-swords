@@ -11,7 +11,7 @@ func push(arg):
 func stun(arg):
 	pass
 
-func receive_hit():
+func receive_hit(height):
 	pass
 
 	
