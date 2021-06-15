@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/OL Jab.png-fefefa0f298af758099e3d483fbc2378.stex"
+path="res://.import/OL_2C3.png-2f3f1dd40a0452820e00ee0909f82972.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Spritesheet/OL Jab.png"
-dest_files=[ "res://.import/OL Jab.png-fefefa0f298af758099e3d483fbc2378.stex" ]
+source_file="res://Sprites/Movesets/OL Moveset/OL 2C/OL_2C3.png"
+dest_files=[ "res://.import/OL_2C3.png-2f3f1dd40a0452820e00ee0909f82972.stex" ]
 
 [params]
 
