@@ -823,7 +823,7 @@ script = ExtResource( 46 )
 script = ExtResource( 48 )
 end_frame = 6
 stun = 60
-push = Vector2( 600, 500 )
+push = Vector2( 600, 350 )
 
 [node name="AntiAir" type="Node" parent="States/Attack"]
 script = ExtResource( 49 )
@@ -835,6 +835,7 @@ script = ExtResource( 17 )
 
 [node name="MovingJump" type="Node" parent="States/Air"]
 script = ExtResource( 5 )
+launchForce = Vector2( 150, 400 )
 
 [node name="Fall" type="Node" parent="States/Air"]
 script = ExtResource( 45 )
