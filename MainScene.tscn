@@ -15,7 +15,7 @@ z_index = -1
 z_as_relative = false
 
 [node name="Floor" parent="." instance=ExtResource( 2 )]
-position = Vector2( 78, 242 )
+position = Vector2( 76, 250 )
 
 [node name="Wall" parent="." instance=ExtResource( 5 )]
 position = Vector2( -9, 160 )
