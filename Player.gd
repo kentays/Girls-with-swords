@@ -115,6 +115,9 @@ func whiff():
 func jump():
 	$AudioStreamPlayer.jump()
 	
+func land():
+	$AudioStreamPlayer.land()
+	
 func dash(moving_right):
 	$AudioStreamPlayer.dash()
 	var dust = Dust.instance()
