@@ -5,6 +5,7 @@ export var launchForce : Vector2 = Vector2(50, 300)
 func enter():
 	owner.vel.y = -1 * launchForce.y
 	.enter()
+	print("entering DP")
 	
 func handle_input(event):
 	pass
@@ -17,4 +18,5 @@ func update(delta):
 	.update(delta)
 	
 func _on_animation_finished():
+	print("DP finished")
 	emit_signal("finished", "fall")

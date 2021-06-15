@@ -15,6 +15,7 @@ func handle_input(event):
 	
 func update(delta):
 	if owner.is_on_floor():
+		print("Touched floor")
 		emit_signal("finished", "idle")
 		
 func _on_animation_finished():

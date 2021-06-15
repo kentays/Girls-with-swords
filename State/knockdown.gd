@@ -5,6 +5,12 @@ func enter():
 	owner.get_node("AnimatedSprite").play("Knockdown")
 	
 
+func push(arg):
+	pass
+	
+func stun(arg):
+	pass
+
 func receive_hit():
 	pass
 

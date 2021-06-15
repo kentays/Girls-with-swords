@@ -3,14 +3,15 @@ extends "../state.gd"
 var stun_count : int = 0
 
 func push(force: Vector2):
-	owner.vel = force
+	owner.vel.x = force.x
+	owner.vel.y = force.y * -1
 	
 func stun(new_stun_count : int):
 	stun_count = new_stun_count
 
 func update(delta):
-	if owner.vel.x > 50:
-		owner.vel.x = owner.vel.x / 2
+	if abs(owner.vel.x) > 50:
+		owner.vel.x = lerp(owner.vel.x, 0, .3)
 	else:
 		owner.vel.x = 0
 	if stun_count > 0:

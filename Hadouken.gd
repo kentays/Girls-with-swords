@@ -1,9 +1,10 @@
 extends KinematicBody2D
 
 export var velocity = Vector2(300, 0)
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+
+export var dmg : int = 0
+export var stun : int = 0
+export var push : Vector2 = Vector2.ZERO
 
 func init(right: bool):
 	if not right:
@@ -16,7 +17,7 @@ func _physics_process(delta):
 	var collision = move_and_collide(delta * velocity)
 	if collision != null:
 		if collision.collider.get_class() == "KinematicBody2D":
-			get_parent().hit_player(collision.collider.name)
+			get_parent().hit_player(collision.collider.name, dmg, stun, push)
 			queue_free()
 		else:
 			queue_free()
