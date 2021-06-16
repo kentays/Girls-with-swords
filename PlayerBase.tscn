@@ -50,60 +50,60 @@
 [ext_resource path="res://State/attack/AntiAir.gd" type="Script" id=49]
 
 [sub_resource type="AtlasTexture" id=1]
-atlas = ExtResource( 10 )
+atlas = ExtResource( 34 )
 region = Rect2( 0, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=2]
-atlas = ExtResource( 10 )
+atlas = ExtResource( 34 )
 region = Rect2( 32, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=3]
-atlas = ExtResource( 10 )
-region = Rect2( 64, 0, 32, 32 )
+atlas = ExtResource( 34 )
+region = Rect2( 0, 32, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=4]
-atlas = ExtResource( 10 )
-region = Rect2( 0, 32, 32, 32 )
+atlas = ExtResource( 34 )
+region = Rect2( 32, 32, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=5]
-atlas = ExtResource( 10 )
-region = Rect2( 32, 32, 32, 32 )
+atlas = ExtResource( 34 )
+region = Rect2( 0, 64, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=6]
-atlas = ExtResource( 10 )
-region = Rect2( 64, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=7]
-atlas = ExtResource( 10 )
-region = Rect2( 0, 64, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=8]
-atlas = ExtResource( 10 )
-region = Rect2( 32, 64, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=9]
-atlas = ExtResource( 47 )
+atlas = ExtResource( 33 )
 region = Rect2( 0, 0, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=10]
-atlas = ExtResource( 47 )
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 33 )
 region = Rect2( 32, 0, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=11]
-atlas = ExtResource( 47 )
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 33 )
 region = Rect2( 0, 32, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=12]
-atlas = ExtResource( 47 )
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 33 )
 region = Rect2( 32, 32, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=13]
-atlas = ExtResource( 47 )
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 33 )
 region = Rect2( 0, 64, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=14]
-atlas = ExtResource( 47 )
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 33 )
 region = Rect2( 32, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 31 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 31 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 31 )
+region = Rect2( 0, 32, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=15]
 atlas = ExtResource( 1 )
@@ -158,370 +158,370 @@ atlas = ExtResource( 1 )
 region = Rect2( 0, 96, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=28]
-atlas = ExtResource( 30 )
+atlas = ExtResource( 9 )
 region = Rect2( 0, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=29]
-atlas = ExtResource( 30 )
+atlas = ExtResource( 9 )
 region = Rect2( 32, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=30]
-atlas = ExtResource( 30 )
-region = Rect2( 0, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=31]
-atlas = ExtResource( 30 )
-region = Rect2( 32, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=32]
-atlas = ExtResource( 30 )
-region = Rect2( 0, 64, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=33]
-atlas = ExtResource( 30 )
-region = Rect2( 32, 64, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=34]
-atlas = ExtResource( 31 )
-region = Rect2( 0, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=35]
-atlas = ExtResource( 31 )
-region = Rect2( 32, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=36]
-atlas = ExtResource( 31 )
-region = Rect2( 0, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=37]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=38]
-atlas = ExtResource( 19 )
-region = Rect2( 32, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=39]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=40]
-atlas = ExtResource( 19 )
-region = Rect2( 32, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=41]
-atlas = ExtResource( 19 )
-region = Rect2( 0, 64, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=42]
-atlas = ExtResource( 16 )
-region = Rect2( 32, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=43]
-atlas = ExtResource( 16 )
-region = Rect2( 0, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=44]
-atlas = ExtResource( 16 )
-region = Rect2( 32, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=45]
-atlas = ExtResource( 16 )
-region = Rect2( 0, 64, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=46]
-atlas = ExtResource( 29 )
-region = Rect2( 0, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=47]
-atlas = ExtResource( 29 )
-region = Rect2( 32, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=48]
-atlas = ExtResource( 29 )
-region = Rect2( 0, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=49]
-atlas = ExtResource( 9 )
-region = Rect2( 0, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=50]
-atlas = ExtResource( 9 )
-region = Rect2( 32, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=51]
 atlas = ExtResource( 9 )
 region = Rect2( 64, 0, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=52]
+[sub_resource type="AtlasTexture" id=31]
 atlas = ExtResource( 9 )
 region = Rect2( 0, 32, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=53]
+[sub_resource type="AtlasTexture" id=32]
 atlas = ExtResource( 9 )
 region = Rect2( 32, 32, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=54]
+[sub_resource type="AtlasTexture" id=33]
 atlas = ExtResource( 9 )
 region = Rect2( 64, 32, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=55]
+[sub_resource type="AtlasTexture" id=34]
 atlas = ExtResource( 9 )
 region = Rect2( 0, 64, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=56]
+[sub_resource type="AtlasTexture" id=35]
 atlas = ExtResource( 9 )
 region = Rect2( 32, 64, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=57]
+[sub_resource type="AtlasTexture" id=36]
 atlas = ExtResource( 9 )
 region = Rect2( 64, 64, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=58]
-atlas = ExtResource( 36 )
+[sub_resource type="AtlasTexture" id=37]
+atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=59]
-atlas = ExtResource( 36 )
+[sub_resource type="AtlasTexture" id=38]
+atlas = ExtResource( 4 )
 region = Rect2( 32, 0, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=60]
-atlas = ExtResource( 36 )
+[sub_resource type="AtlasTexture" id=39]
+atlas = ExtResource( 4 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=40]
+atlas = ExtResource( 4 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=41]
+atlas = ExtResource( 4 )
 region = Rect2( 0, 32, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=61]
-atlas = ExtResource( 36 )
+[sub_resource type="AtlasTexture" id=42]
+atlas = ExtResource( 4 )
 region = Rect2( 32, 32, 32, 32 )
 
+[sub_resource type="AtlasTexture" id=43]
+atlas = ExtResource( 4 )
+region = Rect2( 64, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=44]
+atlas = ExtResource( 4 )
+region = Rect2( 96, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=45]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=46]
+atlas = ExtResource( 4 )
+region = Rect2( 32, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=47]
+atlas = ExtResource( 4 )
+region = Rect2( 64, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=48]
+atlas = ExtResource( 4 )
+region = Rect2( 96, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=49]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 96, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=50]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=51]
+atlas = ExtResource( 3 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=52]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=53]
+atlas = ExtResource( 3 )
+region = Rect2( 32, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=54]
+atlas = ExtResource( 10 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=55]
+atlas = ExtResource( 10 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=56]
+atlas = ExtResource( 10 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=57]
+atlas = ExtResource( 10 )
+region = Rect2( 0, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=58]
+atlas = ExtResource( 10 )
+region = Rect2( 32, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=59]
+atlas = ExtResource( 10 )
+region = Rect2( 64, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=60]
+atlas = ExtResource( 10 )
+region = Rect2( 0, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=61]
+atlas = ExtResource( 10 )
+region = Rect2( 32, 64, 32, 32 )
+
 [sub_resource type="AtlasTexture" id=62]
-atlas = ExtResource( 35 )
+atlas = ExtResource( 19 )
 region = Rect2( 0, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=63]
-atlas = ExtResource( 35 )
+atlas = ExtResource( 19 )
 region = Rect2( 32, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=64]
-atlas = ExtResource( 35 )
+atlas = ExtResource( 19 )
 region = Rect2( 0, 32, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=65]
-atlas = ExtResource( 35 )
+atlas = ExtResource( 19 )
 region = Rect2( 32, 32, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=66]
-atlas = ExtResource( 35 )
+atlas = ExtResource( 19 )
 region = Rect2( 0, 64, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=67]
-atlas = ExtResource( 3 )
-region = Rect2( 0, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=68]
-atlas = ExtResource( 3 )
+atlas = ExtResource( 16 )
 region = Rect2( 32, 0, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=69]
-atlas = ExtResource( 3 )
+[sub_resource type="AtlasTexture" id=68]
+atlas = ExtResource( 16 )
 region = Rect2( 0, 32, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=70]
-atlas = ExtResource( 3 )
+[sub_resource type="AtlasTexture" id=69]
+atlas = ExtResource( 16 )
 region = Rect2( 32, 32, 32, 32 )
 
+[sub_resource type="AtlasTexture" id=70]
+atlas = ExtResource( 16 )
+region = Rect2( 0, 64, 32, 32 )
+
 [sub_resource type="AtlasTexture" id=71]
-atlas = ExtResource( 13 )
+atlas = ExtResource( 29 )
 region = Rect2( 0, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=72]
-atlas = ExtResource( 13 )
+atlas = ExtResource( 29 )
 region = Rect2( 32, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=73]
-atlas = ExtResource( 13 )
+atlas = ExtResource( 29 )
 region = Rect2( 0, 32, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=74]
 atlas = ExtResource( 13 )
-region = Rect2( 32, 32, 32, 32 )
+region = Rect2( 0, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=75]
 atlas = ExtResource( 13 )
-region = Rect2( 0, 64, 32, 32 )
+region = Rect2( 32, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=76]
 atlas = ExtResource( 13 )
-region = Rect2( 32, 64, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=77]
-atlas = ExtResource( 4 )
-region = Rect2( 0, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=78]
-atlas = ExtResource( 4 )
-region = Rect2( 32, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=79]
-atlas = ExtResource( 4 )
-region = Rect2( 64, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=80]
-atlas = ExtResource( 4 )
-region = Rect2( 96, 0, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=81]
-atlas = ExtResource( 4 )
 region = Rect2( 0, 32, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=82]
-atlas = ExtResource( 4 )
+[sub_resource type="AtlasTexture" id=77]
+atlas = ExtResource( 13 )
 region = Rect2( 32, 32, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=83]
-atlas = ExtResource( 4 )
-region = Rect2( 64, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=84]
-atlas = ExtResource( 4 )
-region = Rect2( 96, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=85]
-atlas = ExtResource( 4 )
+[sub_resource type="AtlasTexture" id=78]
+atlas = ExtResource( 13 )
 region = Rect2( 0, 64, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=86]
-atlas = ExtResource( 4 )
+[sub_resource type="AtlasTexture" id=79]
+atlas = ExtResource( 13 )
 region = Rect2( 32, 64, 32, 32 )
 
+[sub_resource type="AtlasTexture" id=80]
+atlas = ExtResource( 30 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=81]
+atlas = ExtResource( 30 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=82]
+atlas = ExtResource( 30 )
+region = Rect2( 0, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=83]
+atlas = ExtResource( 30 )
+region = Rect2( 32, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=84]
+atlas = ExtResource( 30 )
+region = Rect2( 0, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=85]
+atlas = ExtResource( 30 )
+region = Rect2( 32, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=86]
+atlas = ExtResource( 36 )
+region = Rect2( 0, 0, 32, 32 )
+
 [sub_resource type="AtlasTexture" id=87]
-atlas = ExtResource( 4 )
-region = Rect2( 64, 64, 32, 32 )
+atlas = ExtResource( 36 )
+region = Rect2( 32, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=88]
-atlas = ExtResource( 4 )
-region = Rect2( 96, 64, 32, 32 )
+atlas = ExtResource( 36 )
+region = Rect2( 0, 32, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=89]
-atlas = ExtResource( 4 )
-region = Rect2( 0, 96, 32, 32 )
+atlas = ExtResource( 36 )
+region = Rect2( 32, 32, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=90]
-atlas = ExtResource( 33 )
+atlas = ExtResource( 35 )
 region = Rect2( 0, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=91]
-atlas = ExtResource( 33 )
+atlas = ExtResource( 35 )
 region = Rect2( 32, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=92]
-atlas = ExtResource( 33 )
+atlas = ExtResource( 35 )
 region = Rect2( 0, 32, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=93]
-atlas = ExtResource( 33 )
+atlas = ExtResource( 35 )
 region = Rect2( 32, 32, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=94]
-atlas = ExtResource( 33 )
+atlas = ExtResource( 35 )
 region = Rect2( 0, 64, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=95]
-atlas = ExtResource( 33 )
-region = Rect2( 32, 64, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=96]
-atlas = ExtResource( 34 )
+atlas = ExtResource( 47 )
 region = Rect2( 0, 0, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=97]
-atlas = ExtResource( 34 )
+[sub_resource type="AtlasTexture" id=96]
+atlas = ExtResource( 47 )
 region = Rect2( 32, 0, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=98]
-atlas = ExtResource( 34 )
+[sub_resource type="AtlasTexture" id=97]
+atlas = ExtResource( 47 )
 region = Rect2( 0, 32, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=99]
-atlas = ExtResource( 34 )
+[sub_resource type="AtlasTexture" id=98]
+atlas = ExtResource( 47 )
 region = Rect2( 32, 32, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=100]
-atlas = ExtResource( 34 )
+[sub_resource type="AtlasTexture" id=99]
+atlas = ExtResource( 47 )
 region = Rect2( 0, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=100]
+atlas = ExtResource( 47 )
+region = Rect2( 32, 64, 32, 32 )
 
 [sub_resource type="SpriteFrames" id=101]
 animations = [ {
-"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
-"loop": false,
-"name": "HitStun",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ) ],
-"loop": false,
-"name": "Crouch",
-"speed": 20.0
-}, {
-"frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ) ],
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
 "loop": true,
-"name": "DP",
+"name": "2H",
 "speed": 10.0
+}, {
+"frames": [ SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ],
+"loop": true,
+"name": "JumpingPunch",
+"speed": 17.0
+}, {
+"frames": [ ExtResource( 32 ) ],
+"loop": true,
+"name": "Falling",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 12 ), SubResource( 13 ), SubResource( 14 ) ],
+"loop": true,
+"name": "Hadouken",
+"speed": 5.0
 }, {
 "frames": [ SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ) ],
 "loop": true,
 "name": "Idle",
 "speed": 8.0
 }, {
-"frames": [ SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 33 ) ],
-"loop": true,
-"name": "Slash",
-"speed": 18.0
-}, {
-"frames": [ SubResource( 34 ), SubResource( 35 ), SubResource( 36 ) ],
-"loop": true,
-"name": "Hadouken",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ) ],
-"loop": true,
-"name": "CrouchJab",
-"speed": 20.0
-}, {
-"frames": [ SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ) ],
-"loop": false,
-"name": "Knockdown",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ), SubResource( 56 ), SubResource( 57 ) ],
-"loop": true,
-"name": "Jump",
-"speed": 10.0
-}, {
 "frames": [ ExtResource( 14 ), ExtResource( 14 ), ExtResource( 14 ), ExtResource( 14 ) ],
 "loop": true,
 "name": "Block",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 58 ), SubResource( 59 ), SubResource( 60 ), SubResource( 61 ) ],
+"frames": [ SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ) ],
 "loop": true,
-"name": "Sweep",
+"name": "Jump",
 "speed": 10.0
+}, {
+"frames": [ SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ) ],
+"loop": true,
+"name": "Jab",
+"speed": 30.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ) ],
+"loop": false,
+"name": "Crouch",
+"speed": 20.0
+}, {
+"frames": [ SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ) ],
+"loop": true,
+"name": "Run",
+"speed": 7.0
+}, {
+"frames": [ SubResource( 54 ), SubResource( 55 ), SubResource( 56 ), SubResource( 57 ), SubResource( 58 ), SubResource( 59 ), SubResource( 60 ), SubResource( 61 ) ],
+"loop": false,
+"name": "HitStun",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 62 ), SubResource( 63 ), SubResource( 64 ), SubResource( 65 ), SubResource( 66 ) ],
+"loop": true,
+"name": "CrouchJab",
+"speed": 20.0
+}, {
+"frames": [ SubResource( 67 ), SubResource( 68 ), SubResource( 69 ), SubResource( 70 ), SubResource( 71 ), SubResource( 72 ), SubResource( 73 ) ],
+"loop": false,
+"name": "Knockdown",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 23 ), ExtResource( 23 ), ExtResource( 23 ), ExtResource( 23 ) ],
 "loop": true,
 "name": "CrouchBlock",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 62 ), SubResource( 63 ), SubResource( 64 ), SubResource( 65 ), SubResource( 66 ), SubResource( 66 ) ],
-"loop": true,
-"name": "CrouchSlash",
-"speed": 10.0
-}, {
-"frames": [ SubResource( 67 ), SubResource( 68 ), SubResource( 69 ), SubResource( 70 ) ],
-"loop": true,
-"name": "Run",
-"speed": 7.0
-}, {
-"frames": [ SubResource( 71 ), SubResource( 72 ), SubResource( 73 ), SubResource( 74 ), SubResource( 75 ), SubResource( 76 ) ],
+"frames": [ SubResource( 74 ), SubResource( 75 ), SubResource( 76 ), SubResource( 77 ), SubResource( 78 ), SubResource( 79 ) ],
 "loop": true,
 "name": "Walk",
 "speed": 5.0
@@ -531,32 +531,32 @@ animations = [ {
 "name": "Backdash",
 "speed": 10.0
 }, {
-"frames": [ SubResource( 77 ), SubResource( 78 ), SubResource( 79 ), SubResource( 80 ), SubResource( 81 ), SubResource( 82 ), SubResource( 83 ), SubResource( 84 ), SubResource( 85 ), SubResource( 86 ), SubResource( 87 ), SubResource( 88 ), SubResource( 89 ) ],
+"frames": [ SubResource( 80 ), SubResource( 81 ), SubResource( 82 ), SubResource( 83 ), SubResource( 84 ), SubResource( 85 ), SubResource( 85 ) ],
 "loop": true,
-"name": "Jab",
-"speed": 30.0
+"name": "Slash",
+"speed": 18.0
 }, {
-"frames": [ SubResource( 90 ), SubResource( 91 ), SubResource( 92 ), SubResource( 93 ), SubResource( 94 ), SubResource( 95 ) ],
+"frames": [ SubResource( 86 ), SubResource( 87 ), SubResource( 88 ), SubResource( 89 ) ],
 "loop": true,
-"name": "JumpingPunch",
-"speed": 17.0
-}, {
-"frames": [ SubResource( 96 ), SubResource( 97 ), SubResource( 98 ), SubResource( 99 ), SubResource( 100 ) ],
-"loop": true,
-"name": "2H",
+"name": "Sweep",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 32 ) ],
+"frames": [ SubResource( 90 ), SubResource( 91 ), SubResource( 92 ), SubResource( 93 ), SubResource( 94 ), SubResource( 94 ) ],
 "loop": true,
-"name": "Falling",
-"speed": 5.0
+"name": "CrouchSlash",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 95 ), SubResource( 96 ), SubResource( 97 ), SubResource( 98 ), SubResource( 99 ), SubResource( 100 ) ],
+"loop": true,
+"name": "DP",
+"speed": 10.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=102]
-height = 100.0
+[sub_resource type="RectangleShape2D" id=102]
+extents = Vector2( 17.845, 55.5588 )
 
-[sub_resource type="CircleShape2D" id=103]
-radius = 4.39186
+[sub_resource type="RectangleShape2D" id=103]
+extents = Vector2( 2.24553, 6.3203 )
 
 [sub_resource type="Animation" id=104]
 resource_name = "Crouch"
@@ -570,7 +570,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -2, 18 ) ]
+"values": [ Vector2( -0.122459, 17.6245 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("HitBox:scale")
@@ -584,9 +584,35 @@ tracks/1/keys = {
 "update": 0,
 "values": [ Vector2( 0.9, 0.38 ) ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 40 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("HitBox:shape:extents")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 17.845, 55.5588 ) ]
+}
 
 [sub_resource type="Animation" id=105]
 resource_name = "HitStun"
+length = 20.0
+step = 1.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("HitBox:position")
 tracks/0/interp = 1
@@ -597,35 +623,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -2, -1 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("HitBox:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0.9, 0.7 ) ]
-}
-
-[sub_resource type="Animation" id=106]
-length = 1.8
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("HitBox:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( -2, -1 ) ]
+"values": [ Vector2( -0.100128, 1.02654 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("HitBox:scale")
@@ -646,15 +644,30 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.9, 1.8 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 5, 10, 15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 51, 52, 53, 55 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("HitBox:shape:extents")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 84, 93, 84 ]
+"values": [ Vector2( 17.7893, 54.0471 ) ]
 }
 
-[sub_resource type="Animation" id=107]
+[sub_resource type="Animation" id=106]
+length = 60.0
+loop = true
+step = 1.0
 tracks/0/type = "value"
-tracks/0/path = NodePath("Area2D/HurtBox:position")
+tracks/0/path = NodePath("HitBox:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -663,10 +676,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 15, -22 ) ]
+"values": [ Vector2( -0.454945, -1.79403 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Area2D/HurtBox:scale")
+tracks/1/path = NodePath("HitBox:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -675,7 +688,59 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 3, 1 ) ]
+"values": [ Vector2( 0.9, 0.7 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 30, 60 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 84, 93, 84 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("HitBox:shape:extents")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 17.845, 58.271 ) ]
+}
+
+[sub_resource type="Animation" id=107]
+length = 15.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Area2D/HurtBox:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2, 3, 4, 5, 8, 9, 11, 12, 14 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 15, -22 ), Vector2( 12.8482, -17.9116 ), Vector2( 12.8482, -17.9116 ), Vector2( 14.1393, -21.2469 ), Vector2( 16.6138, -21.7848 ), Vector2( 16.6138, -21.7848 ), Vector2( 15.2152, -21.7848 ), Vector2( 15.2152, -21.7848 ), Vector2( 13.3862, -16.8358 ), Vector2( 13.3862, -16.8358 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Area2D/HurtBox:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 3, 1 ), Vector2( 3, 1 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("HitBox:position")
@@ -684,10 +749,10 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 4, 5, 8, 9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -6, -1 ) ]
+"values": [ Vector2( -1.98414, -0.243767 ), Vector2( -1.98414, -0.243767 ), Vector2( -6.105, -0.244 ), Vector2( -6.105, -0.244 ), Vector2( -2.511, -0.244 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("HitBox:scale")
@@ -701,9 +766,59 @@ tracks/3/keys = {
 "update": 0,
 "values": [ Vector2( 0.9, 0.7 ) ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("Sprite:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 2, 4, 5, 9, 12, 15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 11, 12, 13, 14, 15, 16, 17 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("HitBox:shape:extents")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 15.4628, 55.9363 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Area2D/HurtBox:disabled")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 1, 2, 15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, true, false, true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Area2D/HurtBox:shape:extents")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 2, 3, 4, 5, 8, 9, 11, 12, 14 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1.84752, 4.01374 ), Vector2( 1.84752, 4.01374 ), Vector2( 2.52891, 4.01374 ), Vector2( 3.99929, 4.01374 ), Vector2( 3.99929, 4.01374 ), Vector2( 2.3496, 4.01374 ), Vector2( 2.3496, 4.01374 ), Vector2( 1.91925, 4.01374 ), Vector2( 1.91925, 4.01374 ) ]
+}
 
 [sub_resource type="Animation" id=108]
 resource_name = "JumpPunch"
+length = 22.0
+step = 1.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("HitBox:position")
 tracks/0/interp = 1
@@ -711,10 +826,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 9, 10, 16, 17 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, -5 ) ]
+"values": [ Vector2( -1.26657, -1.58022 ), Vector2( -1.26657, -1.58022 ), Vector2( -4.5597, -2.97346 ), Vector2( -4.5597, -2.97346 ), Vector2( -7.59951, -1.58022 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("HitBox:scale")
@@ -728,8 +843,70 @@ tracks/1/keys = {
 "update": 0,
 "values": [ Vector2( 0.6, 0.38 ) ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 4, 7, 10, 17 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 56, 57, 58, 59, 61 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("HitBox:shape:extents")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 9, 10, 16, 17 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 28.417, 68.7021 ), Vector2( 28.417, 68.7021 ), Vector2( 33.0611, 57.3695 ), Vector2( 33.0611, 57.3695 ), Vector2( 28.8392, 60.7026 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Area2D/HurtBox:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 7, 17 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, false, true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Area2D/HurtBox:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 6, 7, 10, 16 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 13.6067, -17.8203 ), Vector2( 13.5344, -17.8927 ), Vector2( 17.6598, -6.67433 ), Vector2( 14.8733, 1.81178 ), Vector2( 14.8733, 1.81178 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Area2D/HurtBox:shape:extents")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 6, 7, 10, 16 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 2.24553, 6.3203 ), Vector2( 2.01634, 5.36131 ), Vector2( 2.66772, 6.3203 ), Vector2( 3.38546, 6.3203 ), Vector2( 3.38546, 6.3203 ) ]
+}
 
 [sub_resource type="Animation" id=109]
+length = 12.0
+step = 1.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("HitBox:position")
 tracks/0/interp = 1
@@ -740,7 +917,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -2, -1 ) ]
+"values": [ Vector2( -0.860069, 0.0132675 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("HitBox:scale")
@@ -753,9 +930,47 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 0.9, 0.7 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 3, 6, 9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 97, 98, 99, 100 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Area2D/HurtBox:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("HitBox:shape:extents")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 17.845, 55.5588 ) ]
 }
 
 [sub_resource type="Animation" id=110]
+length = 60.0
+step = 1.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("HitBox:position")
 tracks/0/interp = 1
@@ -766,7 +981,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -2, -1 ) ]
+"values": [ Vector2( -1.72367, -0.171005 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("HitBox:scale")
@@ -779,6 +994,30 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 0.9, 0.7 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 10, 20, 30, 40, 50 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 104, 105, 106, 107, 108, 109 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("HitBox:shape:extents")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 15.4628, 55.9363 ) ]
 }
 
 [node name="Player" type="KinematicBody2D"]
@@ -804,25 +1043,27 @@ scale = Vector2( 3, 3 )
 texture = ExtResource( 27 )
 hframes = 55
 vframes = 2
-frame = 87
+frame = 97
 
 [node name="HitBox" type="CollisionShape2D" parent="."]
-position = Vector2( -2, -1 )
+position = Vector2( -0.860069, 0.0132675 )
 scale = Vector2( 0.9, 0.7 )
 shape = SubResource( 102 )
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="HurtBox" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 14, -6 )
-scale = Vector2( 1, 4 )
+position = Vector2( 24.246, -17.8203 )
+scale = Vector2( 3, 1 )
 shape = SubResource( 103 )
+disabled = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 37 )
 script = ExtResource( 38 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+playback_speed = 60.0
 anims/Crouch = SubResource( 104 )
 anims/HitStun = SubResource( 105 )
 anims/Idle = SubResource( 106 )

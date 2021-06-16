@@ -1,16 +1,14 @@
-extends "jab.gd"
+extends "BaseAttack.gd"
+			
+			
+func handle_input(event):
+	if hit_connect and event.is_action_pressed(input_dict["jump"]):
+		print("jump cancel")
+		emit_signal("finished", "jump")
 
-
-# needs better hitbox and timing
-
-func enter():
-	owner.whiff()
-	owner.get_node("AnimatedSprite").play("JumpingPunch")
-
-func update(delta):
-	if owner.is_on_floor():
-		emit_signal("finished", "idle")
-	.update(delta)
+	
+func exit():
+	hit_connect = false
 	
 func _on_animation_finished():
 	emit_signal("finished", "fall")
