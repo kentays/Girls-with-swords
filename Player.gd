@@ -74,9 +74,6 @@ func _physics_process(delta):
 	vel.y += gravity * delta
 	move_and_slide(vel, Vector2.UP)
 	current_state.update(delta)
-
-func _on_AnimatedSprite_animation_finished():
-	current_state._on_animation_finished()
 	
 func hit_connect(dmg: int, stun: int, push: Vector2, height: String):
 	pass
@@ -153,3 +150,8 @@ func _on_BufTimer_timeout():
 func change_animation(name: String):
 	$AnimatedSprite.play(name)
 	$AnimationPlayer.play(name)
+
+
+func _on_AnimationPlayer_animation_finished(anim_name):
+	print(anim_name + " has finished")
+	current_state._on_animation_finished()
