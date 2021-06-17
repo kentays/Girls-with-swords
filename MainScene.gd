@@ -16,7 +16,6 @@ func _ready():
 	start()
 
 func _process(_delta):
-	
 	if p1.position.x > p2.position.x:
 		p1.turn_left()
 		p2.turn_right()
@@ -24,6 +23,8 @@ func _process(_delta):
 	else:
 		p1.turn_right()
 		p2.turn_left()
+		
+	$Camera2D.adjust(p1.position, p2.position)
 		
 		
 func start():
