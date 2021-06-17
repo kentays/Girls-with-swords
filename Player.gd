@@ -61,6 +61,9 @@ func _ready():
 			state_node.map_inputs(input_dict)
 	_change_state("idle")
 	
+func start(pos: Vector2):
+	self.position = pos
+	
 func _change_state(state_name):
 	current_state.exit()
 	current_state = states_map[state_name]

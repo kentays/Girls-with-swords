@@ -30,7 +30,7 @@ position = Vector2( 489, 160 )
 collision_layer = 9
 
 [node name="P1" parent="." instance=ExtResource( 1 )]
-position = Vector2( 120, 192 )
+position = Vector2( 120, 195 )
 collision_layer = 3
 
 [node name="P2" parent="." instance=ExtResource( 3 )]
