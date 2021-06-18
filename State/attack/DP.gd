@@ -4,6 +4,7 @@ export var launchForce : Vector2 = Vector2(50, 300)
 
 func enter():
 	owner.vel.y = -1 * launchForce.y
+	owner.grounded = false
 	.enter()
 	print("entering DP")
 	

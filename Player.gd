@@ -16,6 +16,7 @@ var inside_hurtbox : bool = false
 var vel : Vector2 = Vector2()
 
 var facing_right : bool = true
+var grounded : bool = false
 
 var input_buf = []
 
@@ -76,14 +77,20 @@ func _input(event):
 func _physics_process(delta):
 	vel.y += gravity * delta
 	move_and_slide(vel, Vector2.UP)
+	
 	for i in get_slide_count():
 		var collision = get_slide_collision(i)
 		if collision.collider.get_class() == "KinematicBody2D":
 			if collision.normal.y == 0:
 				collision.collider.push(vel.x)
 			else:
+				grounded = false
 				collision.collider.slide_away()
 				slide_away()
+		
+		elif collision.collider.name == "Floor":
+			grounded = true
+
 	current_state.update(delta)
 	
 func push(x_vel : int):
