@@ -79,11 +79,21 @@ func _physics_process(delta):
 	for i in get_slide_count():
 		var collision = get_slide_collision(i)
 		if collision.collider.get_class() == "KinematicBody2D":
-			collision.collider.push(vel.x)
+			if collision.normal.y == 0:
+				collision.collider.push(vel.x)
+			else:
+				collision.collider.slide_away()
+				slide_away()
 	current_state.update(delta)
 	
 func push(x_vel : int):
 	current_state.push(x_vel)
+	
+func slide_away():
+	var mod = 1
+	if facing_right:
+		mod = -1
+	global_position.x += 4 * mod
 	
 func hit_connect(dmg: int, stun: int, push: Vector2, height: String):
 	pass
