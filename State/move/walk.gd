@@ -3,6 +3,7 @@ extends "run.gd"
 func enter():
 	MOVE_SPEED = 100
 	change_animation()
+	owner.walk()
 	if Input.is_action_pressed(input_dict["move_right"]):
 		moving_right = true
 	else:
@@ -17,3 +18,7 @@ func enter():
 			emit_signal("finished", "run")
 		else:
 			emit_signal("finished", "backdash")
+			
+func exit():
+	owner.stop_sfx()
+	.exit()

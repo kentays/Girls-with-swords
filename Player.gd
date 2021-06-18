@@ -153,6 +153,12 @@ func dash(moving_right):
 		dust.flip_right()
 	get_parent().add_child(dust)
 	
+func walk():
+	$AudioStreamPlayer.walk()
+	
+func stop_sfx():
+	$AudioStreamPlayer.stop()
+	
 func hadouken(mask: int):
 	var h = Hadouken.instance()
 	get_parent().add_child(h)
