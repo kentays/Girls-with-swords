@@ -21,7 +21,16 @@ func adjust(p1_pos : Vector2, p2_pos : Vector2):
 	var y_below = 260 - y_bottom
 	if y_below < 0:
 		offset.y += y_below
-	
+		
+	var x_width = 480 * zoom.x
+	var x_below = offset.x - x_width / 2
+	if x_below < 0:
+		offset.x -= x_below
+		
+	var x_right = x_width / 2 + offset.x
+	var x_above = 480 - x_right
+	if x_above < 0:
+		offset.x += x_above
 
 func calculate_center(rect: Rect2):
 	return Vector2(
