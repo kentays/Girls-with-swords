@@ -7,7 +7,7 @@ func enter():
 	.enter()
 	print("entering DP")
 	
-func handle_input(event):
+func handle_input(_event):
 	pass
 	
 func update(delta):

@@ -76,7 +76,14 @@ func _input(event):
 func _physics_process(delta):
 	vel.y += gravity * delta
 	move_and_slide(vel, Vector2.UP)
+	for i in get_slide_count():
+		var collision = get_slide_collision(i)
+		if collision.collider.get_class() == "KinematicBody2D":
+			collision.collider.push(vel.x)
 	current_state.update(delta)
+	
+func push(x_vel : int):
+	current_state.push(x_vel)
 	
 func hit_connect(dmg: int, stun: int, push: Vector2, height: String):
 	pass
@@ -99,7 +106,7 @@ func receive_hit(dmg: int, stun: int, push: Vector2, height: String):
 	current_state.receive_hit(height)
 	if facing_right:
 		push.x *= -1
-	current_state.push(push)
+	current_state.pushback(push)
 	current_state.stun(stun)
 
 func block():

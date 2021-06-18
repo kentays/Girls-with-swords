@@ -13,6 +13,9 @@ func enter():
 		
 	owner.vel.y = -1 * launchForce.y
 	
+func push(_vel):
+	pass
+	
 func update(delta):
 	var mod = -1
 	if facing_right:

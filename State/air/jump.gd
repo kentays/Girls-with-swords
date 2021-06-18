@@ -19,5 +19,8 @@ func update(delta):
 		owner.land()
 		emit_signal("finished", "idle")
 		
+func push(_vel):
+	pass
+		
 func _on_animation_finished():
 	emit_signal("finished", "fall")

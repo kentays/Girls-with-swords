@@ -19,6 +19,9 @@ func exit():
 func handle_input(_event):
 	pass
 	
+func push(x_vel : int):
+	owner.vel.x = x_vel / 2
+
 func update(_delta):
 	pass
 	

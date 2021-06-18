@@ -46,6 +46,9 @@ func update(_delta):
 		mod = 1
 	owner.vel.x = mod * MOVE_SPEED
 	
+func push(_vel):
+	pass
+	
 func receive_hit(height):
 	if height == "high":
 		emit_signal("finished", "hitstun")

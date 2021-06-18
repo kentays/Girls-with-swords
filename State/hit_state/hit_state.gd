@@ -2,7 +2,7 @@ extends "../state.gd"
 
 var stun_count : int = 0
 
-func push(force: Vector2):
+func pushback(force: Vector2):
 	owner.vel.x = force.x
 	owner.vel.y = force.y * -1
 	

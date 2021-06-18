@@ -5,7 +5,14 @@ func enter():
 	owner.get_node("AnimatedSprite").play("Knockdown")
 	
 
-func push(arg):
+func pushback(arg):
+	pass
+
+	
+func update(_delta):
+	owner.vel.x = 0
+
+func push(_vel):
 	pass
 	
 func stun(arg):

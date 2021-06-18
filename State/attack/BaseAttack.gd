@@ -21,6 +21,9 @@ func update(delta):
 		if owner.inside_hurtbox and not hit_connect:
 			owner.hit_connect(dmg, stun, push, height)
 			hit_connect = true
+
+func push(_vel):
+	pass
 	
 func exit():
 	hit_connect = false

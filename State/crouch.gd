@@ -37,3 +37,7 @@ func receive_hit(height: String):
 		emit_signal("finished", "crouch_block")
 	else:
 		emit_signal("finished", "hitstun")
+
+	
+func update(_delta):
+	owner.vel.x = 0
