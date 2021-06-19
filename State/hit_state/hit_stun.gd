@@ -10,6 +10,8 @@ func enter():
 func receive_hit(height):
 	owner.combo += 1
 	stun_count = 0
+	owner.receive_hit_confirm()
+	owner.restart_animation()
 	if owner.combo > 1:
 		print("COMBO ", owner.combo)
 		

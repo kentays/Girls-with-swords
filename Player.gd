@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 var current_state = null
-var other_player_name : String = ""
+var other_player_name : String
 
 var speed : int = 200
 export var jumpForce : int = 400

@@ -9,8 +9,7 @@ func receive_hit(height):
 		emit_signal("finished", "hitstun")
 	else:
 		print("Blockstring")
-		owner.get_node("AnimatedSprite").set_frame(0)
-		
+		owner.block()
 	
 func update(_delta):
 	owner.vel.x = 0

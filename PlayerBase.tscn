@@ -639,7 +639,7 @@ script = ExtResource( 20 )
 begin_frame = 4
 end_frame = 8
 dmg = 8
-stun = 30
+stun = 20
 push = Vector2( 300, 0 )
 height = "mid"
 
@@ -664,7 +664,6 @@ dmg = 5
 stun = 60
 push = Vector2( 200, 0 )
 height = "high"
-knockdown = true
 
 [node name="CrouchSlash" type="Node" parent="States/Attack"]
 script = ExtResource( 46 )
