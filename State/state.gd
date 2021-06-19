@@ -28,5 +28,8 @@ func update(_delta):
 func _on_animation_finished():
 	return
 	
+func _on_audio_finished():
+	print("Audio finished")
+
 func receive_hit(height: String):
 	emit_signal("finished", "hitstun")

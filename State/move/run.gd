@@ -13,6 +13,7 @@ func enter():
 
 func exit():
 	owner.vel.x = 0
+	owner.stop_sfx()
 	
 func handle_input(event):
 	if event.is_action_pressed(input_dict["jump"]):
@@ -59,3 +60,6 @@ func receive_hit(height):
 		emit_signal("finished", "block")
 	else:
 		emit_signal("finished", "hitstun")
+		
+func _on_audio_finished():
+	owner.run()

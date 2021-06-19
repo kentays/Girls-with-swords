@@ -19,6 +19,7 @@ func enter():
 		else:
 			emit_signal("finished", "backdash")
 			
-func exit():
-	owner.stop_sfx()
-	.exit()
+func _on_audio_finished():
+	pass
+			
+

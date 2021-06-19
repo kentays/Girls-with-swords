@@ -9,6 +9,7 @@ var jump_sfx: AudioStream
 var dash_sfx: AudioStream
 var landing_sfx: AudioStream
 var walk_sfx: AudioStream
+var run_sfx: AudioStream
 
 
 # Called when the node enters the scene tree for the first time.
@@ -21,6 +22,7 @@ func _ready():
 	dash_sfx = preload("res://Sounds/dash.ogg")
 	landing_sfx = preload("res://Sounds/landing.ogg")
 	walk_sfx = preload("res://Sounds/walk.ogg")
+	run_sfx = preload("res://Sounds/run.ogg")
 
 func hit():
 	self.set_stream(hit_sfx)
@@ -52,6 +54,10 @@ func land():
 	
 func walk():
 	self.set_stream(walk_sfx)
+	self.play()
+	
+func run():
+	self.set_stream(run_sfx)
 	self.play()
 	
 func hadouken():

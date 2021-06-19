@@ -170,6 +170,9 @@ func dash(moving_right):
 		dust.flip_right()
 	get_parent().add_child(dust)
 	
+func run():
+	$AudioStreamPlayer.run()
+	
 func walk():
 	$AudioStreamPlayer.walk()
 	
@@ -208,3 +211,7 @@ func restart_animation():
 func _on_AnimationPlayer_animation_finished(anim_name):
 	print(anim_name + " has finished")
 	current_state._on_animation_finished()
+
+
+func _on_AudioStreamPlayer_finished():
+	current_state._on_audio_finished()

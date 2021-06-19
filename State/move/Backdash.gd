@@ -14,3 +14,6 @@ func handle_input(event):
 	
 func _on_animation_finished():
 	emit_signal("finished", "idle")
+	
+func _on_audio_finished():
+	pass
