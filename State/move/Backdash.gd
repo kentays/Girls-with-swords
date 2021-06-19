@@ -11,8 +11,5 @@ func handle_input(event):
 	if event.is_action_pressed(input_dict["jump"]):
 		emit_signal("finished", "moving_jump")
 	
-func _on_animation_finished():
-	emit_signal("finished", "idle")
-	
 func _on_audio_finished():
-	pass
+	emit_signal("finished", "idle")
