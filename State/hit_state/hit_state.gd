@@ -18,4 +18,7 @@ func update(delta):
 		stun_count -= 1
 	else:
 		emit_signal("finished", "idle")
+		
+func knockdown():
+	pass
 	

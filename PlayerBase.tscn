@@ -1195,6 +1195,7 @@ dmg = 5
 stun = 60
 push = Vector2( 200, 0 )
 height = "high"
+knockdown = true
 
 [node name="CrouchSlash" type="Node" parent="States/Attack"]
 script = ExtResource( 46 )

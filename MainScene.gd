@@ -38,11 +38,11 @@ func start():
 	
 
 	
-func hit_player(name: String, dmg: int, stun: int, push: Vector2, height: String):
+func hit_player(name: String, dmg: int, stun: int, push: Vector2, height: String, knockdown: bool):
 	print(name + " hit")
 	health_dict[name] -= dmg
 	if (health_dict["P1"] < 0) or (health_dict["P2"] < 0):
 		start()
 	p1_healthbar.value = health_dict["P1"]
 	p2_healthbar.value = health_dict["P2"]
-	get_node(name).receive_hit(dmg, stun, push, height)
+	get_node(name).receive_hit(dmg, stun, push, height, knockdown)

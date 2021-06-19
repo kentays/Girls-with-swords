@@ -12,6 +12,9 @@ func receive_hit(height):
 	stun_count = 0
 	if owner.combo > 1:
 		print("COMBO ", owner.combo)
+		
+func knockdown():
+	emit_signal("finished", "knockdown")
 	
 func exit():
 	owner.combo = 0

@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 var current_state = null
-var other_player : String = ""
+var other_player_name : String = ""
 
 var speed : int = 200
 export var jumpForce : int = 400
@@ -101,20 +101,16 @@ func push(x_vel : int):
 	current_state.push(x_vel)
 	
 func _on_Area2D_body_entered(body):
-	if body.name == other_player:
-		if name == "P1":
-			print(other_player, " entered hitbox")
+	if body.name == other_player_name:
 		inside_hurtbox = true
 	
 
 func _on_Area2D_body_exited(body):
-	if body.name == other_player:
-		if name == "P1":
-			print(other_player, " exited hitbox")
+	if body.name == other_player_name:
 		inside_hurtbox = false
 
-func hit_connect(dmg: int, stun: int, push: Vector2, height: String):
-	get_parent().hit_player(other_player, dmg, stun, push, height)
+func hit_connect(dmg: int, stun: int, push: Vector2, height: String, knockdown: bool):
+	get_parent().hit_player(other_player_name, dmg, stun, push, height, knockdown)
 	
 func slide_away():
 	var mod = 1
@@ -136,12 +132,14 @@ func turn_left():
 	hurtbox.position.x = abs(hurtbox.position.x) * -1
 	hitbox.position.x = abs(hitbox.position.x)
 
-func receive_hit(dmg: int, stun: int, push: Vector2, height: String):
+func receive_hit(dmg: int, stun: int, push: Vector2, height: String, knockdown: bool):
 	current_state.receive_hit(height)
 	if facing_right:
 		push.x *= -1
 	current_state.pushback(push)
 	current_state.stun(stun)
+	if knockdown:
+		current_state.knockdown()
 
 func block():
 	$AudioStreamPlayer.block()

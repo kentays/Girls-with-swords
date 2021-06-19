@@ -11,6 +11,7 @@ export var stun : int = 0
 
 export var push : Vector2 = Vector2.ZERO
 export(String, "low", "mid", "high") var height
+export var knockdown : bool = false
 			
 	
 func enter():
@@ -19,10 +20,9 @@ func enter():
 		
 func update(delta):
 	var frame_count = owner.get_node("AnimationPlayer").get_current_animation_position()
-	print(frame_count)
 	if frame_count >= begin_frame and frame_count <= end_frame:
 		if owner.inside_hurtbox and not hit_connect:
-			owner.hit_connect(dmg, stun, push, height)
+			owner.hit_connect(dmg, stun, push, height, knockdown)
 			hit_connect = true
 
 func push(_velo):

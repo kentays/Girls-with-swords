@@ -1,7 +1,7 @@
 extends "Player.gd"
 
 func _init():
-	other_player = "P1"
+	other_player_name = "P1"
 	
 	input_dict = {
 		"jump" : "p2_jump",
