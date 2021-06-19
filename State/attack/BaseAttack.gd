@@ -7,6 +7,8 @@ export var end_frame : int = 0
 
 export var dmg : int = 0
 export var stun : int = 0
+# setting this to 0 results in a knockdown
+
 export var push : Vector2 = Vector2.ZERO
 export(String, "low", "mid", "high") var height
 			
