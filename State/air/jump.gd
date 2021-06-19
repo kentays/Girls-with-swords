@@ -3,6 +3,7 @@ extends "../state.gd"
 export var jumpForce : int = 400
 
 func enter():
+	change_animation()
 	owner.grounded = false
 	# this is required due to a ground detection bug
 	if Input.is_action_pressed(input_dict["move_right"]) or Input.is_action_pressed(input_dict["move_left"]):
@@ -14,6 +15,8 @@ func enter():
 func handle_input(event):
 	if event.is_action_pressed(input_dict["punch"]):
 		emit_signal("finished", "jumping_punch")
+	elif event.is_action_pressed(input_dict["kick"]):
+		emit_signal("finished", "jumping_kick")
 	
 func update(delta):
 	if owner.grounded:

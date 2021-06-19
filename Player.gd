@@ -42,7 +42,8 @@ onready var states_map = {
 	"fall": $States/Air/Fall,
 	"crouch_slash": $States/Attack/CrouchSlash,
 	"DP": $States/Attack/DP,
-	"anti_air": $States/Attack/AntiAir
+	"anti_air": $States/Attack/AntiAir,
+	"jumping_kick": $States/Attack/JumpKick
 }
 
 onready var sprite = $AnimatedSprite
