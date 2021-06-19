@@ -8,17 +8,15 @@ func enter():
 	
 
 func receive_hit(height):
-	owner.combo += 1
+	owner.combo_up()
 	stun_count = 0
 	owner.receive_hit_confirm()
 	owner.restart_animation()
-	if owner.combo > 1:
-		print("COMBO ", owner.combo)
 		
 func knockdown():
 	emit_signal("finished", "knockdown")
 	
 func exit():
-	owner.combo = 0
+	owner.reset_combo()
 
 	

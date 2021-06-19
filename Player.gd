@@ -138,6 +138,15 @@ func receive_hit(dmg: int, stun: int, push: Vector2, height: String, knockdown: 
 	if knockdown:
 		current_state.knockdown()
 
+func combo_up():
+	combo += 1
+	if combo > 1:
+		get_parent().combo_on(name, combo)
+	
+func reset_combo():
+	combo = 0
+	get_parent().combo_off(name)
+
 func block():
 	$AudioStreamPlayer.block()
 

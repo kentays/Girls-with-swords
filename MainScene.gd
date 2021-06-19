@@ -1,18 +1,23 @@
 extends Node2D
 
 
-var health_dict = {
-	"P1" : 100,
-	"P2" : 100
+var hud_dict = {
+	"P1" : {"health_num": 100},
+	"P2" : {"health_num": 100}
 }
-
-onready var p1_healthbar = $HUD/P1Health
-onready var p2_healthbar = $HUD/P2Health
 
 onready var p1 = get_node("P1")
 onready var p2 = get_node("P2")
 
 func _ready():
+	hud_dict.P1.healthbar = $HUD/P1Health
+	hud_dict.P2.healthbar = $HUD/P2Health
+	hud_dict.P1.combo = $HUD/P1Combo
+	hud_dict.P2.combo = $HUD/P2Combo
+	
+	combo_off("P1")
+	combo_off("P2")
+	
 	start()
 
 func _process(_delta):
@@ -31,18 +36,22 @@ func start():
 	p1.start(Vector2(100, 195))
 	p2.start(Vector2(275, 195))
 	
-	health_dict = {
-	"P1" : 100,
-	"P2" : 100
-}
-	
+	hud_dict.P1.health_num = 100
+	hud_dict.P2.health_num = 100
 
 	
 func hit_player(name: String, dmg: int, stun: int, push: Vector2, height: String, knockdown: bool):
 	print(name + " hit")
-	health_dict[name] -= dmg
-	if (health_dict["P1"] < 0) or (health_dict["P2"] < 0):
+	hud_dict[name]["health_num"] -= dmg
+	if (hud_dict.P1.health_num < 0) or (hud_dict.P2.health_num < 0):
 		start()
-	p1_healthbar.value = health_dict["P1"]
-	p2_healthbar.value = health_dict["P2"]
+	hud_dict.P1.healthbar.value = hud_dict.P1.health_num
+	hud_dict.P2.healthbar.value = hud_dict.P2.health_num
 	get_node(name).receive_hit(dmg, stun, push, height, knockdown)
+
+
+func combo_on(name: String, combo_num: int):
+	hud_dict[name]["combo"].combo(combo_num)
+	
+func combo_off(name: String):
+	hud_dict[name]["combo"].off()

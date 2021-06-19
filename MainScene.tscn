@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://P1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Bounds.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Sprites/Overlay/Name Example.png" type="Texture" id=9]
 [ext_resource path="res://Camera2D.gd" type="Script" id=10]
 [ext_resource path="res://Other-assets/font.tres" type="DynamicFont" id=11]
+[ext_resource path="res://HUDCombo.gd" type="Script" id=12]
 [ext_resource path="res://MainScene.gd" type="Script" id=13]
 
 [sub_resource type="Theme" id=1]
@@ -123,7 +124,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="P1Combo" type="Label" parent="HUD"]
+[node name="P2Combo" type="Label" parent="HUD"]
 margin_left = 359.735
 margin_top = 64.5145
 margin_right = 399.735
@@ -131,11 +132,15 @@ margin_bottom = 80.5145
 theme = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "x2"
+script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="P2Combo" type="Label" parent="HUD"]
+[node name="Timer" type="Timer" parent="HUD/P2Combo"]
+wait_time = 0.5
+
+[node name="P1Combo" type="Label" parent="HUD"]
 margin_left = 64.8118
 margin_top = 62.1361
 margin_right = 104.812
@@ -143,6 +148,13 @@ margin_bottom = 78.1361
 theme = SubResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "x3"
+script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Timer" type="Timer" parent="HUD/P1Combo"]
+wait_time = 0.5
+
+[connection signal="timeout" from="HUD/P2Combo/Timer" to="HUD/P2Combo" method="_on_Timer_timeout"]
+[connection signal="timeout" from="HUD/P1Combo/Timer" to="HUD/P1Combo" method="_on_Timer_timeout"]
