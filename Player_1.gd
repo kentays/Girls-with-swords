@@ -1,6 +1,8 @@
 extends "Player.gd"
 
 func _init():
+	other_player = "P2"
+	
 	input_dict = {
 		"jump" : "p1_jump",
 		"move_right" : "p1_move_right",
@@ -10,19 +12,6 @@ func _init():
 		"slash" : "p1_slash",
 		"kick" : "p1_kick"
 	}
-
-
-func _on_Area2D_body_entered(body):
-	if body.name == "P2":
-		inside_hurtbox = true
-	
-
-func _on_Area2D_body_exited(body):
-	if body.name == "P2":
-		inside_hurtbox = false
-
-func hit_connect(dmg: int, stun: int, push: Vector2, height: String):
-	get_parent().hit_player("P2", dmg, stun, push, height)
 	
 func sub_hadouken():
 	var mask = 24

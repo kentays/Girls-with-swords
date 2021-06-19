@@ -16,13 +16,14 @@ func enter():
 	change_animation()	
 		
 func update(delta):
-	var frame_count = owner.get_node("AnimatedSprite").frame
+	var frame_count = owner.get_node("AnimationPlayer").get_current_animation_position()
+	print(frame_count)
 	if frame_count >= begin_frame and frame_count <= end_frame:
 		if owner.inside_hurtbox and not hit_connect:
 			owner.hit_connect(dmg, stun, push, height)
 			hit_connect = true
 
-func push(_vel):
+func push(_velo):
 	pass
 	
 func exit():
