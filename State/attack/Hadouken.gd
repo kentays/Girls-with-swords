@@ -5,7 +5,7 @@ extends "../state.gd"
 
 # Called when the node enters the scene tree for the first time.
 func enter():
-	owner.get_node("AnimatedSprite").play("Hadouken")
+	change_animation()
 	
 func _on_animation_finished():
 	owner.sub_hadouken()

@@ -49,7 +49,6 @@ onready var states_map = {
 	"jumping_kick": $States/Attack/JumpKick
 }
 
-onready var sprite = $AnimatedSprite
 onready var new_sprite = $Sprite
 onready var hurtbox = $Area2D/HurtBox
 onready var hitbox = $HitBox
@@ -120,14 +119,12 @@ func slide_away():
 	
 func turn_right():
 	facing_right = true
-	sprite.flip_h = false
 	new_sprite.flip_h = false
 	hurtbox.position.x = abs(hurtbox.position.x)
 	hitbox.position.x = abs(hitbox.position.x) * -1
 	
 func turn_left():
 	facing_right = false
-	sprite.flip_h = true
 	new_sprite.flip_h = true
 	hurtbox.position.x = abs(hurtbox.position.x) * -1
 	hitbox.position.x = abs(hitbox.position.x)
@@ -199,7 +196,6 @@ func _on_BufTimer_timeout():
 	input_buf = []
 	
 func change_animation(name: String):
-	$AnimatedSprite.play(name)
 	$AnimationPlayer.play(name)
 	
 func restart_animation():

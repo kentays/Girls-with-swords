@@ -3,7 +3,6 @@ extends "state.gd"
 func enter():
 	owner.knockdown()
 	change_animation()
-	owner.get_node("AnimatedSprite").play("Knockdown")
 	
 
 func pushback(arg):

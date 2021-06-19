@@ -5,7 +5,6 @@ export var jumpForce : int = 300
 func enter():
 	owner.whiff()
 	owner.grounded = false
-	owner.get_node("AnimatedSprite").play("2H")
 	owner.vel.y = -1 * jumpForce
 	
 func handle_input(event):

@@ -2,7 +2,6 @@ extends "hit_state.gd"
 
 func enter():
 	.enter()
-	owner.get_node("AnimatedSprite").play("Block")
 	owner.block()
 
 func receive_hit(height):
