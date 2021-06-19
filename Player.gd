@@ -18,6 +18,8 @@ var vel : Vector2 = Vector2()
 var facing_right : bool = true
 var grounded : bool = false
 
+var combo : int = 0
+
 var input_buf = []
 
 
@@ -184,6 +186,9 @@ func _on_BufTimer_timeout():
 func change_animation(name: String):
 	$AnimatedSprite.play(name)
 	$AnimationPlayer.play(name)
+	
+func restart_animation():
+	$AnimationPlayer.seek(0)
 
 
 func _on_AnimationPlayer_animation_finished(anim_name):
