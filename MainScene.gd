@@ -38,6 +38,8 @@ func start():
 	
 	hud_dict.P1.health_num = 100
 	hud_dict.P2.health_num = 100
+	
+	$HUD/Timer.reset()
 
 	
 func hit_player(name: String, dmg: int, stun: int, push: Vector2, height: String, knockdown: bool):
@@ -55,3 +57,8 @@ func combo_on(name: String, combo_num: int):
 	
 func combo_off(name: String):
 	hud_dict[name]["combo"].off()
+
+
+func _on_Timer_timeout():
+	print("Time Up")
+	start()
