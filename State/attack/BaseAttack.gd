@@ -18,7 +18,7 @@ func enter():
 	owner.whiff()
 	change_animation()	
 		
-func update(delta):
+func update(_delta):
 	var frame_count = owner.get_node("AnimationPlayer").get_current_animation_position()
 	frame_count = int(frame_count)
 	if frame_count >= begin_frame and frame_count <= end_frame:
@@ -26,7 +26,7 @@ func update(delta):
 			owner.hit_connect(dmg, stun, push, height, knockdown)
 			hit_connect = true
 
-func push(_velo):
+func push(_velo: int):
 	pass
 	
 func exit():

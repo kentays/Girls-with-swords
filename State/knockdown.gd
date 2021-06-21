@@ -5,20 +5,20 @@ func enter():
 	change_animation()
 	
 
-func pushback(arg: int):
+func pushback(_arg: int):
 	pass
 
 	
 func update(_delta):
 	owner.vel.x = 0
 
-func push(_vel):
+func push(_vel: int):
 	pass
 	
-func stun(arg: int):
+func stun(_arg: int):
 	pass
 
-func receive_hit(height: String):
+func receive_hit(_height: String):
 	pass
 
 	

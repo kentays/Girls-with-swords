@@ -17,7 +17,7 @@ func handle_input(event: InputEvent):
 	elif event.is_action_pressed(input_dict["kick"]):
 		emit_signal("finished", "jumping_kick")
 	
-func update(delta: float):
+func update(_delta: float):
 	if owner.grounded:
 		print("Touched floor")
 		owner.land()

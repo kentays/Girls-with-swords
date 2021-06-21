@@ -20,6 +20,7 @@ func handle_input(_event: InputEvent):
 	pass
 	
 func push(x_vel : int):
+	x_vel = float(x_vel)
 	owner.vel.x = x_vel / 2
 
 func update(_delta: float):
@@ -31,5 +32,5 @@ func _on_animation_finished():
 func _on_audio_finished():
 	print("Audio finished")
 
-func receive_hit(height: String):
+func receive_hit(_height: String):
 	emit_signal("finished", "hitstun")
