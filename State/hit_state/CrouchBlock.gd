@@ -4,7 +4,7 @@ func enter():
 	.enter()
 	owner.block()
 
-func receive_hit(height):
+func receive_hit(height: String):
 	if height == "high":
 		emit_signal("finished", "hitstun")
 	else:

@@ -15,7 +15,7 @@ func exit():
 	owner.vel.x = 0
 	owner.stop_sfx()
 	
-func handle_input(event):
+func handle_input(event: InputEvent):
 	if event.is_action_pressed(input_dict["jump"]):
 		emit_signal("finished", "moving_jump")
 	
@@ -41,7 +41,7 @@ func handle_input(event):
 		
 		emit_signal("finished", "slash")
 		
-func update(_delta):
+func update(_delta: float):
 	var mod = -1
 	if moving_right:
 		mod = 1
@@ -50,7 +50,7 @@ func update(_delta):
 func push(_vel):
 	pass
 	
-func receive_hit(height):
+func receive_hit(height: String):
 	if height == "high":
 		emit_signal("finished", "hitstun")
 		return

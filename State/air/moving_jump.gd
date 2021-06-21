@@ -17,7 +17,7 @@ func enter():
 func push(_vel):
 	pass
 	
-func update(delta):
+func update(delta: float):
 	var mod = -1
 	if facing_right:
 		mod = 1

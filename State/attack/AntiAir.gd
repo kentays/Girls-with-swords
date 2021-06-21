@@ -7,7 +7,7 @@ func enter():
 	owner.grounded = false
 	owner.vel.y = -1 * jumpForce
 	
-func handle_input(event):
+func handle_input(event: InputEvent):
 	pass
 	
 func _on_animation_finished():

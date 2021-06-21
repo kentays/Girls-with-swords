@@ -14,7 +14,7 @@ func init(right: bool):
 
 
 # Called when the node enters the scene tree for the first time.
-func _physics_process(delta):
+func _physics_process(delta: float):
 	var collision = move_and_collide(delta * velocity)
 	if collision != null:
 		if collision.collider.get_class() == "KinematicBody2D":

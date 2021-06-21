@@ -1,7 +1,7 @@
 extends "BaseAttack.gd"
 			
 			
-func handle_input(event):
+func handle_input(event: InputEvent):
 	if hit_connect and event.is_action_pressed(input_dict["jump"]):
 		print("jump cancel")
 		emit_signal("finished", "jump")

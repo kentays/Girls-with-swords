@@ -20,7 +20,7 @@ func _ready():
 	
 	start()
 
-func _process(_delta):
+func _process(_delta: float):
 	if p1.position.x > p2.position.x:
 		p1.turn_left()
 		p2.turn_right()
@@ -49,7 +49,7 @@ func hit_player(name: String, dmg: int, stun: int, push: Vector2, height: String
 		start()
 	hud_dict.P1.healthbar.value = hud_dict.P1.health_num
 	hud_dict.P2.healthbar.value = hud_dict.P2.health_num
-	get_node(name).receive_hit(dmg, stun, push, height, knockdown)
+	get_node(name).receive_hit(stun, push, height, knockdown)
 
 
 func combo_on(name: String, combo_num: int):

@@ -7,7 +7,7 @@ func enter():
 		moving_right = false
 	owner.dash(moving_right)
 
-func handle_input(event):
+func handle_input(event: InputEvent):
 	if event.is_action_pressed(input_dict["jump"]):
 		emit_signal("finished", "moving_jump")
 	

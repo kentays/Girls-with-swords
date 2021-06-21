@@ -4,7 +4,7 @@ signal finished(next_state_name)
 
 var input_dict = null
 
-func map_inputs(mapping):
+func map_inputs(mapping: Dictionary):
 	input_dict = mapping
 	
 func change_animation():
@@ -16,13 +16,13 @@ func enter():
 func exit():
 	pass
 	
-func handle_input(_event):
+func handle_input(_event: InputEvent):
 	pass
 	
 func push(x_vel : int):
 	owner.vel.x = x_vel / 2
 
-func update(_delta):
+func update(_delta: float):
 	pass
 	
 func _on_animation_finished():

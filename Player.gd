@@ -68,16 +68,16 @@ func _ready():
 func start(pos: Vector2):
 	self.position = pos
 	
-func _change_state(state_name):
+func _change_state(state_name: String):
 	current_state.exit()
 	current_state = states_map[state_name]
 	current_state.enter()
 	
-func _input(event):
+func _input(event: InputEvent):
 	try_buffer(event)
 	current_state.handle_input(event)
 
-func _physics_process(delta):
+func _physics_process(delta: float):
 	vel.y += gravity * delta
 	move_and_slide(vel, Vector2.UP)
 		
@@ -99,12 +99,12 @@ func _physics_process(delta):
 func push(x_vel : int):
 	current_state.push(x_vel)
 	
-func _on_Area2D_body_entered(body):
+func _on_Area2D_body_entered(body: KinematicBody2D):
 	if body.name == other_player_name:
 		inside_hurtbox = true
 	
 
-func _on_Area2D_body_exited(body):
+func _on_Area2D_body_exited(body: KinematicBody2D):
 	if body.name == other_player_name:
 		inside_hurtbox = false
 
@@ -129,7 +129,7 @@ func turn_left():
 	hurtbox.position.x = abs(hurtbox.position.x) * -1
 	hitbox.position.x = abs(hitbox.position.x)
 
-func receive_hit(dmg: int, stun: int, push: Vector2, height: String, knockdown: bool):
+func receive_hit(stun: int, push: Vector2, height: String, knockdown: bool):
 	current_state.receive_hit(height)
 	if facing_right:
 		push.x *= -1
@@ -166,7 +166,7 @@ func jump():
 func land():
 	$AudioStreamPlayer.land()
 	
-func dash(moving_right):
+func dash(moving_right: bool):
 	$AudioStreamPlayer.dash()
 	var dust = Dust.instance()
 	dust.set_global_position(position)
@@ -183,19 +183,19 @@ func walk():
 func stop_sfx():
 	$AudioStreamPlayer.stop()
 	
-func hadouken(mask: int):
+func hadouken(mask: int): # make sure this works
 	var h = Hadouken.instance()
 	get_parent().add_child(h)
 	h.init(facing_right)
 	h.set_global_position(position)
 	
 	
-func try_buffer(event):
+func try_buffer(event: InputEvent):
 	for key in input_dict.keys():
 		if event.is_action_pressed(input_dict[key]):
 			buffer(key)
 			
-func buffer(key):
+func buffer(key: String):
 	input_buf.push_front(key)
 	while len(input_buf) > 4:
 		input_buf.pop_back()
@@ -211,7 +211,7 @@ func restart_animation():
 	$AnimationPlayer.seek(0)
 
 
-func _on_AnimationPlayer_animation_finished(anim_name):
+func _on_AnimationPlayer_animation_finished(anim_name: String):
 	print(anim_name + " has finished")
 	current_state._on_animation_finished()
 

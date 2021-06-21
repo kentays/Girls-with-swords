@@ -11,13 +11,13 @@ func enter():
 	owner.jump()
 	owner.vel.y = -1 * jumpForce
 	
-func handle_input(event):
+func handle_input(event: InputEvent):
 	if event.is_action_pressed(input_dict["punch"]):
 		emit_signal("finished", "jumping_punch")
 	elif event.is_action_pressed(input_dict["kick"]):
 		emit_signal("finished", "jumping_kick")
 	
-func update(delta):
+func update(delta: float):
 	if owner.grounded:
 		print("Touched floor")
 		owner.land()

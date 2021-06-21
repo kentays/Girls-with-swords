@@ -8,10 +8,10 @@ func enter():
 	.enter()
 	print("entering DP")
 	
-func handle_input(_event):
+func handle_input(_event: InputEvent):
 	pass
 	
-func update(delta):
+func update(delta: float):
 	var mod = -1
 	if owner.facing_right:
 		mod = 1

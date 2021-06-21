@@ -7,7 +7,7 @@ func enter():
 	change_animation()
 	
 
-func receive_hit(height):
+func receive_hit(height: String):
 	owner.combo_up()
 	stun_count = 0
 	owner.receive_hit_confirm()

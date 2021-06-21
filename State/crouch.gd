@@ -3,7 +3,7 @@ extends "state.gd"
 func enter():
 	change_animation()
 
-func handle_input(event):
+func handle_input(event: InputEvent):
 	if not Input.is_action_pressed(input_dict["crouch"]):
 		emit_signal("finished", "idle")
 	
@@ -39,5 +39,5 @@ func receive_hit(height: String):
 		emit_signal("finished", "hitstun")
 
 	
-func update(_delta):
+func update(_delta: float):
 	owner.vel.x = 0

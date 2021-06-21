@@ -32,13 +32,13 @@ func adjust(p1_pos : Vector2, p2_pos : Vector2):
 	if x_above < 0:
 		offset.x += x_above
 
-func calculate_center(rect: Rect2):
+func calculate_center(rect: Rect2) -> Vector2:
 	return Vector2(
 		rect.position.x + rect.size.x / 2,
 		rect.position.y + rect.size.y / 2
 	)
 
-func calculate_zoom(rect: Rect2, viewport_size: Vector2):
+func calculate_zoom(rect: Rect2, viewport_size: Vector2) -> Vector2:
 	var max_zoom = max(
 		max(0.6, rect.size.x / viewport_size.x + zoom_offset),
 		max(0.6, rect.size.y / viewport_size.y + zoom_offset)

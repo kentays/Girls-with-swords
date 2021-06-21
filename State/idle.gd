@@ -16,7 +16,7 @@ func enter():
 	elif Input.is_action_pressed(input_dict["jump"]):
 		emit_signal("finished", "jump")
 	
-func handle_input(event):
+func handle_input(event: InputEvent):
 	if event.is_action_pressed(input_dict["jump"]):
 		emit_signal("finished", "jump")
 	
@@ -36,5 +36,5 @@ func handle_input(event):
 		emit_signal("finished", "walk")
 		
 	
-func update(_delta):
+func update(_delta: float):
 	owner.vel.x = 0

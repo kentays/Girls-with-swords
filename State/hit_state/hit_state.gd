@@ -9,7 +9,7 @@ func pushback(force: Vector2):
 func stun(new_stun_count : int):
 	stun_count = new_stun_count
 
-func update(delta):
+func update(delta: float):
 	if abs(owner.vel.x) > 50:
 		owner.vel.x = lerp(owner.vel.x, 0, .3)
 	else:

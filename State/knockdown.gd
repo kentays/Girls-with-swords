@@ -5,7 +5,7 @@ func enter():
 	change_animation()
 	
 
-func pushback(arg):
+func pushback(arg: int):
 	pass
 
 	
@@ -15,10 +15,10 @@ func update(_delta):
 func push(_vel):
 	pass
 	
-func stun(arg):
+func stun(arg: int):
 	pass
 
-func receive_hit(height):
+func receive_hit(height: String):
 	pass
 
 	

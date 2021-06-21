@@ -1,6 +1,6 @@
 extends "BaseAttack.gd"
 
-func update(delta):
+func update(delta: float):
 	.update(delta)
 	if owner.grounded:
 		print("Touched floor")
