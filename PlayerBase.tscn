@@ -29,13 +29,13 @@
 [ext_resource path="res://State/attack/DP.gd" type="Script" id=48]
 [ext_resource path="res://State/attack/AntiAir.gd" type="Script" id=49]
 
-[sub_resource type="RectangleShape2D" id=102]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 15, 26 )
 
-[sub_resource type="RectangleShape2D" id=103]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 3.38546, 6.3203 )
 
-[sub_resource type="Animation" id=104]
+[sub_resource type="Animation" id=3]
 resource_name = "Crouch"
 tracks/0/type = "value"
 tracks/0/path = NodePath("HitBox:position")
@@ -74,7 +74,7 @@ tracks/2/keys = {
 "values": [ Vector2( 16, 21 ) ]
 }
 
-[sub_resource type="Animation" id=105]
+[sub_resource type="Animation" id=4]
 resource_name = "Fall"
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -113,7 +113,7 @@ tracks/2/keys = {
 "values": [ Vector2( -1, -2 ) ]
 }
 
-[sub_resource type="Animation" id=106]
+[sub_resource type="Animation" id=5]
 length = 20.0
 step = 1.0
 tracks/0/type = "value"
@@ -153,7 +153,7 @@ tracks/2/keys = {
 "values": [ Vector2( 16, 39 ) ]
 }
 
-[sub_resource type="Animation" id=107]
+[sub_resource type="Animation" id=6]
 length = 60.0
 loop = true
 step = 1.0
@@ -206,7 +206,7 @@ tracks/3/keys = {
 "values": [ Vector2( 15, -22 ), Vector2( 35, -22 ) ]
 }
 
-[sub_resource type="Animation" id=108]
+[sub_resource type="Animation" id=7]
 length = 15.0
 step = 1.0
 tracks/0/type = "value"
@@ -282,7 +282,7 @@ tracks/5/keys = {
 "values": [ Vector2( 4, 1 ) ]
 }
 
-[sub_resource type="Animation" id=109]
+[sub_resource type="Animation" id=8]
 resource_name = "Jump"
 length = 20.0
 step = 1.0
@@ -323,7 +323,7 @@ tracks/2/keys = {
 "values": [ Vector2( -1, -2 ) ]
 }
 
-[sub_resource type="Animation" id=110]
+[sub_resource type="Animation" id=9]
 length = 35.0
 step = 1.0
 tracks/0/type = "value"
@@ -375,7 +375,7 @@ tracks/3/keys = {
 "values": [ Vector2( 25.6581, 2.97165 ) ]
 }
 
-[sub_resource type="Animation" id=111]
+[sub_resource type="Animation" id=10]
 length = 22.0
 step = 1.0
 tracks/0/type = "value"
@@ -439,7 +439,7 @@ tracks/4/keys = {
 "values": [ Vector2( 2.24553, 6.3203 ), Vector2( 2.01634, 5.36131 ), Vector2( 2.66772, 6.3203 ), Vector2( 3.38546, 6.3203 ), Vector2( 3.38546, 6.3203 ) ]
 }
 
-[sub_resource type="Animation" id=114]
+[sub_resource type="Animation" id=11]
 resource_name = "Knockdown"
 length = 40.0
 step = 1.0
@@ -480,7 +480,7 @@ tracks/2/keys = {
 "values": [ Vector2( -5, 21 ) ]
 }
 
-[sub_resource type="Animation" id=112]
+[sub_resource type="Animation" id=12]
 length = 12.0
 loop = true
 step = 1.0
@@ -521,7 +521,7 @@ tracks/2/keys = {
 "values": [ Vector2( 16, 39 ) ]
 }
 
-[sub_resource type="Animation" id=113]
+[sub_resource type="Animation" id=13]
 length = 60.0
 loop = true
 step = 1.0
@@ -590,18 +590,18 @@ scale = Vector2( 3, 3 )
 texture = ExtResource( 27 )
 hframes = 55
 vframes = 2
-frame = 61
+frame = 32
 
 [node name="HitBox" type="CollisionShape2D" parent="."]
-position = Vector2( -7.59951, -1.58022 )
-shape = SubResource( 102 )
+position = Vector2( -1, -2 )
+shape = SubResource( 1 )
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="HurtBox" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 14.8733, 1.81178 )
+position = Vector2( 13.6067, -17.8203 )
 scale = Vector2( 4, 1 )
-shape = SubResource( 103 )
+shape = SubResource( 2 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 37 )
@@ -609,17 +609,17 @@ script = ExtResource( 38 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 playback_speed = 60.0
-anims/Crouch = SubResource( 104 )
-anims/Fall = SubResource( 105 )
-anims/HitStun = SubResource( 106 )
-anims/Idle = SubResource( 107 )
-anims/Jab = SubResource( 108 )
-anims/Jump = SubResource( 109 )
-anims/JumpKick = SubResource( 110 )
-anims/JumpPunch = SubResource( 111 )
-anims/Knockdown = SubResource( 114 )
-anims/Run = SubResource( 112 )
-anims/Walk = SubResource( 113 )
+anims/Crouch = SubResource( 3 )
+anims/Fall = SubResource( 4 )
+anims/HitStun = SubResource( 5 )
+anims/Idle = SubResource( 6 )
+anims/Jab = SubResource( 7 )
+anims/Jump = SubResource( 8 )
+anims/JumpKick = SubResource( 9 )
+anims/JumpPunch = SubResource( 10 )
+anims/Knockdown = SubResource( 11 )
+anims/Run = SubResource( 12 )
+anims/Walk = SubResource( 13 )
 
 [node name="States" type="Node" parent="."]
 
