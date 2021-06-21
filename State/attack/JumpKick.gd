@@ -1,4 +1,1 @@
 extends "JumpPunch.gd"
-
-func _on_animation_finished():
-	emit_signal("finished", "fall")

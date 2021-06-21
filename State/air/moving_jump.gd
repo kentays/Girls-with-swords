@@ -5,6 +5,7 @@ var facing_right : bool = true
 
 func enter():
 	owner.grounded = false
+	owner.change_animation("Jump") # Uses the jump animation
 	owner.jump()
 	if Input.is_action_pressed(input_dict["move_right"]):
 		facing_right = true
