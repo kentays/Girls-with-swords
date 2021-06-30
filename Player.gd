@@ -100,11 +100,17 @@ func push(x_vel : int):
 	current_state.push(x_vel)
 	
 func _on_Area2D_body_entered(body: KinematicBody2D):
+	if body == null:
+		print("Null body collision")
+		return
 	if body.name == other_player_name:
 		inside_hurtbox = true
 	
 
 func _on_Area2D_body_exited(body: KinematicBody2D):
+	if body == null:
+		print("Null body exit")
+		return
 	if body.name == other_player_name:
 		inside_hurtbox = false
 
