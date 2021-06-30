@@ -35,6 +35,7 @@ onready var states_map = {
 	"run": $States/Move/Run,
 	"hitstun": $States/HitState/HitStun,
 	"crouch_jab": $States/Attack/CrouchJab,
+	"crouch_kick": $States/Attack/CrouchKick,
 	"knockdown": $States/Knockdown,
 	"crouch_block": $States/HitState/CrouchBlock,
 	"walk": $States/Move/Walk,
