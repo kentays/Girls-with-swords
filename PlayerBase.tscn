@@ -30,7 +30,7 @@
 [ext_resource path="res://State/attack/AntiAir.gd" type="Script" id=49]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 15, 39 )
+extents = Vector2( 16, 39 )
 
 [sub_resource type="RectangleShape2D" id=2]
 
@@ -304,10 +304,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 6, 7, 13, 14 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 15, 26 ) ]
+"values": [ Vector2( 14.5065, 30.2148 ), Vector2( 14.5065, 30.2148 ), Vector2( 16.5965, 27.9756 ), Vector2( 16.5965, 27.9756 ), Vector2( 18.2386, 25.7363 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("HitBox:position")
@@ -316,10 +316,10 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 6, 7, 13, 14 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -1, -2 ) ]
+"values": [ Vector2( -1.59713, -0.208595 ), Vector2( -1.59713, -0.208595 ), Vector2( -0.402859, -0.208595 ), Vector2( -0.402859, -0.208595 ), Vector2( 0.791416, -0.208595 ) ]
 }
 
 [sub_resource type="Animation" id=9]
@@ -342,12 +342,12 @@ tracks/1/path = NodePath("HitBox:shape:extents")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
-tracks/1/enabled = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( -1, 0, 19, 20, 24, 25 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 15, 26 ) ]
+"values": [ Vector2( 15.2529, 28.8713 ), Vector2( 15.2529, 28.8713 ), Vector2( 15.2529, 28.8713 ), Vector2( 15.2529, 25.587 ), Vector2( 15.2529, 25.587 ), Vector2( 15.2529, 29.1698 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("HitBox:position")
@@ -356,10 +356,10 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 19, 20, 24, 25 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -1, -2 ) ]
+"values": [ Vector2( 0.492847, -4.38855 ), Vector2( 0.492847, -4.38855 ), Vector2( 0.492847, -7.97138 ), Vector2( 0.492847, -7.97138 ), Vector2( 0.194279, -4.83641 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("Area2D/HurtBox:position")
@@ -368,10 +368,22 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 6, 13, 16, 18, 20, 24, 25 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 25.6581, 2.97165 ) ]
+"values": [ Vector2( 25.6581, 2.97165 ), Vector2( 15.2082, 1.47881 ), Vector2( 15.2082, 1.47881 ), Vector2( 18.1939, 1.47881 ), Vector2( 18.1939, 1.47881 ), Vector2( 23.8667, -1.65617 ), Vector2( 23.8667, -1.65617 ), Vector2( 15.656, 0.881669 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Area2D/HurtBox:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 5, 6, 13, 16, 18, 20, 24, 25 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1e-05, 1e-05 ), Vector2( 0.777, 0.582 ), Vector2( 0.777, 0.582 ), Vector2( 1.282, 0.582 ), Vector2( 1.282, 0.582 ), Vector2( 1.344, 0.582 ), Vector2( 1.344, 0.582 ), Vector2( 0.647, 0.582 ) ]
 }
 
 [sub_resource type="Animation" id=10]
@@ -384,10 +396,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 9, 10, 16, 17 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -1, -2 ), Vector2( -1.26657, -1.58022 ), Vector2( -4.5597, -2.97346 ), Vector2( -4.5597, -2.97346 ), Vector2( -7.59951, -1.58022 ) ]
+"values": [ Vector2( -1, -2 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Sprite:frame")
@@ -402,16 +414,16 @@ tracks/1/keys = {
 "values": [ 56, 57, 58, 59, 61 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("HitBox:shape:extents")
+tracks/2/path = NodePath("Area2D/HurtBox:scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
-tracks/2/enabled = false
+tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 6, 7, 9, 10, 16, 17 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 16, 28 ) ]
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1e-05, 1e-05 ), Vector2( 0.646, 0.566 ), Vector2( 0.646, 0.566 ), Vector2( 0.945, 0.61 ), Vector2( 0.945, 0.61 ), Vector2( 1e-05, 1e-05 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("Area2D/HurtBox:position")
@@ -420,22 +432,10 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 6, 7, 10, 16 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 7, 9, 10, 16 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 13.6067, -17.8203 ), Vector2( 13.5344, -17.8927 ), Vector2( 17.6598, -6.67433 ), Vector2( 14.8733, 1.81178 ), Vector2( 14.8733, 1.81178 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("Area2D/HurtBox:shape:extents")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = false
-tracks/4/keys = {
-"times": PoolRealArray( 0, 6, 7, 10, 16 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 2.24553, 6.3203 ), Vector2( 2.01634, 5.36131 ), Vector2( 2.66772, 6.3203 ), Vector2( 3.38546, 6.3203 ), Vector2( 3.38546, 6.3203 ) ]
+"values": [ Vector2( 15.6967, -7.37038 ), Vector2( 15.6967, -7.37038 ), Vector2( 14.3531, 1.13883 ), Vector2( 14.3531, 1.13883 ) ]
 }
 
 [sub_resource type="Animation" id=11]
@@ -461,10 +461,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 10, 13, 23, 24, 34, 36 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 25, 18 ) ]
+"values": [ Vector2( 27.67, 16.157 ), Vector2( 27.67, 16.157 ), Vector2( 27.513, 13.687 ), Vector2( 27.513, 13.687 ), Vector2( 27.717, 12.081 ), Vector2( 27.717, 12.081 ), Vector2( 30.085, 7.647 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("HitBox:position")
@@ -473,14 +473,14 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 10, 13, 23, 24, 34, 36 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -5, 21 ) ]
+"values": [ Vector2( -5.78, 22.846 ), Vector2( -5.78, 22.846 ), Vector2( -5.78, 25.436 ), Vector2( -5.78, 25.436 ), Vector2( -5.78, 26.791 ), Vector2( -5.78, 26.791 ), Vector2( -5.78, 31.36 ) ]
 }
 
 [sub_resource type="Animation" id=12]
-length = 12.0
+length = 24.0
 loop = true
 step = 1.0
 tracks/0/type = "value"
@@ -502,7 +502,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 3, 6, 9 ),
+"times": PoolRealArray( 0, 9, 17, 24 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 97, 98, 99, 100 ]
@@ -589,16 +589,16 @@ scale = Vector2( 3, 3 )
 texture = ExtResource( 27 )
 hframes = 55
 vframes = 2
-frame = 17
+frame = 99
 
 [node name="HitBox" type="CollisionShape2D" parent="."]
-position = Vector2( -1.98414, -0.243767 )
+position = Vector2( -1, 0 )
 shape = SubResource( 1 )
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="HurtBox" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 13.5484, -17.0159 )
+position = Vector2( 23.7499, -22 )
 scale = Vector2( 1e-05, 1e-05 )
 shape = SubResource( 2 )
 
