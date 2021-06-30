@@ -30,6 +30,7 @@ onready var states_map = {
 	"jump": $States/Air/Jump,
 	"moving_jump": $States/Air/MovingJump,
 	"jab": $States/Attack/Jab,
+	"kick": $States/Attack/Kick,
 	"crouch": $States/Crouch,
 	"run": $States/Move/Run,
 	"hitstun": $States/HitState/HitStun,
