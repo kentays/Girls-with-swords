@@ -3,7 +3,7 @@ extends "jab.gd"
 export var jumpForce : int = 300
 
 func enter():
-	owner.whiff()
+	.enter()
 	owner.grounded = false
 	owner.vel.y = -1 * jumpForce
 	

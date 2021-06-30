@@ -1,6 +1,7 @@
 extends "run.gd"
 
 func enter():
+	change_animation()
 	if Input.is_action_pressed(input_dict["move_right"]):
 		moving_right = true
 	else:
