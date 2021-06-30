@@ -6,6 +6,7 @@ export var dmg : int = 0
 export var stun : int = 0
 export var push : Vector2 = Vector2.ZERO
 export(String, "low", "mid", "high") var height
+export var knockdown : bool = false
 
 func init(right: bool):
 	if not right:
@@ -18,7 +19,7 @@ func _physics_process(delta: float):
 	var collision = move_and_collide(delta * velocity)
 	if collision != null:
 		if collision.collider.get_class() == "KinematicBody2D":
-			get_parent().hit_player(collision.collider.name, dmg, stun, push, height)
+			get_parent().hit_player(collision.collider.name, dmg, stun, push, height, knockdown)
 			queue_free()
 		else:
 			queue_free()
