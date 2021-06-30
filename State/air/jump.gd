@@ -16,6 +16,8 @@ func handle_input(event: InputEvent):
 		emit_signal("finished", "jumping_punch")
 	elif event.is_action_pressed(input_dict["kick"]):
 		emit_signal("finished", "jumping_kick")
+	elif event.is_action_pressed(input_dict["slash"]):
+		emit_signal("finished", "jumping_slash")
 	
 func update(_delta: float):
 	if owner.grounded:
