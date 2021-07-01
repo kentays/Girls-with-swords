@@ -22,6 +22,9 @@ func handle_input(_event: InputEvent):
 func push(x_vel : int):
 	x_vel = float(x_vel)
 	owner.vel.x = x_vel / 2
+	
+func damage(dmg : int):
+	owner.deduct_health(dmg)
 
 func update(_delta: float):
 	pass
