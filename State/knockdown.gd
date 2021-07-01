@@ -5,7 +5,7 @@ func enter():
 	change_animation()
 	
 
-func pushback(_arg: int):
+func pushback(_arg: Vector2):
 	pass
 
 	
