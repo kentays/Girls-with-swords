@@ -2,6 +2,9 @@ extends "../state.gd"
 
 var stun_count : int = 0
 
+func enter():
+	change_animation()
+
 func pushback(force: Vector2):
 	owner.vel.x = force.x
 	owner.vel.y = force.y * -1

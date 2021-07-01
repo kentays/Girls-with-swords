@@ -4,7 +4,6 @@ func enter():
 	.enter()
 	owner.combo = 1
 	owner.receive_hit_confirm()
-	change_animation()
 	
 
 func receive_hit(_height: String):

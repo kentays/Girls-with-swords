@@ -10,9 +10,3 @@ func receive_hit(height: String):
 	else:
 		print("Blockstring")
 		owner.block()
-	
-func update(_delta: float):
-	owner.vel.x = 0
-	
-func _on_animation_finished():
-	emit_signal("finished", "idle")
