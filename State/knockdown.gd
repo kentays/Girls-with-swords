@@ -7,6 +7,9 @@ func enter():
 
 func pushback(_arg: Vector2):
 	pass
+	
+func knockdown():
+	pass
 
 	
 func update(_delta):
