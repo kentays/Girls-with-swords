@@ -32,7 +32,7 @@
 [ext_resource path="res://State/attack/AntiAir.gd" type="Script" id=49]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 25.623, 27.5456 )
+extents = Vector2( 22.0543, 38.3162 )
 
 [sub_resource type="RectangleShape2D" id=2]
 
@@ -859,8 +859,8 @@ tracks/3/keys = {
 "values": [ Vector2( 15.6967, -7.37038 ), Vector2( 15.6967, -7.37038 ), Vector2( 14.3531, 1.13883 ), Vector2( 14.3531, 1.13883 ) ]
 }
 
-[sub_resource type="Animation" id=25]
-length = 30.0
+[sub_resource type="Animation" id=19]
+length = 35.0
 step = 1.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -869,10 +869,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 10, 23 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 7, 13, 19, 27 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 3, 4, 5 ]
+"values": [ 58, 68, 69, 70, 71 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("HitBox:position")
@@ -881,10 +881,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 9, 10, 22, 23 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 26, 27 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 3.67531, 11.5084 ), Vector2( 3.67531, 11.5084 ), Vector2( 4.93405, 17.8021 ), Vector2( 4.93405, 17.8021 ), Vector2( 4.93405, 13.6663 ) ]
+"values": [ Vector2( 0.0789163, -2.15789 ), Vector2( 0.0789163, -2.15789 ), Vector2( -2.25874, 4.49544 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("HitBox:shape:extents")
@@ -893,10 +893,10 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 9, 10, 22, 23 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 26, 27 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 25.623, 27.5456 ), Vector2( 25.623, 27.5456 ), Vector2( 25.623, 21.0721 ), Vector2( 25.623, 21.0721 ), Vector2( 25.623, 25.208 ) ]
+"values": [ Vector2( 25.623, 27.5456 ), Vector2( 25.623, 27.5456 ), Vector2( 25.623, 27.5456 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("Area2D/HurtBox:scale")
@@ -905,10 +905,10 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 9, 10, 22, 23 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 6, 7, 12, 13, 18, 19, 26, 27 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1e-05, 1e-05 ), Vector2( 1.62, 0.833 ), Vector2( 1.62, 0.833 ), Vector2( 1e-05, 1e-05 ) ]
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 2.759, -1.151 ), Vector2( 2.759, -1.151 ), Vector2( 4.649, -2.079 ), Vector2( 4.649, -2.079 ), Vector2( 4.408, -1.866 ), Vector2( 4.408, -1.866 ), Vector2( 1e-05, 1e-05 ) ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("Area2D/HurtBox:position")
@@ -917,13 +917,13 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 10, 22, 23 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 7, 12, 13, 18, 19, 26 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 22.9608, 30.3042 ), Vector2( 22.9608, 30.3042 ), Vector2( 22.9608, 30.3042 ) ]
+"values": [ Vector2( 5.87794, 2.25234 ), Vector2( 5.87794, 2.25234 ), Vector2( 5.87794, 11.603 ), Vector2( 5.87794, 11.603 ), Vector2( 10.5532, 19.515 ), Vector2( 10.5532, 19.515 ) ]
 }
 
-[sub_resource type="Animation" id=24]
+[sub_resource type="Animation" id=20]
 length = 26.0
 step = 1.0
 tracks/0/type = "value"
@@ -933,10 +933,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 7, 10, 13, 15, 20 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 5, 10, 19, 23 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 22, 23, 24, 25, 26, 27 ]
+"values": [ 18, 19, 20, 21, 18 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("HitBox:shape:extents")
@@ -948,7 +948,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 25.623, 34.0191 ) ]
+"values": [ Vector2( 18.2504, 38.3348 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("HitBox:position")
@@ -960,7 +960,7 @@ tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -3.15783, 4.85513 ) ]
+"values": [ Vector2( -2.25873, 0.53946 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("Area2D/HurtBox:scale")
@@ -969,10 +969,10 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 6, 7, 9, 10, 12, 13, 14, 15, 19, 20 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 9, 10, 18, 19 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1e-05, 1e-05 ), Vector2( 1.759, 1.118 ), Vector2( 1.759, 1.118 ), Vector2( 2.977, 2.223 ), Vector2( 2.977, 2.223 ), Vector2( 3.309, 3.155 ), Vector2( 3.309, 3.155 ), Vector2( 3.448, 3.745 ), Vector2( 3.448, 3.745 ), Vector2( 1e-05, 1e-05 ) ]
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1e-05, 1e-05 ), Vector2( 2.053, 1.029 ), Vector2( 2.053, 1.029 ), Vector2( 1e-05, 1e-05 ) ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("Area2D/HurtBox:position")
@@ -981,13 +981,13 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 6, 7, 9, 10, 12, 13, 14, 15, 19 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 10, 18 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 25.4783, -0.265105 ), Vector2( 25.4783, -0.265105 ), Vector2( -17.3188, -15.9094 ), Vector2( -17.3188, -15.9094 ), Vector2( 4.97886, -8.53679 ), Vector2( 4.97886, -8.53679 ), Vector2( 12.104, -8.537 ), Vector2( 12.104, -8.537 ), Vector2( 19.9151, 1.53277 ), Vector2( 19.9151, 1.53277 ) ]
+"values": [ Vector2( 20.6344, -0.0856076 ), Vector2( 20.6344, -0.0856076 ) ]
 }
 
-[sub_resource type="Animation" id=28]
+[sub_resource type="Animation" id=21]
 length = 40.0
 step = 1.0
 tracks/0/type = "value"
@@ -1039,7 +1039,7 @@ tracks/3/keys = {
 "values": [ Vector2( 1e-05, 1e-05 ) ]
 }
 
-[sub_resource type="Animation" id=26]
+[sub_resource type="Animation" id=22]
 resource_name = "Wakeup"
 length = 16.0
 step = 1.0
@@ -1068,7 +1068,7 @@ tracks/1/keys = {
 "values": [ Vector2( 0, 0 ) ]
 }
 
-[sub_resource type="Animation" id=29]
+[sub_resource type="Animation" id=23]
 length = 24.0
 loop = true
 step = 1.0
@@ -1109,7 +1109,7 @@ tracks/2/keys = {
 "values": [ Vector2( 16, 39 ) ]
 }
 
-[sub_resource type="Animation" id=30]
+[sub_resource type="Animation" id=24]
 resource_name = "Slash"
 length = 26.0
 step = 1.0
@@ -1174,7 +1174,7 @@ tracks/4/keys = {
 "values": [ Vector2( 25.4783, -0.265105 ), Vector2( 25.4783, -0.265105 ), Vector2( -17.3188, -15.9094 ), Vector2( -17.3188, -15.9094 ), Vector2( 4.97886, -8.53679 ), Vector2( 4.97886, -8.53679 ), Vector2( 12.104, -8.537 ), Vector2( 12.104, -8.537 ), Vector2( 19.9151, 1.53277 ), Vector2( 19.9151, 1.53277 ) ]
 }
 
-[sub_resource type="Animation" id=31]
+[sub_resource type="Animation" id=25]
 resource_name = "Sweep"
 length = 30.0
 step = 1.0
@@ -1239,7 +1239,7 @@ tracks/4/keys = {
 "values": [ Vector2( 22.9608, 30.3042 ), Vector2( 22.9608, 30.3042 ), Vector2( 22.9608, 30.3042 ) ]
 }
 
-[sub_resource type="Animation" id=27]
+[sub_resource type="Animation" id=26]
 length = 60.0
 loop = true
 step = 1.0
@@ -1292,7 +1292,7 @@ tracks/3/keys = {
 "values": [ Vector2( 23.7499, -22 ), Vector2( 40, -22 ) ]
 }
 
-[sub_resource type="Animation" id=32]
+[sub_resource type="Animation" id=27]
 length = 60.0
 loop = true
 step = 1.0
@@ -1361,17 +1361,17 @@ scale = Vector2( 3, 3 )
 texture = ExtResource( 27 )
 hframes = 55
 vframes = 2
-frame = 3
+frame = 53
 
 [node name="HitBox" type="CollisionShape2D" parent="."]
-position = Vector2( 3.67531, 11.5084 )
+position = Vector2( -2.12859, 0.577877 )
 shape = SubResource( 1 )
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="HurtBox" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 25.4783, -0.265105 )
-scale = Vector2( 1e-05, 1e-05 )
+position = Vector2( 22.9608, 30.3042 )
+scale = Vector2( 1.62, 0.833 )
 shape = SubResource( 2 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
@@ -1396,15 +1396,15 @@ anims/Jab = SubResource( 15 )
 anims/Jump = SubResource( 16 )
 anims/JumpKick = SubResource( 17 )
 anims/JumpPunch = SubResource( 18 )
-anims/JumpSlash = SubResource( 25 )
-anims/Kick = SubResource( 24 )
-anims/Knockdown = SubResource( 28 )
-anims/Lose = SubResource( 26 )
-anims/Run = SubResource( 29 )
-anims/Slash = SubResource( 30 )
-anims/Sweep = SubResource( 31 )
-anims/Wakeup = SubResource( 27 )
-anims/Walk = SubResource( 32 )
+anims/JumpSlash = SubResource( 19 )
+anims/Kick = SubResource( 20 )
+anims/Knockdown = SubResource( 21 )
+anims/Lose = SubResource( 22 )
+anims/Run = SubResource( 23 )
+anims/Slash = SubResource( 24 )
+anims/Sweep = SubResource( 25 )
+anims/Wakeup = SubResource( 26 )
+anims/Walk = SubResource( 27 )
 
 [node name="States" type="Node" parent="."]
 
@@ -1423,20 +1423,35 @@ script = ExtResource( 7 )
 script = ExtResource( 1 )
 begin_frame = 4
 end_frame = 8
-dmg = 8
-stun = 20
-push = Vector2( 300, 0 )
+dmg = 5
+stun = 10
+push = Vector2( 200, 0 )
 height = "mid"
 
 [node name="CrouchJab" type="Node" parent="States/Attack"]
 script = ExtResource( 18 )
+begin_frame = 3
+end_frame = 7
+dmg = 4
+stun = 5
+push = Vector2( 50, 0 )
 
 [node name="Slash" type="Node" parent="States/Attack"]
 script = ExtResource( 40 )
+begin_frame = 7
+end_frame = 20
+dmg = 12
+stun = 10
+push = Vector2( 150, 0 )
 height = "mid"
 
 [node name="Sweep" type="Node" parent="States/Attack"]
 script = ExtResource( 41 )
+begin_frame = 10
+end_frame = 23
+dmg = 10
+stun = 20
+push = Vector2( 5, 0 )
 
 [node name="Hadouken" type="Node" parent="States/Attack"]
 script = ExtResource( 43 )
@@ -1445,36 +1460,71 @@ script = ExtResource( 43 )
 script = ExtResource( 44 )
 begin_frame = 1
 end_frame = 10
-dmg = 5
-stun = 60
+dmg = 7
+stun = 5
 push = Vector2( 200, 0 )
 height = "high"
 
 [node name="CrouchSlash" type="Node" parent="States/Attack"]
 script = ExtResource( 46 )
+begin_frame = 4
+end_frame = 20
+dmg = 12
+stun = 10
+push = Vector2( 150, 0 )
+knockdown = true
 
 [node name="DP" type="Node" parent="States/Attack"]
 script = ExtResource( 48 )
-end_frame = 6
-stun = 60
+begin_frame = 1
+end_frame = 24
+dmg = 13
+stun = 25
 push = Vector2( 600, 500 )
-height = "high"
+height = "mid"
 
 [node name="AntiAir" type="Node" parent="States/Attack"]
 script = ExtResource( 49 )
-height = "high"
+begin_frame = 6
+end_frame = 27
+dmg = 15
+stun = 30
+height = "mid"
 
 [node name="JumpKick" type="Node" parent="States/Attack"]
 script = ExtResource( 28 )
+begin_frame = 6
+end_frame = 25
+dmg = 9
+stun = 10
+push = Vector2( 100, 0 )
+height = "high"
 
 [node name="Kick" type="Node" parent="States/Attack"]
 script = ExtResource( 1 )
+begin_frame = 10
+end_frame = 19
+dmg = 10
+stun = 8
+push = Vector2( 100, 0 )
+height = "mid"
 
 [node name="JumpSlash" type="Node" parent="States/Attack"]
 script = ExtResource( 3 )
+begin_frame = 7
+end_frame = 27
+dmg = 15
+stun = 10
+push = Vector2( 150, 0 )
+height = "high"
 
 [node name="CrouchKick" type="Node" parent="States/Attack"]
 script = ExtResource( 4 )
+begin_frame = 10
+end_frame = 23
+dmg = 10
+stun = 10
+push = Vector2( 100, 0 )
 
 [node name="Air" type="Node" parent="States"]
 
