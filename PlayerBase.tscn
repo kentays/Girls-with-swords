@@ -1,9 +1,8 @@
-[gd_scene load_steps=58 format=2]
+[gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://State/attack/Kick.gd" type="Script" id=1]
 [ext_resource path="res://Player.gd" type="Script" id=2]
 [ext_resource path="res://State/attack/JumpSlash.gd" type="Script" id=3]
-[ext_resource path="res://State/attack/CrouchKick.gd" type="Script" id=4]
 [ext_resource path="res://State/air/moving_jump.gd" type="Script" id=5]
 [ext_resource path="res://State/idle.gd" type="Script" id=6]
 [ext_resource path="res://State/knockdown.gd" type="Script" id=7]
@@ -1452,6 +1451,7 @@ end_frame = 23
 dmg = 10
 stun = 20
 push = Vector2( 5, 0 )
+knockdown = true
 
 [node name="Hadouken" type="Node" parent="States/Attack"]
 script = ExtResource( 43 )
@@ -1472,7 +1472,6 @@ end_frame = 20
 dmg = 12
 stun = 10
 push = Vector2( 150, 0 )
-knockdown = true
 
 [node name="DP" type="Node" parent="States/Attack"]
 script = ExtResource( 48 )
@@ -1517,14 +1516,6 @@ dmg = 15
 stun = 10
 push = Vector2( 150, 0 )
 height = "high"
-
-[node name="CrouchKick" type="Node" parent="States/Attack"]
-script = ExtResource( 4 )
-begin_frame = 10
-end_frame = 23
-dmg = 10
-stun = 10
-push = Vector2( 100, 0 )
 
 [node name="Air" type="Node" parent="States"]
 
