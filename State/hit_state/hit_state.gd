@@ -8,6 +8,8 @@ func enter():
 func pushback(force: Vector2):
 	owner.vel.x = force.x
 	owner.vel.y = force.y * -1
+	if force.y:
+		owner.grounded = false
 	
 func stun(new_stun_count : int):
 	stun_count = new_stun_count
@@ -20,7 +22,10 @@ func update(_delta: float):
 	if stun_count > 0:
 		stun_count -= 1
 	else:
-		emit_signal("finished", "idle")
+		if owner.grounded:
+			emit_signal("finished", "idle")
+		else:
+			emit_signal("finished", "fall")
 		
 func knockdown():
 	pass
