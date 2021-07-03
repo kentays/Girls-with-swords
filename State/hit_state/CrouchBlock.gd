@@ -11,6 +11,11 @@ func receive_hit(height: String):
 		print("Blockstring")
 		owner.block()
 		
+func pushback(force: Vector2):
+	.pushback(force)
+	if not owner.grounded:
+		emit_signal("finished", "block")
+		
 func damage(_dmg: int):
 	pass
 	
