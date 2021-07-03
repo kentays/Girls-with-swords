@@ -10,11 +10,12 @@ export var stun : int = 0
 # setting this to 0 results in a knockdown
 
 export var push : Vector2 = Vector2.ZERO
-export(String, "low", "mid", "high") var height
+export(String, "", "low", "mid", "high") var height
 export var knockdown : bool = false
 			
 	
 func enter():
+	print(height)
 	owner.whiff()
 	change_animation()	
 		

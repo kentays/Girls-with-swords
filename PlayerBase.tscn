@@ -1434,6 +1434,7 @@ end_frame = 7
 dmg = 4
 stun = 5
 push = Vector2( 50, 0 )
+height = "low"
 
 [node name="Slash" type="Node" parent="States/Attack"]
 script = ExtResource( 40 )
@@ -1451,6 +1452,7 @@ end_frame = 23
 dmg = 10
 stun = 20
 push = Vector2( 5, 0 )
+height = "low"
 knockdown = true
 
 [node name="Hadouken" type="Node" parent="States/Attack"]
@@ -1472,6 +1474,7 @@ end_frame = 20
 dmg = 12
 stun = 10
 push = Vector2( 150, 0 )
+height = "low"
 
 [node name="DP" type="Node" parent="States/Attack"]
 script = ExtResource( 48 )
