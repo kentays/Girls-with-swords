@@ -10,3 +10,6 @@ func receive_hit(height: String):
 	else:
 		print("Blockstring")
 		owner.block()
+		
+func damage(_dmg: int):
+	pass

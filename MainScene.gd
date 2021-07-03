@@ -44,13 +44,14 @@ func start():
 	
 func hit_player(name: String, dmg: int, stun: int, push: Vector2, height: String, knockdown: bool):
 	print(name + " hit")
+	get_node(name).receive_hit(dmg, stun, push, height, knockdown)
+
+func deduct_health(name: String, dmg: int):
 	hud_dict[name]["health_num"] -= dmg
 	if (hud_dict.P1.health_num < 0) or (hud_dict.P2.health_num < 0):
 		start()
 	hud_dict.P1.healthbar.value = hud_dict.P1.health_num
 	hud_dict.P2.healthbar.value = hud_dict.P2.health_num
-	get_node(name).receive_hit(stun, push, height, knockdown)
-
 
 func combo_on(name: String, combo_num: int):
 	hud_dict[name]["combo"].combo(combo_num)

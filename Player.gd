@@ -137,14 +137,18 @@ func turn_left():
 	hurtbox.position.x = abs(hurtbox.position.x) * -1
 	hitbox.position.x = abs(hitbox.position.x)
 
-func receive_hit(stun: int, push: Vector2, height: String, knockdown: bool):
+func receive_hit(dmg: int, stun: int, push: Vector2, height: String, knockdown: bool):
 	current_state.receive_hit(height)
 	if facing_right:
 		push.x *= -1
+	current_state.damage(dmg)
 	current_state.pushback(push)
 	current_state.stun(stun)
 	if knockdown:
 		current_state.knockdown()
+		
+func deduct_health(dmg: int):
+	get_parent().deduct_health(name, dmg)
 
 func combo_up():
 	combo += 1
