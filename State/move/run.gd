@@ -51,7 +51,7 @@ func push(_vel):
 	pass
 	
 func receive_hit(height: String):
-	if height == "high":
+	if height == "low":
 		emit_signal("finished", "hitstun")
 		return
 	if moving_right and not owner.facing_right:
