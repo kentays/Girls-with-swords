@@ -31,7 +31,7 @@
 [ext_resource path="res://State/attack/AntiAir.gd" type="Script" id=49]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 30.085, 7.647 )
+extents = Vector2( 14.704, 38.668 )
 
 [sub_resource type="RectangleShape2D" id=2]
 
@@ -987,7 +987,7 @@ tracks/4/keys = {
 }
 
 [sub_resource type="Animation" id=21]
-length = 90.0
+length = 40.0
 step = 1.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -996,10 +996,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 35, 59, 60, 70, 81 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 35 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ 78, 81, 81, 101, 102, 103 ]
+"values": [ 78, 81 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("HitBox:shape:extents")
