@@ -16,6 +16,7 @@ func knockdown():
 	emit_signal("finished", "knockdown")
 	
 func exit():
+	.exit()
 	owner.reset_combo()
 
 	

@@ -18,6 +18,8 @@ var vel : Vector2 = Vector2()
 
 var facing_right : bool = true
 var grounded : bool = false
+var touching_wall : bool = false
+var pushback : bool = false
 
 var combo : int = 0
 
@@ -82,21 +84,36 @@ func _input(event: InputEvent):
 func _physics_process(delta: float):
 	vel.y += gravity * delta
 	move_and_slide(vel, Vector2.UP)
+	
+	if vel.x != 0:
+		touching_wall = false
 		
 	for i in get_slide_count():
 		var collision = get_slide_collision(i)
 		if collision.collider.get_class() == "KinematicBody2D":
+			# Pushback running into a blayer
 			if collision.normal.y == 0:
 				collision.collider.push(vel.x)
 			else:
+			# Sliding to prevent landing on top of each other
 				grounded = false
 				collision.collider.slide_away()
 				slide_away()
 		
-		elif collision.collider.name == "Floor":
+		if collision.collider.name == "Floor":
 			grounded = true
+			
+		if is_on_wall() and collision.collider.name in ["Wall", "Wall2"]:
+			touching_wall = true
 
 	current_state.update(delta)
+	
+	if pushback:
+		if abs(vel.x) > 50:
+			vel.x = lerp(vel.x, 0, .3)
+		else:
+			vel.x = 0
+			pushback = false
 	
 func push(x_vel : int):
 	current_state.push(x_vel)
@@ -143,6 +160,8 @@ func receive_hit(dmg: int, stun: int, push: Vector2, height: String, knockdown: 
 		push.x *= -1
 	current_state.damage(dmg)
 	current_state.pushback(push)
+	if touching_wall:
+		get_parent().push_attacker(other_player_name, push.x)
 	current_state.stun(stun)
 	if knockdown:
 		current_state.knockdown()

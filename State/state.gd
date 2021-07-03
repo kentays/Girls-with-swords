@@ -25,6 +25,14 @@ func push(x_vel : int):
 	
 func damage(dmg : int):
 	owner.deduct_health(dmg)
+	
+func pushback(force: Vector2):
+	if not owner.touching_wall:
+		owner.vel.x = force.x
+		owner.pushback = true
+	owner.vel.y = force.y * -1
+	if force.y:
+		owner.grounded = false
 
 func update(_delta: float):
 	pass
