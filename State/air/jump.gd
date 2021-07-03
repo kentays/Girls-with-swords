@@ -25,6 +25,17 @@ func update(_delta: float):
 		owner.land()
 		emit_signal("finished", "idle")
 		
+func receive_hit(height: String):
+	if height == "low":
+		emit_signal("finished", "hitstun")
+		return
+	if owner.facing_right and Input.is_action_pressed(input_dict["move_left"]):
+		emit_signal("finished", "block")
+	elif not owner.facing_right and Input.is_action_pressed(input_dict["move_right"]):
+		emit_signal("finished", "block")
+	else:
+		emit_signal("finished", "hitstun")
+		
 func push(_vel):
 	pass
 		
