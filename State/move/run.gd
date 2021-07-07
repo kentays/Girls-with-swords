@@ -13,6 +13,7 @@ func enter():
 
 func exit():
 	owner.vel.x = 0
+	print("exiting run/walk")
 	owner.stop_sfx()
 	
 func handle_input(event: InputEvent):
@@ -36,10 +37,11 @@ func handle_input(event: InputEvent):
 			var dir: String = "move_right"
 			if not owner.facing_right: dir = "move_left"
 			if (owner.input_buf[1] == dir) and (owner.input_buf[2] == "crouch"):
+				owner.stop_sfx()
 				emit_signal("finished", "hadouken")
-				return
-		
-		emit_signal("finished", "slash")
+
+		else:
+			emit_signal("finished", "slash")
 		
 func update(_delta: float):
 	var mod = -1
