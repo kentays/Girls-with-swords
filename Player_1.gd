@@ -14,7 +14,6 @@ func _init():
 	}
 	
 func sub_hadouken():
-	var mask = 24
-	hadouken(24)
+	hadouken(2)
 
 

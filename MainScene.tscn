@@ -36,15 +36,16 @@ position = Vector2( 76, 250 )
 
 [node name="Wall" parent="." instance=ExtResource( 5 )]
 position = Vector2( -9, 160 )
-collision_layer = 9
+collision_layer = 15
 
 [node name="Wall2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 489, 160 )
-collision_layer = 9
+collision_layer = 15
 
 [node name="P1" parent="." instance=ExtResource( 1 )]
 position = Vector2( 120, 195 )
 collision_layer = 3
+collision_mask = 3
 
 [node name="P2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 216, 192 )

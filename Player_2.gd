@@ -12,3 +12,6 @@ func _init():
 		"slash" : "p2_slash",
 		"kick" : "p2_kick"
 	}
+
+func sub_hadouken():
+	hadouken(1)

@@ -58,6 +58,7 @@ onready var hurtbox = $Area2D/HurtBox
 onready var hitbox = $HitBox
 
 func _ready():
+	print("")
 	current_state = $States/Idle
 	for state_node in $States.get_children():
 		if state_node.get_children():
@@ -91,7 +92,10 @@ func _physics_process(delta: float):
 	for i in get_slide_count():
 		var collision = get_slide_collision(i)
 		if collision.collider.get_class() == "KinematicBody2D":
-			# Pushback running into a blayer
+			if collision.collider.name == "Hadouken":
+				collision.collider.hit_player(name)
+				return
+			# Pushback running into a player
 			if collision.normal.y == 0:
 				collision.collider.push(vel.x)
 			else:
@@ -219,6 +223,9 @@ func hadouken(mask: int): # make sure this works
 	get_parent().add_child(h)
 	h.init(facing_right)
 	h.set_global_position(position)
+	h.set_collision_mask_bit(mask, true)
+	h.set_collision_layer_bit(mask, true)
+	print(h.collision_mask)
 	
 	
 func try_buffer(event: InputEvent):
