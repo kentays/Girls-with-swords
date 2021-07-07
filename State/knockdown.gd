@@ -15,7 +15,7 @@ func knockdown():
 func update(_delta):
 	owner.vel.x = 0
 
-func push(_vel: int):
+func push(_vel: float):
 	pass
 	
 func stun(_arg: int):

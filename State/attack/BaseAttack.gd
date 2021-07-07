@@ -27,7 +27,7 @@ func update(_delta):
 			owner.hit_connect(dmg, stun, push, height, knockdown)
 			hit_connect = true
 
-func push(_velo: int):
+func push(_velo: float):
 	pass
 	
 func exit():

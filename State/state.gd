@@ -19,8 +19,7 @@ func exit():
 func handle_input(_event: InputEvent):
 	pass
 	
-func push(x_vel : int):
-	x_vel = float(x_vel)
+func push(x_vel : float):
 	owner.vel.x = x_vel / 2
 	
 func damage(dmg : int):
