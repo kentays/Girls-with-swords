@@ -54,8 +54,8 @@ onready var states_map = {
 }
 
 onready var new_sprite = $Sprite
-onready var hurtbox = $Area2D/HurtBox
-onready var hitbox = $HitBox
+onready var hurtbox = $HurtArea/HurtBox
+onready var hitbox = $HitArea/HitBox
 
 func _ready():
 	print("")
@@ -121,21 +121,7 @@ func _physics_process(delta: float):
 	
 func push(x_vel : int):
 	current_state.push(x_vel)
-	
-func _on_Area2D_body_entered(body: KinematicBody2D):
-	if body == null:
-		print("Null body collision")
-		return
-	if body.name == other_player_name:
-		inside_hurtbox = true
-	
 
-func _on_Area2D_body_exited(body: KinematicBody2D):
-	if body == null:
-		print("Null body exit")
-		return
-	if body.name == other_player_name:
-		inside_hurtbox = false
 
 func hit_connect(dmg: int, stun: int, push: Vector2, height: String, knockdown: bool):
 	get_parent().hit_player(other_player_name, dmg, stun, push, height, knockdown)
@@ -256,3 +242,17 @@ func _on_AnimationPlayer_animation_finished(anim_name: String):
 
 func _on_AudioStreamPlayer_finished():
 	current_state._on_audio_finished()
+
+
+func _on_HurtArea_area_entered(area):
+	if area.owner.name == other_player_name:
+		inside_hurtbox = true
+		print("Other player in HurtBox")
+
+
+func _on_HurtArea_area_exited(area):
+	if area.owner.name == other_player_name:
+		inside_hurtbox = false
+		print("Other player exits HurtBox")
+	
+		
