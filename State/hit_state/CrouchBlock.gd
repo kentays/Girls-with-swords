@@ -19,5 +19,3 @@ func pushback(force: Vector2):
 func damage(_dmg: int):
 	pass
 	
-func _on_animation_finished():
-	emit_signal("finished", "crouch")
