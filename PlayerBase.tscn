@@ -34,7 +34,7 @@
 extents = Vector2( 3, 10 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 19.909, 21 )
+extents = Vector2( 0, 0 )
 
 [sub_resource type="RectangleShape2D" id=3]
 
@@ -408,7 +408,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 6, 7, 15, 16, 23, 24, 30, 31 ),
+"times": PoolRealArray( 0, 9, 10, 15, 16, 23, 24, 30, 31 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 12.7183, 18.2131 ), Vector2( 12.7183, 18.2131 ), Vector2( 17.034, 27.3839 ), Vector2( 17.034, 27.3839 ), Vector2( 17.034, 24.6866 ), Vector2( 17.034, 24.6866 ), Vector2( 17.034, 28.4628 ) ]
@@ -1364,7 +1364,7 @@ scale = Vector2( 3, 3 )
 texture = ExtResource( 27 )
 hframes = 55
 vframes = 2
-frame = 6
+frame = 41
 
 [node name="PhysicsBox" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 9 )
@@ -1386,8 +1386,8 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="HurtBox" type="CollisionShape2D" parent="HurtArea"]
-position = Vector2( -5.936, -12.138 )
-scale = Vector2( 1e-05, 1e-05 )
+position = Vector2( 9.88811, -5.48468 )
+scale = Vector2( 1.506, 3.355 )
 shape = SubResource( 3 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
@@ -1441,7 +1441,7 @@ begin_frame = 4
 end_frame = 8
 dmg = 5
 stun = 30
-push = Vector2( 200, 0 )
+push = Vector2( 250, 0 )
 height = "mid"
 
 [node name="CrouchJab" type="Node" parent="States/Attack"]
@@ -1450,7 +1450,7 @@ begin_frame = 3
 end_frame = 7
 dmg = 4
 stun = 25
-push = Vector2( 80, 0 )
+push = Vector2( 250, 0 )
 height = "low"
 
 [node name="Slash" type="Node" parent="States/Attack"]
@@ -1459,7 +1459,7 @@ begin_frame = 7
 end_frame = 20
 dmg = 12
 stun = 40
-push = Vector2( 300, 0 )
+push = Vector2( 400, 0 )
 height = "mid"
 
 [node name="Sweep" type="Node" parent="States/Attack"]
@@ -1468,7 +1468,7 @@ begin_frame = 10
 end_frame = 23
 dmg = 10
 stun = 30
-push = Vector2( 5, 0 )
+push = Vector2( 250, 0 )
 height = "low"
 knockdown = true
 
@@ -1490,7 +1490,7 @@ begin_frame = 4
 end_frame = 20
 dmg = 12
 stun = 40
-push = Vector2( 150, 0 )
+push = Vector2( 400, 0 )
 height = "low"
 
 [node name="DP" type="Node" parent="States/Attack"]
@@ -1499,7 +1499,7 @@ begin_frame = 1
 end_frame = 24
 dmg = 13
 stun = 40
-push = Vector2( 600, 500 )
+push = Vector2( 600, 400 )
 height = "mid"
 
 [node name="AntiAir" type="Node" parent="States/Attack"]
