@@ -237,6 +237,8 @@ func try_buffer(event: InputEvent):
 	for key in input_dict.keys():
 		if event.is_action_pressed(input_dict[key]):
 			buffer(key)
+	if event.is_action_released(input_dict["crouch"]):
+		buffer("stand")
 			
 func buffer(key: String):
 	input_buf.push_front(key)

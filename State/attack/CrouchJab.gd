@@ -4,6 +4,7 @@ extends "BaseAttack.gd"
 func _init():
 	add_gatling("kick", "sweep")
 	add_gatling("slash", "crouch_slash")
+	add_complex_gatling(["stand", "kick"], "kick")
 	add_gatling("jump", "jump")
 	
 func _on_animation_finished():

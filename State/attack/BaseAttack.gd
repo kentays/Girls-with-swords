@@ -50,17 +50,18 @@ func update(_delta):
 			owner.hit_connect(dmg, stun, push, height, knockdown)
 			hit_connect = true
 			print("Hit connect")
-			
+	print(owner.input_buf)		
 	# check the buffer if we should gatling
 	if hit_connect:
-		for gatling in gatlings:
-			if owner.check_buffer(gatling.input):
-				print("Gatling via inherited method and buffer to " + gatling.state)
-				emit_signal("finished", gatling.state)
 		for gatling in complex_gatlings:
 			if owner.check_complex_buffer(gatling.inputs):
 				print("Complex gatling via inherited method and buffer to " + gatling.state)
 				emit_signal("finished", gatling.state)
+		for gatling in gatlings:
+			if owner.check_buffer(gatling.input):
+				print("Gatling via inherited method and buffer to " + gatling.state)
+				emit_signal("finished", gatling.state)
+		
 
 func push(_velo: float):
 	pass
