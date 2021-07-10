@@ -219,6 +219,13 @@ func hadouken(mask: int): # make sure this works
 	print(h.collision_mask)
 	
 	
+func check_buffer(key: String, position: int) -> bool:
+	if len(input_buf) < position + 1:
+		return false
+	if input_buf[position] == key:
+		return true	
+	return false
+	
 func try_buffer(event: InputEvent):
 	for key in input_dict.keys():
 		if event.is_action_pressed(input_dict[key]):
