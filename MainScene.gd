@@ -54,7 +54,6 @@ func deduct_health(name: String, dmg: int):
 	hud_dict.P2.healthbar.value = hud_dict.P2.health_num
 
 func push_attacker(name: String, x_force: int):
-	print("Applying pushback to " + name + " of force " + String(x_force))
 	var attacker: KinematicBody2D = get_node(name)
 	attacker.pushback = true
 	attacker.vel.x = x_force * -1
@@ -67,5 +66,4 @@ func combo_off(name: String):
 
 
 func _on_Timer_timeout():
-	print("Time Up")
 	start()

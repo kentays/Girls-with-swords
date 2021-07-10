@@ -1,8 +1,9 @@
-[gd_scene load_steps=58 format=2]
+[gd_scene load_steps=59 format=2]
 
 [ext_resource path="res://State/attack/Kick.gd" type="Script" id=1]
 [ext_resource path="res://Player.gd" type="Script" id=2]
 [ext_resource path="res://State/attack/JumpSlash.gd" type="Script" id=3]
+[ext_resource path="res://State/attack/jab.gd" type="Script" id=4]
 [ext_resource path="res://State/air/moving_jump.gd" type="Script" id=5]
 [ext_resource path="res://State/idle.gd" type="Script" id=6]
 [ext_resource path="res://State/knockdown.gd" type="Script" id=7]
@@ -34,7 +35,7 @@
 extents = Vector2( 3, 10 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 0, 0 )
+extents = Vector2( 16, 40 )
 
 [sub_resource type="RectangleShape2D" id=3]
 
@@ -100,6 +101,18 @@ tracks/4/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0.655144, -12.1661 ), Vector2( 0.655144, -12.1661 ), Vector2( -2.307, -12.166 ), Vector2( -2.307, -12.166 ), Vector2( -5.936, -12.138 ), Vector2( -5.936, -12.138 ), Vector2( -5.936, -12.138 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("HurtArea/HurtBox:disabled")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
 }
 
 [sub_resource type="Animation" id=5]
@@ -975,7 +988,7 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 9, 10, 18, 19 ),
+"times": PoolRealArray( 0, 8, 9, 18, 19 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1e-05, 1e-05 ), Vector2( 2.053, 1.029 ), Vector2( 2.053, 1.029 ), Vector2( 1e-05, 1e-05 ) ]
@@ -987,10 +1000,10 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 10, 18 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 9, 10, 18 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 20.6344, -0.0856076 ), Vector2( 20.6344, -0.0856076 ) ]
+"values": [ Vector2( 0, -0.086 ), Vector2( 20.6344, -0.0856076 ), Vector2( 20.6344, -0.0856076 ) ]
 }
 
 [sub_resource type="Animation" id=22]
@@ -1115,7 +1128,7 @@ tracks/2/keys = {
 }
 
 [sub_resource type="Animation" id=25]
-length = 34.0
+length = 42.0
 step = 1.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -1364,7 +1377,7 @@ scale = Vector2( 3, 3 )
 texture = ExtResource( 27 )
 hframes = 55
 vframes = 2
-frame = 41
+frame = 84
 
 [node name="PhysicsBox" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 9 )
@@ -1378,7 +1391,7 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="HitBox" type="CollisionShape2D" parent="HitArea"]
-position = Vector2( -1.402, 18 )
+position = Vector2( 0, -1 )
 shape = SubResource( 2 )
 
 [node name="HurtArea" type="Area2D" parent="."]
@@ -1386,8 +1399,8 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="HurtBox" type="CollisionShape2D" parent="HurtArea"]
-position = Vector2( 9.88811, -5.48468 )
-scale = Vector2( 1.506, 3.355 )
+position = Vector2( 0, -22 )
+scale = Vector2( 1e-05, 1e-05 )
 shape = SubResource( 3 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
@@ -1436,10 +1449,10 @@ script = ExtResource( 7 )
 [node name="Attack" type="Node" parent="States"]
 
 [node name="Jab" type="Node" parent="States/Attack"]
-script = ExtResource( 1 )
+script = ExtResource( 4 )
 begin_frame = 4
-end_frame = 8
-dmg = 5
+end_frame = 9
+dmg = 8
 stun = 30
 push = Vector2( 250, 0 )
 height = "mid"
@@ -1458,7 +1471,7 @@ script = ExtResource( 40 )
 begin_frame = 7
 end_frame = 20
 dmg = 12
-stun = 40
+stun = 18
 push = Vector2( 400, 0 )
 height = "mid"
 
