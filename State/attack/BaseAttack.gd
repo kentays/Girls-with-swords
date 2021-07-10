@@ -21,7 +21,11 @@ func enter():
 	hit_connect = false
 	print(height)
 	owner.whiff()
-	change_animation()	
+	change_animation()
+	
+func clear_gatlings():
+	gatlings = []
+	complex_gatlings = []	
 	
 func add_gatling(input: String, state: String):
 	var d: Dictionary = {"input": input, "state": state}
@@ -45,6 +49,7 @@ func update(_delta):
 		if owner.inside_hurtbox and not hit_connect:
 			owner.hit_connect(dmg, stun, push, height, knockdown)
 			hit_connect = true
+			print("Hit connect")
 			
 	# check the buffer if we should gatling
 	if hit_connect:
