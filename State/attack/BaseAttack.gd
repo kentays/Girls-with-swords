@@ -17,6 +17,7 @@ var gatlings: Array = []
 			
 	
 func enter():
+	hit_connect = false
 	print(height)
 	owner.whiff()
 	change_animation()	
@@ -43,7 +44,7 @@ func update(_delta):
 	# check the buffer if we should gatling
 	if hit_connect:
 		for gatling in gatlings:
-			if owner.check_buffer(gatling.input, 1):
+			if owner.check_buffer(gatling.input):
 				print("Gatling via inherited method and buffer to " + gatling.state)
 				emit_signal("finished", gatling.state)
 

@@ -219,10 +219,10 @@ func hadouken(mask: int): # make sure this works
 	print(h.collision_mask)
 	
 	
-func check_buffer(key: String, position: int) -> bool:
-	if len(input_buf) < position + 1:
+func check_buffer(key: String) -> bool:
+	if len(input_buf) < 2:
 		return false
-	if input_buf[position] == key:
+	if key in input_buf:
 		return true	
 	return false
 	

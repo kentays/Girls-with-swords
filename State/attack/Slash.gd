@@ -1,6 +1,4 @@
-extends "jab.gd"
+extends "BaseAttack.gd"
 
-func handle_input(event: InputEvent):
-	pass
-
-# needs better hitbox and timing
+func _on_animation_finished():
+	emit_signal("finished", "idle")
