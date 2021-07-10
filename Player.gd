@@ -86,9 +86,10 @@ func _physics_process(delta: float):
 	vel.y += gravity * delta
 	move_and_slide(vel, Vector2.UP)
 	
+	inside_hurtbox = false
 	for area in $HurtArea.get_overlapping_areas():
 		if area.name == "HitArea" and area.owner.name == other_player_name:
-			print("Other player in hitbox")
+			inside_hurtbox = true
 	
 	if vel.x != 0:
 		touching_wall = false
@@ -248,16 +249,7 @@ func _on_AudioStreamPlayer_finished():
 	current_state._on_audio_finished()
 
 
-func _on_HurtArea_area_entered(area):
-	if area.owner.name == other_player_name:
-		inside_hurtbox = true
-		print(other_player_name + " in HurtBox")
 
-
-func _on_HurtArea_area_exited(area):
-	if area.owner.name == other_player_name:
-		inside_hurtbox = false
-		print(other_player_name + " exits HurtBox")
 
 	
 		
