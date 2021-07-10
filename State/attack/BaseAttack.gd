@@ -14,6 +14,7 @@ export(String, "", "low", "mid", "high") var height
 export var knockdown : bool = false
 
 var gatlings: Array = []
+var complex_gatlings: Array = []
 			
 	
 func enter():
@@ -25,6 +26,10 @@ func enter():
 func add_gatling(input: String, state: String):
 	var d: Dictionary = {"input": input, "state": state}
 	gatlings.push_back(d)
+	
+func add_complex_gatling(inputs: Array, state: String):
+	var d: Dictionary = {"inputs": inputs, "state": state}
+	complex_gatlings.push_back(d)
 	
 func handle_input(event: InputEvent):
 	if hit_connect:
@@ -46,6 +51,10 @@ func update(_delta):
 		for gatling in gatlings:
 			if owner.check_buffer(gatling.input):
 				print("Gatling via inherited method and buffer to " + gatling.state)
+				emit_signal("finished", gatling.state)
+		for gatling in complex_gatlings:
+			if owner.check_complex_buffer(gatling.inputs):
+				print("Complex gatling via inherited method and buffer to " + gatling.state)
 				emit_signal("finished", gatling.state)
 
 func push(_velo: float):

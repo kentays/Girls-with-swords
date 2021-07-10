@@ -10,6 +10,19 @@ onready var p1 = get_node("P1")
 onready var p2 = get_node("P2")
 
 func _ready():
+	
+	print("TESTING GLOBAL SUBARRAY.  Shoult be True False")
+	var subarr = [1, 2]
+	var arr = [0, 1, 2, 3, 4]
+	print(Global.is_subset_of(subarr, arr))
+	
+	subarr = [0, 2]
+	arr = [0, 1, 2, 3, 4]
+	print(Global.is_subset_of(subarr, arr))
+	
+	print("TESTING KEY FLIPPING FOR [right, left, up, down]")
+	print(Global.flip_keys(["move_right", "move_left", "jump", "crouch"]))
+	
 	hud_dict.P1.healthbar = $HUD/P1Health
 	hud_dict.P2.healthbar = $HUD/P2Health
 	hud_dict.P1.combo = $HUD/P1Combo

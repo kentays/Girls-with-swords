@@ -58,7 +58,6 @@ onready var hurtbox = $HurtArea/HurtBox
 onready var hitbox = $HitArea/HitBox
 
 func _ready():
-	print("")
 	current_state = $States/Idle
 	for state_node in $States.get_children():
 		if state_node.get_children():
@@ -225,6 +224,14 @@ func check_buffer(key: String) -> bool:
 	if key in input_buf:
 		return true	
 	return false
+	
+func check_complex_buffer(keys: Array) -> bool:
+	var keys_copy = keys.duplicate()
+	if not facing_right:
+		keys_copy = Global.flip_keys(keys)
+	keys_copy.invert() # the buffer is always backwards
+	return Global.is_subset_of(keys_copy, input_buf)
+	
 	
 func try_buffer(event: InputEvent):
 	for key in input_dict.keys():
