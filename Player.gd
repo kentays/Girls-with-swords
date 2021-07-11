@@ -130,7 +130,7 @@ func _physics_process(delta: float):
 			
 func hitstop():
 	hitstopped = true
-	$AnimationPlayer.stop()
+	$AnimationPlayer.stop(false)
 	$BufTimer.paused = true
 	
 func resume():
