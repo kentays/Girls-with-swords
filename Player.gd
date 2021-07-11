@@ -23,6 +23,7 @@ var grounded : bool = false
 var touching_wall : bool = false
 var pushback : bool = false
 var hitstopped : bool = false
+export var debug : bool = false
 
 var combo : int = 0
 
@@ -254,7 +255,9 @@ func get_physics_rect():
 	return Rect2(position, extents)
 	
 func get_other_hurt_rect() -> Rect2:
-	return other_player.get_hurt_rect()
+	var other: Rect2 = other_player.get_hurt_rect()
+	other.position = other.position - global_position + other_player.global_position
+	return other
 	
 func check_buffer(key: String) -> bool:
 	if len(input_buf) < 2:
@@ -303,9 +306,12 @@ func _on_AudioStreamPlayer_finished():
 	current_state._on_audio_finished()
 
 func _draw():
-	draw_rect(get_hit_rect(), Color(255, 0, 0, 0.5))
-	draw_rect(get_hurt_rect(), Color(0, 255, 0, 0.5))
-	draw_rect(get_physics_rect(), Color(0, 0, 255, 0.5))
+	if debug:
+		draw_rect(get_hit_rect(), Color(255, 0, 0, 0.5))
+		draw_rect(get_hurt_rect(), Color(0, 255, 0, 0.5))
+		draw_rect(get_other_hurt_rect(), Color(0, 255, 0, 0.5))
+		draw_rect(get_physics_rect(), Color(0, 0, 255, 0.5))
+
 
 	
 		

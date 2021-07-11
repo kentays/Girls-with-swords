@@ -4,6 +4,7 @@ var stun_count : int = 0
 
 func enter():
 	change_animation()
+	owner.get_node("AnimationPlayer").seek(0.17, true)
 	owner.get_parent().hitstop()
 		
 func stun(new_stun_count : int):
@@ -19,7 +20,7 @@ func impact(anim: String):
 	var rect2: Rect2 = owner.get_other_hurt_rect()
 	var clipped: Rect2 = rect1.clip(rect2)
 	var clip_center: Vector2 = clipped.position + clipped.size/2.0
-	i.global_position = owner.global_position
+	i.global_position = clip_center + owner.global_position
 	
 	
 

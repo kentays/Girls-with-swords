@@ -3,6 +3,7 @@ extends "hit_state.gd"
 func enter():
 	.enter()
 	owner.block()
+	impact("Block")
 
 func receive_hit(height: String):
 	if height == "low" and not Input.is_action_pressed(input_dict["crouch"]):
