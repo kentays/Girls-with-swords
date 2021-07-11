@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 var current_state = null
 var other_player_name : String
+var other_player : KinematicBody2D
 
 var speed : int = 200
 export var jumpForce : int = 400
@@ -9,6 +10,7 @@ var gravity : int = 800
 
 export (PackedScene) var Dust
 export (PackedScene) var Hadouken
+export (PackedScene) var Impact
 
 var input_dict : Dictionary
 
@@ -57,8 +59,11 @@ onready var states_map = {
 onready var new_sprite = $Sprite
 onready var hurtbox = $HurtArea/HurtBox
 onready var hitbox = $HitArea/HitBox
+onready var physicsbox = $PhysicsBox
 
 func _ready():
+	other_player = get_parent().get_node(other_player_name)
+	print("Other player = " + str(other_player))
 	current_state = $States/Idle
 	for state_node in $States.get_children():
 		if state_node.get_children():
@@ -127,6 +132,8 @@ func _physics_process(delta: float):
 		else:
 			vel.x = 0
 			pushback = false
+			
+	update()
 			
 func hitstop():
 	hitstopped = true
@@ -230,8 +237,24 @@ func hadouken(mask: int): # make sure this works
 	h.set_global_position(position)
 	h.set_collision_mask_bit(mask, true)
 	h.set_collision_layer_bit(mask, true)
-	print(h.collision_mask)
 	
+func get_hit_rect():
+	var extents = hitbox.shape.extents * 2
+	var position = hitbox.position - extents / 2
+	return Rect2(position, extents)
+	
+func get_hurt_rect():
+	var extents = hurtbox.scale * 2 * hurtbox.shape.extents
+	var position = hurtbox.position - extents / 2
+	return Rect2(position, extents)
+	
+func get_physics_rect():
+	var extents = physicsbox.scale * 2 * physicsbox.shape.extents
+	var position = physicsbox.position - extents / 2
+	return Rect2(position, extents)
+	
+func get_other_hurt_rect() -> Rect2:
+	return other_player.get_hurt_rect()
 	
 func check_buffer(key: String) -> bool:
 	if len(input_buf) < 2:
@@ -279,8 +302,10 @@ func _on_AnimationPlayer_animation_finished(anim_name: String):
 func _on_AudioStreamPlayer_finished():
 	current_state._on_audio_finished()
 
-
-
+func _draw():
+	draw_rect(get_hit_rect(), Color(255, 0, 0, 0.5))
+	draw_rect(get_hurt_rect(), Color(0, 255, 0, 0.5))
+	draw_rect(get_physics_rect(), Color(0, 0, 255, 0.5))
 
 	
 		

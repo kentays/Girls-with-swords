@@ -4,6 +4,7 @@ func enter():
 	.enter()
 	owner.combo = 1
 	owner.receive_hit_confirm()
+	impact("Hit")
 	
 
 func receive_hit(_height: String):
@@ -11,6 +12,7 @@ func receive_hit(_height: String):
 	stun_count = 0
 	owner.receive_hit_confirm()
 	owner.restart_animation()
+	impact("Hit")
 	owner.get_parent().hitstop()
 		
 func knockdown():

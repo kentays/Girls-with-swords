@@ -38,7 +38,7 @@
 [ext_resource path="res://Sprites/Spritesheet/OL Sweep.png" type="Texture" id=36]
 [ext_resource path="res://Sounds/hit.ogg" type="AudioStream" id=37]
 [ext_resource path="res://AudioStreamPlayer.gd" type="Script" id=38]
-[ext_resource path="res://Dust.tscn" type="PackedScene" id=39]
+[ext_resource path="res://GFX/Dust.tscn" type="PackedScene" id=39]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
