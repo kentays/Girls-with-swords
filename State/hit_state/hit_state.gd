@@ -4,7 +4,8 @@ var stun_count : int = 0
 
 func enter():
 	change_animation()
-	
+	owner.get_parent().hitstop()
+		
 func stun(new_stun_count : int):
 	stun_count = new_stun_count
 

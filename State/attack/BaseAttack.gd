@@ -1,6 +1,7 @@
 extends "../state.gd"
 
 var hit_connect : bool = false
+var frame_after_connect : bool = false
 
 export var begin_frame : int = 0
 export var end_frame : int = 0
@@ -19,6 +20,7 @@ var complex_gatlings: Array = []
 	
 func enter():
 	hit_connect = false
+	frame_after_connect = false
 	print(height)
 	owner.whiff()
 	change_animation()
@@ -49,10 +51,9 @@ func update(_delta):
 		if owner.inside_hurtbox and not hit_connect:
 			owner.hit_connect(dmg, stun, push, height, knockdown)
 			hit_connect = true
-			print("Hit connect")
-	print(owner.input_buf)		
+			print("Hit connect")	
 	# check the buffer if we should gatling
-	if hit_connect:
+	if frame_after_connect:
 		for gatling in complex_gatlings:
 			if owner.check_complex_buffer(gatling.inputs):
 				print("Complex gatling via inherited method and buffer to " + gatling.state)
@@ -61,6 +62,10 @@ func update(_delta):
 			if owner.check_buffer(gatling.input):
 				print("Gatling via inherited method and buffer to " + gatling.state)
 				emit_signal("finished", gatling.state)
+				
+	if hit_connect:
+		frame_after_connect = true
+		# need to delay this by a frame
 		
 
 func push(_velo: float):

@@ -76,7 +76,21 @@ func combo_on(name: String, combo_num: int):
 	
 func combo_off(name: String):
 	hud_dict[name]["combo"].off()
+	
+func hitstop():
+	print("HitStop")
+	$Hitstop.wait_time = 0.15
+	$Hitstop.start()
+	$P1.hitstop()
+	$P2.hitstop()
+	
 
 
 func _on_Timer_timeout():
 	start()
+
+
+func _on_Hitstop_timeout():
+	print("Resuming play")
+	$P1.resume()
+	$P2.resume()

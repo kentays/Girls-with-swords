@@ -20,6 +20,7 @@ var facing_right : bool = true
 var grounded : bool = false
 var touching_wall : bool = false
 var pushback : bool = false
+var hitstopped : bool = false
 
 var combo : int = 0
 
@@ -79,9 +80,13 @@ func _change_state(state_name: String):
 	
 func _input(event: InputEvent):
 	try_buffer(event)
+	if hitstopped:
+		return
 	current_state.handle_input(event)
 
 func _physics_process(delta: float):
+	if hitstopped:
+		return
 	vel.y += gravity * delta
 	move_and_slide(vel, Vector2.UP)
 	
@@ -122,6 +127,16 @@ func _physics_process(delta: float):
 		else:
 			vel.x = 0
 			pushback = false
+			
+func hitstop():
+	hitstopped = true
+	$AnimationPlayer.stop()
+	$BufTimer.paused = true
+	
+func resume():
+	hitstopped = false
+	$AnimationPlayer.play()
+	$BufTimer.paused = false
 	
 func push(x_vel : int):
 	current_state.push(x_vel)

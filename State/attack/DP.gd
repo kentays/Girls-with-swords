@@ -2,6 +2,10 @@ extends "jab.gd"
 
 export var launchForce : Vector2 = Vector2(50, 300)
 
+func _init():
+	clear_gatlings()
+
+
 func enter():
 	owner.vel.y = -1 * launchForce.y
 	owner.grounded = false

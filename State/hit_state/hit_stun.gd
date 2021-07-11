@@ -11,6 +11,7 @@ func receive_hit(_height: String):
 	stun_count = 0
 	owner.receive_hit_confirm()
 	owner.restart_animation()
+	owner.get_parent().hitstop()
 		
 func knockdown():
 	emit_signal("finished", "knockdown")

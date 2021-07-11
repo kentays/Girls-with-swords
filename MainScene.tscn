@@ -162,6 +162,11 @@ __meta__ = {
 [node name="Timer" type="Timer" parent="HUD/P1Combo"]
 wait_time = 0.5
 
+[node name="Hitstop" type="Timer" parent="."]
+wait_time = 0.02
+one_shot = true
+
 [connection signal="timeout" from="HUD/Timer/Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="HUD/P2Combo/Timer" to="HUD/P2Combo" method="_on_Timer_timeout"]
 [connection signal="timeout" from="HUD/P1Combo/Timer" to="HUD/P1Combo" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Hitstop" to="." method="_on_Hitstop_timeout"]
