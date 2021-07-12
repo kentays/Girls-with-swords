@@ -1,5 +1,9 @@
 extends "BaseAttack.gd"
 
+func _init():
+	add_gatling("kick", "jumping_kick")
+	add_gatling("slash", "jumping_slash")
+
 func update(delta: float):
 	.update(delta)
 	if owner.grounded:

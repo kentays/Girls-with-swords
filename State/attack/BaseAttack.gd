@@ -38,7 +38,13 @@ func add_complex_gatling(inputs: Array, state: String):
 	complex_gatlings.push_back(d)
 	
 func handle_input(event: InputEvent):
+	var b = owner.input_buf
 	if hit_connect:
+		for gatling in complex_gatlings:
+			if owner.check_complex_buffer(gatling.inputs):
+				print("Complex gatling via inherited method and buffer to " + gatling.state)
+				emit_signal("finished", gatling.state)
+				return
 		for gatling in gatlings:
 			if event.is_action_pressed(input_dict[gatling.input]):
 				print("Gatling via inherited method to " + gatling.state)
