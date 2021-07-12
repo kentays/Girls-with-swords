@@ -1752,7 +1752,7 @@ script = ExtResource( 18 )
 begin_frame = 3
 end_frame = 7
 dmg = 4
-stun = 25
+stun = 12
 push = Vector2( 250, 0 )
 height = "low"
 
@@ -1770,7 +1770,7 @@ script = ExtResource( 41 )
 begin_frame = 10
 end_frame = 23
 dmg = 10
-stun = 30
+stun = 16
 push = Vector2( 250, 0 )
 height = "low"
 knockdown = true
@@ -1783,7 +1783,7 @@ script = ExtResource( 44 )
 begin_frame = 1
 end_frame = 10
 dmg = 7
-stun = 30
+stun = 12
 push = Vector2( 200, 0 )
 height = "high"
 
@@ -1792,7 +1792,7 @@ script = ExtResource( 46 )
 begin_frame = 4
 end_frame = 20
 dmg = 12
-stun = 40
+stun = 18
 push = Vector2( 400, 0 )
 height = "low"
 
@@ -1801,7 +1801,7 @@ script = ExtResource( 48 )
 begin_frame = 1
 end_frame = 24
 dmg = 13
-stun = 40
+stun = 18
 push = Vector2( 600, 400 )
 height = "mid"
 
@@ -1810,7 +1810,7 @@ script = ExtResource( 49 )
 begin_frame = 6
 end_frame = 27
 dmg = 15
-stun = 40
+stun = 18
 height = "mid"
 
 [node name="JumpKick" type="Node" parent="States/Attack"]
@@ -1818,7 +1818,7 @@ script = ExtResource( 28 )
 begin_frame = 6
 end_frame = 25
 dmg = 9
-stun = 30
+stun = 16
 push = Vector2( 100, 0 )
 height = "high"
 
@@ -1836,7 +1836,7 @@ script = ExtResource( 3 )
 begin_frame = 7
 end_frame = 27
 dmg = 15
-stun = 40
+stun = 18
 push = Vector2( 150, 0 )
 height = "high"
 
