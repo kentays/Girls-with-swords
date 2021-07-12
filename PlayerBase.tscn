@@ -36,7 +36,7 @@
 extents = Vector2( 3, 10 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 25.623, 34.0191 )
+extents = Vector2( 30.085, 7.647 )
 
 [sub_resource type="RectangleShape2D" id=3]
 
@@ -1212,7 +1212,7 @@ tracks/5/keys = {
 }
 
 [sub_resource type="Animation" id=22]
-length = 40.0
+length = 80.0
 step = 1.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -1221,10 +1221,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 35 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 35, 49, 50, 60, 70 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 78, 81 ]
+"values": [ 78, 81, 81, 101, 102, 103 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("HitArea/HitBox:shape:extents")
@@ -1236,7 +1236,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 10, 13, 23, 24, 34, 36 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 27.67, 16.157 ), Vector2( 27.67, 16.157 ), Vector2( 27.513, 13.687 ), Vector2( 27.513, 13.687 ), Vector2( 27.717, 12.081 ), Vector2( 27.717, 12.081 ), Vector2( 30.085, 7.647 ) ]
+"values": [ Vector2( 27.67, 16.157 ), Vector2( 27.67, 16.157 ), Vector2( 27.513, 13.687 ), Vector2( 27.513, 13.687 ), Vector2( 27.717, 12.081 ), Vector2( 27.717, 12.081 ), Vector2( 0, 0 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("HitArea/HitBox:position")
@@ -1667,7 +1667,7 @@ scale = Vector2( 3, 3 )
 texture = ExtResource( 27 )
 hframes = 55
 vframes = 2
-frame = 24
+frame = 81
 
 [node name="PhysicsBox" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 9 )
@@ -1681,7 +1681,7 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="HitBox" type="CollisionShape2D" parent="HitArea"]
-position = Vector2( -3.15783, 4.85513 )
+position = Vector2( -5.78, 31.36 )
 shape = SubResource( 2 )
 
 [node name="HurtArea" type="Area2D" parent="."]
@@ -1690,8 +1690,9 @@ collision_mask = 2
 
 [node name="HurtBox" type="CollisionShape2D" parent="HurtArea"]
 position = Vector2( 4.97886, -8.53679 )
-scale = Vector2( 2.977, 2.223 )
+scale = Vector2( 1e-05, 1e-05 )
 shape = SubResource( 3 )
+disabled = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 37 )
